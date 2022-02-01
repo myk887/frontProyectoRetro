@@ -1,0 +1,30 @@
+.HomePage {
+  display: grid;
+  grid-template-columns: 200px 1fr 1fr;
+  grid-template-rows:  auto ;
+  grid-template-areas:
+  'aside main main'
+  ;
+  grid-gap: 10px;
+}
+.aside ul{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.aside {
+  list-style: none;
+  background-color: #ddd;
+  border-right: 1px solid #ccc;
+  flex: 0 0 auto;
+  min-height: 65vh;
+  padding: 20px;
+}
+.main {
+  grid-area: main;
+  min-height: 65vh;
+}
+li:first-letter {
+  list-style: none;
+  text-transform: uppercase;
+}

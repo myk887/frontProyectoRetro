@@ -1,0 +1,103 @@
+.ArticlePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.headerArticle {
+    padding: 11px;
+    align-items: center;
+    justify-content: space-between;
+}
+.asideArticle {
+    list-style: none;
+    background-color: #ddd;
+    border-right: 1px solid #ccc;
+    min-width: 80vw;
+    padding: 20px;
+}
+.asideArticle ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+.photoArticle {
+    width: 400px;
+    height: 300px;
+    border-radius: 15px;
+}
+.containerArticle {
+    min-width: 83vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.productArticle {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 15px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+    flex-direction: column;
+    min-height: 60vh;
+    text-align: left;
+    min-width: 83vw;
+}
+.contentArticle {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 95%;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+.descriptionArticle {
+    margin-left: 4%;
+    height: 80px;
+    width: 90%;
+    padding: 10px;
+    background-color: silver;
+    border-radius: 10px;
+}
+.spanButtonArticle {
+    display: flex;
+    justify-content: space-between;
+}
+.irCompraArticle {
+    height: 20px;
+    width: auto;
+}
+.enlaceArticle {
+    text-decoration: none;
+    color: black;
+}
+.enviarRegistro {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+}
+.puntuacion {
+    margin-left: 4%;
+    width: 92%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 10px;
+    justify-content: space-between;
+}
+.puntuacion>div {
+    text-align: left;
+}
+.puntuacion span {
+    font-size: 20px;
+    text-align: right;
+}
+.tituloArticle {
+    font-size: 40px;
+}
+
+

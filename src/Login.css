@@ -1,0 +1,31 @@
+.reloj-loading{
+    animation: 1s rotate linear infinite;
+    border: 16px solid silver;
+    border-top: 16px solid black;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+    to {
+      transform: rotate(360deg);
+    }}
+
+.login {
+    display: flex;
+    flex-direction: column;
+}
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+}
+
+.perfil {
+  display: flex;
+  align-items: center;
+}
