@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react'
 import './Login.css'
 import Modal from './Modal'
-import {  NavLink, useNavigate } from 'react-router-dom'
+import {  Link, NavLink, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 
 
@@ -68,7 +68,7 @@ function Session() {
       (datosUsuario &&
         <div className='perfil'>
           <img className='avatar' src={`http://localhost:3000${datosUsuario[0].avatar.replace('./', '/')}`} alt={datosUsuario[0].username}></img>
-          {datosUsuario[0].username}
+          <Link to={`/`} title='Ver perfil'>{datosUsuario[0].username}</Link>
         </div>)
       :
       <div>

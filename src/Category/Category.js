@@ -4,9 +4,10 @@ import NotFound from '../NotFound';
 import Categories from './Categories';
 
 
-function Category({user, setUser, setSearch, search}) {
+function Category({search}) {
   return (
-    <div className="HomePage">      <aside className='aside'>
+    <div className="HomePage">
+      <aside className='aside'>
         <Categories />
       </aside>
       <main className='main'>
