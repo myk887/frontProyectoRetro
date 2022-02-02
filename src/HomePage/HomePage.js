@@ -4,7 +4,7 @@ import NotFound from '../NotFound';
 import Categories from './Categories';
 
 
-function HomePage({search, user, setUser, setSearch}) {
+function HomePage({search}) {
   return (
     <div className="HomePage">
       <aside className='aside'>

@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import rootReducer from './reducer'
 import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
+import ErrorBoundary from './ErrorBoundary';
 
 const localStorageMiddleware = store => next => action => {
   let result = next(action)
@@ -22,11 +23,13 @@ const store = createStore(rootReducer, initialStore, applyMiddleware(localStorag
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </BrowserRouter>
+    <ErrorBoundary fallback={'hola'}>
+      <BrowserRouter>
+        <Provider store={store}>
+          <App />
+        </Provider>
+      </BrowserRouter>
+    </ErrorBoundary>
   </React.StrictMode>,
   document.getElementById('root')
 );

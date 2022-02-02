@@ -1,3 +1,5 @@
+import Loading from "./Loading"
+
 const notFound = [
     {
         "id": Math.random(),
@@ -14,16 +16,19 @@ const notFound = [
 
 function NotFound() {
     return (
-        notFound.map(product =>
-            <div key={product.id} className='product'>
-                <img src={product.photo} alt={product.name} className='photo'/>
-                <div className='content'>
-                    <h1>{product.name}</h1>
-                    <div className='description'>
-                        <p>{product.description}</p> <span>{product.price}</span>
+        <div className="notFound">
+            <Loading/>
+            {notFound.map(product =>
+                <div key={product.id} className='product'>
+                    <img src={product.photo} alt={product.name} className='photo'/>
+                    <div className='content'>
+                        <h1>{product.name}</h1>
+                        <div className='description'>
+                            <p>{product.description}</p> <span>{product.price}</span>
+                        </div>
                     </div>
-                </div>
-            </div>)
+                </div>)}
+        </div>
     )
 }
 export default NotFound
