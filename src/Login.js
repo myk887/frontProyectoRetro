@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react'
 import './Login.css'
 import Modal from './Modal'
-import {  NavLink, useNavigate } from 'react-router-dom'
+import {  Link, NavLink, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 
 
@@ -68,8 +68,15 @@ function Session() {
       (datosUsuario &&
         <div className='perfil'>
           <img className='avatar' src={`http://localhost:3000${datosUsuario[0].avatar.replace('./', '/')}`} alt={datosUsuario[0].username}></img>
-          {datosUsuario[0].username}
-        </div>)
+          <div class="dropdown">
+            <button className='buttonUsername'>{datosUsuario[0].username}</button>
+            <div class="dropdown-content">
+            <Link to={'/'}>Blog</Link>
+            <Link to={'/'}>Academy</Link>
+            <Link to={'/'}>YouTube</Link>
+            </div>
+          </div>
+      </div>)
       :
       <div>
         <button onClick={() => setShow(!show)}>Iniciar sesión</button>

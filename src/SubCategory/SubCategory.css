@@ -1,0 +1,37 @@
+.HomePage {
+  display: grid;
+  grid-template-columns: 200px 1fr 1fr;
+  grid-template-rows:  auto ;
+  grid-template-areas:
+  'aside main main'
+  ;
+}
+.aside ul{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.aside {
+  list-style: none;
+  background-color: #ddd;
+  flex: 0 0 auto;
+  min-height: 65vh;
+  padding: 20px;
+}
+.main {
+  grid-area: main;
+  min-height: 65vh;
+}
+li:first-letter {
+  list-style: none;
+  text-transform: uppercase;
+}
+.subCategories ul {
+  margin-top: 0;
+  padding: 20px;
+  background-color: #ddd;
+  /* background: linear-gradient(to right bottom, #ccc 60%, #ddd); */
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+}
