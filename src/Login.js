@@ -68,8 +68,15 @@ function Session() {
       (datosUsuario &&
         <div className='perfil'>
           <img className='avatar' src={`http://localhost:3000${datosUsuario[0].avatar.replace('./', '/')}`} alt={datosUsuario[0].username}></img>
-          <Link to={`/`} title='Ver perfil'>{datosUsuario[0].username}</Link>
-        </div>)
+          <div class="dropdown">
+            <button className='buttonUsername'>{datosUsuario[0].username}</button>
+            <div class="dropdown-content">
+            <Link to={'/'}>Blog</Link>
+            <Link to={'/'}>Academy</Link>
+            <Link to={'/'}>YouTube</Link>
+            </div>
+          </div>
+      </div>)
       :
       <div>
         <button onClick={() => setShow(!show)}>Iniciar sesión</button>

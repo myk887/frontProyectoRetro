@@ -5,7 +5,6 @@
   grid-template-areas:
   'aside main main'
   ;
-  grid-gap: 10px;
 }
 .aside ul{
   display: flex;
@@ -15,7 +14,6 @@
 .aside {
   list-style: none;
   background-color: #ddd;
-  border-right: 1px solid #ccc;
   flex: 0 0 auto;
   min-height: 65vh;
   padding: 20px;
@@ -27,4 +25,29 @@
 li:first-letter {
   list-style: none;
   text-transform: uppercase;
+}
+.secondAside {
+  width: 100%;
+  display: flex;
+}
+.buttonCategory {
+  background-color: #ddd;
+  border: none;
+  border-radius: 0;
+  margin: 0 10px 10px 20px;
+  padding: 20px;
+}
+.buttonShow {
+  /* background: linear-gradient(to top, white, #ddd 80%); */
+  background-color: white;
+  padding: 2.5px;
+  height: 57.5px;
+  width: 22.5px;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 16px;
+}
+
+.subCategories ul {
+  width: 92%;
 }
