@@ -1,5 +1,7 @@
 
 import React, { useState } from 'react'
+import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 
 
 function Registre() {
@@ -10,6 +12,9 @@ function Registre() {
   const [avatar, setAvatar] = useState('')
   const [loading, setLoading] = useState(false)
   const [verifica, setVerifica] = useState(false)
+  const userToken = useSelector(s => s.user)
+  const datos = useSelector(d => d.userDatos)
+  const navigate = useNavigate()
 
   const api = 'http://localhost:3000/users/'
 
@@ -49,6 +54,7 @@ function Registre() {
       setUbicacion('')
     }
   }
+  if (userToken && datos) navigate('/')
   return (
             loading ?
                 <div className='reloj-loading'>
