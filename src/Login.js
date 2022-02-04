@@ -63,6 +63,10 @@ function Session() {
     setUsuario(user)
     setDatosUsuario(datos)
   }, [user, datos])
+  const cerrarSesion = () => {
+    localStorage.clear()
+    window.location.reload(true);
+  }
   return (
     usuario ?
       (datosUsuario &&
@@ -71,9 +75,9 @@ function Session() {
           <div class="dropdown">
             <button className='buttonUsername'>{datosUsuario[0].username}</button>
             <div class="dropdown-content">
-            <Link to={'/'}>Blog</Link>
-            <Link to={'/'}>Academy</Link>
-            <Link to={'/'}>YouTube</Link>
+            <Link to={'/'}>Mi Perfil</Link>
+            <Link to={'/'}>Mis Productos</Link>
+            <Link to={'/'} onClick={cerrarSesion}>Cerrar Sesion</Link>
             </div>
           </div>
       </div>)

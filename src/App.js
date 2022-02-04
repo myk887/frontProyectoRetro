@@ -13,6 +13,7 @@ import SearchCategory from './SearchCategory';
 import SearchSubCategory from './SearchSubCategory';
 import ErrorBoundary from './ErrorBoundary';
 import Loading from './Loading';
+import IntroductionPage from './IntroductionPage/IntroductionPage';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
       </header>
       <ErrorBoundary fallback={<Loading/>}>
         <Routes>
+          <Route path="Inicio" element={<IntroductionPage />} />
           <Route path="/" element={<HomePage search={search} setSearch={setSearch} />} />
           <Route path="article/:id" element={<ArticlesPage />} />
           <Route path="article/byCategory/:category" element={<Category search={search} setSearch={setSearch} />} />
