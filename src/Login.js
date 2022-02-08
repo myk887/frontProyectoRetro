@@ -76,7 +76,7 @@ function Session() {
             <button className='buttonUsername'>{datosUsuario[0].username}</button>
             <div class="dropdown-content">
             <Link to={'/'}>Mi Perfil</Link>
-            <Link to={'/'}>Mis Productos</Link>
+            <Link to={'user/articles'}>Mis Productos</Link>
             <Link to={'/'} onClick={cerrarSesion}>Cerrar Sesion</Link>
             </div>
           </div>

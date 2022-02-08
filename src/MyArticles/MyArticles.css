@@ -1,0 +1,37 @@
+
+
+.myArticles {
+    text-align: center;
+}
+.MyArticle {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid black;
+    width: 60%;
+    margin: 20px;
+}
+.image {
+    width: 150px;
+    height: 150px;
+}
+.textMyArticle {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+.delete {
+    font-style: italic;
+    text-decoration: underline;
+    cursor: pointer;
+    color: blue;
+    margin-right: 10px;
+}
+.modify {
+    font-style: italic;
+    text-decoration: underline;
+    cursor: pointer;
+    color: blue;
+    margin-left: 10px;
+}
