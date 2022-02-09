@@ -21,9 +21,6 @@ function SubCategories () {
 
     return (
             !show ?
-            // <button className="buttonCategory" onClick={() => setShow(true)}>
-            //     Categorias
-            // </button>
             <button className="buttonShow" onClick={() => setShow(!show)}>
                 ☰
             </button>
