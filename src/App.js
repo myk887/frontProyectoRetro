@@ -14,6 +14,7 @@ import SearchSubCategory from './SearchSubCategory';
 import ErrorBoundary from './ErrorBoundary';
 import Loading from './Loading';
 import IntroductionPage from './IntroductionPage/IntroductionPage';
+import MyArticles from './MyArticles/MyArticles';
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
           <Route path="article/byCategory/:category" element={<Category search={search} setSearch={setSearch} />} />
           <Route path="article/bySubCategory/:subcategory" element={<SubCategory search={search} setSearch={setSearch} />} />
           <Route path="user/registre" element={<RegistrePage />} />
+          <Route path="user/articles" element={<MyArticles />} />
         </Routes>
         </ErrorBoundary>
         <footer className='footer'>

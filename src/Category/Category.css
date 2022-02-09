@@ -21,6 +21,8 @@
 .main {
   grid-area: main;
   min-height: 65vh;
+  display: flex;
+  flex-direction: column;
 }
 li:first-letter {
   list-style: none;

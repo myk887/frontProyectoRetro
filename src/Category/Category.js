@@ -15,7 +15,7 @@ function Category({search}) {
         <div className='subCategories'>
           <SubCategories />
         </div>
-        {search ? <Products key={search} products={search}/> : <NotFound />}
+        {search.length ? <Products key={search} products={search}/> : <NotFound />}
       </main>
     </div>
   );

@@ -15,7 +15,7 @@ function SubCategory({search}) {
         <div className='subCategories'>
             <SubCategories />
         </div>
-        {search ? <Products key={search} products={search}/> : <NotFound />}
+        {search ? <Products key={search + Math.random()} products={search}/> : <NotFound />}
       </main>
     </div>
   );

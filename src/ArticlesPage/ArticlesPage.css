@@ -99,5 +99,10 @@
 .tituloArticle {
     font-size: 40px;
 }
-
+.tuProducto {
+    background-color: black;
+    color: whitesmoke;
+    margin: auto 0;
+    padding: 5px;
+}
 
