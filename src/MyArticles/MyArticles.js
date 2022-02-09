@@ -56,7 +56,7 @@ function MyArticles () {
                         <div className="buttonsArticle">
                             <span className="delete" onClick={(e) => handleDelete({e,id: articulo.id})}>Eliminar anuncio</span>
                             {' '}
-                            <span className="modify">Modificar anuncio</span>
+                            <span className="modify"><Link to={`/user/article/modify/${articulo.id}`}>Modificar anuncio</Link></span>
                         </div>
                     </div>
                 </div>
