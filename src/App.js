@@ -16,6 +16,7 @@ import Loading from './Loading';
 import IntroductionPage from './IntroductionPage/IntroductionPage';
 import MyArticles from './MyArticles/MyArticles';
 import CreateArticle from './CreateArticle/CreateArticle';
+import ModifyArticle from './ModifyArticle/ModifyArticle';
 
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
           <Route path="user/registre" element={<RegistrePage />} />
           <Route path="user/articles" element={<MyArticles />} />
           <Route path="user/article/create" element={<CreateArticle />} />
+          <Route path="user/article/modify/:idActuallyArticle" element={<ModifyArticle />} />
         </Routes>
         </ErrorBoundary>
         <footer className='footer'>
