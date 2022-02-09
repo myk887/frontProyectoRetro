@@ -1,0 +1,13 @@
+
+
+.cretateForm {
+    min-height: 65vh;
+    margin: 0 20px 0 20px;
+}
+
+.formArticle {
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

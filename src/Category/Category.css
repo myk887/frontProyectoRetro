@@ -21,6 +21,7 @@
 .main {
   grid-area: main;
   min-height: 65vh;
+  justify-content: flex-start;
   display: flex;
   flex-direction: column;
 }

@@ -21,6 +21,7 @@
 .main {
   grid-area: main;
   min-height: 65vh;
+  justify-content: flex-start;
 }
 li:first-letter {
   list-style: none;

@@ -1,7 +1,7 @@
 import  useFetch  from "fetch-suspense"
 import { Suspense, useEffect } from "react"
 import { useSelector } from "react-redux"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import Loading from "../Loading"
 import './MyArticles.css'
 
@@ -42,7 +42,7 @@ function MyArticles () {
     return (
         <div className="myArticles">
             <h1>Mis Anuncios</h1>
-            <button>Crear Nuevo Anuncio</button>
+            <button><Link to={'/user/article/create'}>Crear Nuevo Anuncio</Link></button>
             {
             !misArticulos ?
             <h1>NO TINES PRODUCTOS EN VENTA, CREA UN NUEVO ANUNCIO</h1>

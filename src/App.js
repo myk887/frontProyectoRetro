@@ -15,6 +15,7 @@ import ErrorBoundary from './ErrorBoundary';
 import Loading from './Loading';
 import IntroductionPage from './IntroductionPage/IntroductionPage';
 import MyArticles from './MyArticles/MyArticles';
+import CreateArticle from './CreateArticle/CreateArticle';
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
           <Route path="article/bySubCategory/:subcategory" element={<SubCategory search={search} setSearch={setSearch} />} />
           <Route path="user/registre" element={<RegistrePage />} />
           <Route path="user/articles" element={<MyArticles />} />
+          <Route path="user/article/create" element={<CreateArticle />} />
         </Routes>
         </ErrorBoundary>
         <footer className='footer'>
