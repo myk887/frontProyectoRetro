@@ -10,7 +10,8 @@ function Categories () {
 
     return (
         <ul>
-            <li><NavLink to={`/`}>Todos</NavLink></li>
+            <li><NavLink to={`/`}>Home</NavLink></li>
+            <li><NavLink to={`/todos`}>Todos</NavLink></li>
             {categoriesBack.map(category =>
                 <li key={category}><NavLink to={`/article/byCategory/${removeAccents(category.toLocaleLowerCase())}`}>{category}</NavLink></li>
                 )}

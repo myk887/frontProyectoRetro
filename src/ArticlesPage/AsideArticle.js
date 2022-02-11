@@ -7,6 +7,7 @@ function AsideArticle() {
     return (
         <ul>
             <li><NavLink to={`/`}>Home</NavLink></li>
+            <li><NavLink to={`/todos`}>Todos</NavLink></li>
             {categoriesBack.map(category =>
                 <li key={category}><NavLink to={`/article/byCategory/${category.toLowerCase()}`}>{category}</NavLink></li>
                 )}
