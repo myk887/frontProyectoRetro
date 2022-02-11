@@ -37,8 +37,8 @@ function App() {
       </header>
       <ErrorBoundary fallback={<Loading/>}>
         <Routes>
-          <Route path="Inicio" element={<IntroductionPage />} />
-          <Route path="/" element={<HomePage search={search} setSearch={setSearch} />} />
+          <Route path="/" element={<IntroductionPage />} />
+          <Route path="todos" element={<HomePage search={search} setSearch={setSearch} />} />
           <Route path="article/:id" element={<ArticlesPage />} />
           <Route path="article/byCategory/:category" element={<Category search={search} setSearch={setSearch} />} />
           <Route path="article/bySubCategory/:subcategory" element={<SubCategory search={search} setSearch={setSearch} />} />
