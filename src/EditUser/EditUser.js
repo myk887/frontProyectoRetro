@@ -83,8 +83,10 @@ function EditUser() {
           const data = await res.json()
           console.log(data)
           setLoading(false)
+          alert('Contraseña cambiadas')
         } else {
           console.log(res.status)
+          alert('Hubo un error' + res.statusText)
           setLoading(false)
         }
       }
