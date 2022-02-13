@@ -41,7 +41,10 @@ function MyArticles () {
 
     return (
         <div className="myArticles">
-            <h1>Mis Anuncios</h1>
+            <div className='titleProducts'>
+                <Link className='casita' to={'/'} title='Pàgina principal'>⌂</Link>
+                <h1>Mis Anuncios</h1>
+            </div>
             <button><Link to={'/user/article/create'}>Crear Nuevo Anuncio</Link></button>
             {
             !misArticulos ?

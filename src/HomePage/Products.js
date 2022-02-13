@@ -1,6 +1,7 @@
 import { Suspense, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Loading from '../Loading'
+import NotFound from '../NotFound'
 import './Products.css'
 
 
@@ -15,7 +16,7 @@ function Products({products}) {
     else productsOrder = products
 
     const perPage = 3
-    const pags = Math.ceil(products.length / perPage)
+    const pags = Math.ceil(productsOrder.length / perPage)
     const handlePrev = () => setStep(step > 0 ? step - 1 : pags - 1)
     const handleNext = () => setStep((step + 1) % pags)
 
@@ -28,7 +29,7 @@ function Products({products}) {
               <option value="2" >Precio mayor a menor </option>
           </select>
           <select name="provinces" required onChange={e => setOrder2(e.target.value)}>
-            <option value=''>Provincia</option>
+            <option value='' selected>Provincia</option>
             <option value="coruña">A Coruña/La Coruña</option>
             <option value="araba">Araba/Alava</option>
             <option value="albacete">Albacete</option>
@@ -81,7 +82,10 @@ function Products({products}) {
             <option value="zaragoza">Zaragoza</option>
           </select>
         </div>
-        {productsOrder.slice(step * perPage, (step + 1) * perPage).map(product =>
+        {!productsOrder.length ?
+        <NotFound/>
+        :
+        productsOrder?.slice(step * perPage, (step + 1) * perPage).map(product =>
         <div key={product.id} className='product'>
             <img src={`http://localhost:3000${product.photo.replace('./', '/')}`} alt={product.name} className='photo'/>
             <div className='content'>
