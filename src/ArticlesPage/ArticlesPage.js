@@ -62,7 +62,7 @@ function PaginaArticuloId() {
                     <div className='descriptionArticle'>
                         <p>{article.description}</p>
                         <div className='spanButtonArticle'>
-                            <div > Precio: {article.price}€ <br/>Lugar de venta: {name && name[0].location} </div>
+                            <div > Precio: {article.price}€ <br/>Lugar de venta: {name && name[0].location}, {name && name[0].province}  </div>
                             {datos ? (article.idUser === datos[0].id ?
                             <span className='tuProducto'>Es tuyo</span>
                             :

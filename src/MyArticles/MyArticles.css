@@ -1,6 +1,9 @@
 
 
 .myArticles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 .MyArticle {
@@ -11,6 +14,14 @@
     border: 3px solid black;
     width: 60%;
     margin: 20px;
+}
+.titleProducts {
+    display: flex;
+    width: 62vw;
+}
+.titleProducts h1 {
+    width: 62vw;
+    text-align: center;
 }
 .image {
     width: 150px;

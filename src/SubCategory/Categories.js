@@ -11,6 +11,7 @@ function Categories () {
 
     return (
         <ul>
+            <li><NavLink to={`/`}>Home</NavLink></li>
             <li><NavLink to={`/`}>Todos</NavLink></li>
             {categoriesBack.map(category =>
                 <li key={category}><NavLink to={`/article/byCategory/${removeAccents(category.toLocaleLowerCase())}`}>{category}</NavLink></li>
