@@ -17,6 +17,7 @@ import IntroductionPage from './IntroductionPage/IntroductionPage';
 import MyArticles from './MyArticles/MyArticles';
 import CreateArticle from './CreateArticle/CreateArticle';
 import ModifyArticle from './ModifyArticle/ModifyArticle';
+import EditUser from './EditUser/EditUser';
 
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
           <Route path="user/articles" element={<MyArticles />} />
           <Route path="user/article/create" element={<CreateArticle />} />
           <Route path="user/article/modify/:idActuallyArticle" element={<ModifyArticle />} />
+          <Route path="user/edit" element={<EditUser />} />
         </Routes>
         </ErrorBoundary>
         <footer className='footer'>

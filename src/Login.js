@@ -65,7 +65,7 @@ function Session() {
   }, [user, datos])
   const cerrarSesion = () => {
     localStorage.clear()
-    window.location.reload(true);
+    setUsuario(null)
   }
   return (
     usuario ?
@@ -75,7 +75,7 @@ function Session() {
           <div class="dropdown">
             <button className='buttonUsername'>{datosUsuario[0].username}</button>
             <div class="dropdown-content">
-            <Link to={'/'}>Mi Perfil</Link>
+            <Link to={'user/edit'}>Mi Perfil</Link>
             <Link to={'user/articles'}>Mis Productos</Link>
             <Link to={'/'} onClick={cerrarSesion}>Cerrar Sesion</Link>
             </div>

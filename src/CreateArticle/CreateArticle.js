@@ -28,6 +28,8 @@ function CreateArticle() {
     article.category = category
     article.price = price
     article.photo = photo
+    article.location = datos[0].location
+    article.province = datos[0].province
 
   const handleSubmit = async e => {
       setLoading(true)
