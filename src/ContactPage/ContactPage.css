@@ -1,0 +1,27 @@
+form{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+input {
+  width: 35vw;
+  height: 25px;
+}
+
+textarea {
+  width: 73vw;
+  height: 200px;
+  align-self: center;
+}
+
+.check {
+  width: 20px;
+}
+
+button {
+  width: 30vw;
+  height: 5vh;
+  align-self: center;
+  margin-bottom: 30px;
+}
