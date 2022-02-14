@@ -43,9 +43,6 @@ function EditUser() {
     user.location = address
     user.province = provinces
 
-  const pass = new FormData()
-  pass.append('pass', JSON.stringify({"currentPassword": password, "passwordNew": newPassword}))
-
     const handleSubmit = async e => {
       setLoading(true)
       e.preventDefault()
@@ -76,12 +73,13 @@ function EditUser() {
           console.log(password, newPassword)
           const res = await fetch('http://localhost:3000/users/change/password', {
           method: 'PATCH',
-          body: pass,
-          headers: {'Authorization': 'Bearer ' + userToken?.token}
+          body: JSON.stringify({"currentPassword": password, "passwordNew": newPassword}),
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + userToken?.token
+          }
         })
         if (res.ok) {
-          const data = await res.json()
-          console.log(data)
           setLoading(false)
           alert('Contraseña cambiadas')
         } else {
