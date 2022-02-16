@@ -1,0 +1,16 @@
+.footer {
+  display: flex;
+}
+
+ul >li:hover {
+  color: white;
+}
+
+.link {
+  color: white;
+}
+
+.community img {
+  width: 45px;
+
+}
