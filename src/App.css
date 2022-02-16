@@ -9,7 +9,7 @@ justify-content: space-between;
 }
 .footer {
   grid-area: footer;
-  background-color: purple;
+  background-color: hsl(241, 73%, 75%);
   padding: 20px;
 }
 

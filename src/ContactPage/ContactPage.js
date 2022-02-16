@@ -1,5 +1,6 @@
 import './ContactPage.css'
 import React, { useState } from 'react'
+import { Link } from "react-router-dom"
 
 
 function ContactPage() {
@@ -9,7 +10,6 @@ function ContactPage() {
   const [phone, setPhone] = useState('')
   const [checked, setChecked] = useState('')
   const [message, setMessage] = useState('')
- 
 
   const handleSubmit = async e => {
     e.preventDefault()
@@ -22,7 +22,7 @@ function ContactPage() {
     // })
     console.log('Mensaje enviado')
   }
-  
+
 
   return (
     <div className="contactpage">
@@ -37,14 +37,13 @@ function ContactPage() {
           <input placeholder="Telefono..." value={phone} onChange={e => setPhone(e.target.value)}></input>
         </label>
         <textarea placeholder="Escribe aquí tu mensaje..." value={message} onChange={e => setMessage(e.target.value)}></textarea>
-        <label>  
+        <label>
           <input className='check' type="checkbox" required value={checked} onChange={e => setChecked(e.target.value)}></input>
-          He leído y acepto la <span> Política de Privacidad</span>
+          He leído y acepto la <Link to="/privacity" className='link'> Política de Privacidad</Link>
           <p>*Campos obligatorios</p>
-        </label>  
-        <button className="submit" type="submit" value="Submit" onClick={handleSubmit}>Enviar mensaje</button>      
+        </label>
+        <button className="submit" type="submit" value="Submit" onClick={handleSubmit}>Enviar mensaje</button>
       </form>
-      
     </div>
   )
 }

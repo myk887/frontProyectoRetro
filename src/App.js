@@ -21,6 +21,9 @@ import EditUser from './EditUser/EditUser';
 import ContactPage from './ContactPage/ContactPage';
 import MyActivity from './MyActivity/MyActivity';
 import PageBuy from './PageBuy/PageBuy';
+import Privacity from './Legal/Privacity';
+import LegalNotice from './Legal/LegalNotice';
+import Footer from './Footer';
 
 
 function App() {
@@ -54,10 +57,13 @@ function App() {
           <Route path="contact" element={<ContactPage />} />
           <Route path="user/actividad" element={<MyActivity />} />
           <Route path="user/Comercio" element={<PageBuy />} />
+          <Route path="privacity" element={<Privacity />} />
+          <Route path="legal-notice" element={<LegalNotice />} />
+          
         </Routes>
         </ErrorBoundary>
         <footer className='footer'>
-          AKA FOOTER
+          <Footer />
         </footer>
     </div>
   );

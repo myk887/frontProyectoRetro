@@ -19,6 +19,10 @@ textarea {
   width: 20px;
 }
 
+.link {
+  color: blue;
+}
+
 button {
   width: 30vw;
   height: 5vh;
