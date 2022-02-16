@@ -1,5 +1,5 @@
 import useFetch from 'fetch-suspense'
-import { Suspense,  useState } from 'react'
+import { Suspense,  useCallback,  useEffect,  useState } from 'react'
 import { Link } from 'react-router-dom'
 import Loading from '../Loading'
 import './introductionPage.css';
@@ -13,7 +13,20 @@ function ProductsLowcost () {
     const pags = Math.ceil(articlesLowcost.length / perPage)
 
     const handlePrev = () => setStep(step > 0 ? step - 1 : pags - 1)
-    const handleNext = () => setStep((step + 1) % pags)
+    const handleNext = useCallback(() => setStep((step + 1) % pags), [setStep, step, pags])
+
+    //useCallback
+    //useMemo
+
+    useEffect(() => {
+      const carousel = setInterval(() => {
+        handleNext();
+      }, 3000);
+
+      return () => {
+        clearInterval(carousel)
+      }
+    }, [handleNext])
 
     return (
         <div>

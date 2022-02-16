@@ -1,0 +1,55 @@
+.datauser {
+    display: flex;
+    flex-direction: column;
+    padding: 7vw;
+}
+.info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 5vw;
+    background-color: #ddd;
+    padding: 30px;
+}
+.title {
+    display: flex;
+}
+.title h1 {
+    margin-left: 35vw;
+}
+.casita {
+    font-size: 60px;
+}
+.info>p {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.MyArticle {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid black;
+    margin: 20px;
+}
+.image {
+    width: 150px;
+    height: 150px;
+}
+.textMyArticle {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.soldBuy {
+    width: 100%;
+}
+.comercio {
+    display: flex;
+    align-items: center;
+}

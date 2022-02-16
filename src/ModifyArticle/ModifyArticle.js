@@ -1,6 +1,6 @@
 
 import  useFetch  from "fetch-suspense"
-import React, { Suspense, useEffect, useState } from 'react'
+import React, { Suspense, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import './ModifyArticle.css'
