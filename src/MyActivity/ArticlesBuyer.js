@@ -32,18 +32,18 @@ function ArticlesBuyer(){
   datosArticulos = useFetch('http://localhost:3000/trading//userSeller', opts)
   if (!userToken?.token) datosArticulos = undefined
 
-  const misArticlesPromises = datosArticulos.map(async (element, i) => {
+  const misArticlesPromises = datosArticulos?.map(async (element, i) => {
     const article = await fetchFun({ id: element.idArtilce, opts})
 
     return article
   });
   let oa = []
-  const id = misArticlesPromises.map(async element => {
+  const id = misArticlesPromises?.map(async element => {
     const id = await element.then(v => v)
     oa.push(id)
     return oa
   })
-  !array.length && id[misArticlesPromises.length-1].then(v => setArry(v))
+  datosArticulos.length && !array.length && id[misArticlesPromises.length-1].then(v => setArry(v))
   useCallback(() => id[misArticlesPromises.length-1].then(v => setArry(v)), [id, setArry, misArticlesPromises])
 
 

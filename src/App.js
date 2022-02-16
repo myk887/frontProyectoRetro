@@ -19,6 +19,8 @@ import CreateArticle from './CreateArticle/CreateArticle';
 import ModifyArticle from './ModifyArticle/ModifyArticle';
 import EditUser from './EditUser/EditUser';
 import ContactPage from './ContactPage/ContactPage';
+import MyActivity from './MyActivity/MyActivity';
+import PageBuy from './PageBuy/PageBuy';
 
 
 function App() {
@@ -50,6 +52,8 @@ function App() {
           <Route path="user/article/modify/:idActuallyArticle" element={<ModifyArticle />} />
           <Route path="user/edit" element={<EditUser />} />
           <Route path="contact" element={<ContactPage />} />
+          <Route path="user/actividad" element={<MyActivity />} />
+          <Route path="user/Comercio" element={<PageBuy />} />
         </Routes>
         </ErrorBoundary>
         <footer className='footer'>

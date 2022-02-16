@@ -7,7 +7,7 @@ import ArticlesSold from './ArticlesSold'
 
 
 
-function EditUser() {
+function PageBuy() {
 
   const userToken = useSelector(s => s.user)
   const navigate = useNavigate()
@@ -44,4 +44,4 @@ function EditUser() {
   )
 }
 
-export default EditUser
+export default PageBuy
