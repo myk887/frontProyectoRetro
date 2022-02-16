@@ -47,8 +47,8 @@ function MyArticles () {
             </div>
             <button><Link to={'/user/article/create'}>Crear Nuevo Anuncio</Link></button>
             {
-            !misArticulos ?
-            <h1>NO TINES PRODUCTOS EN VENTA, CREA UN NUEVO ANUNCIO</h1>
+            !misArticulos.length ?
+            <h1>NO TIENES PRODUCTOS EN VENTA, CREA UN NUEVO ANUNCIO</h1>
             :
             misArticulos?.map(articulo =>
                 <div key={articulo.id} className="MyArticle">
