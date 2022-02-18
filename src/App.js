@@ -59,7 +59,6 @@ function App() {
           <Route path="user/Comercio" element={<PageBuy />} />
           <Route path="privacity" element={<Privacity />} />
           <Route path="legal-notice" element={<LegalNotice />} />
-          
         </Routes>
         </ErrorBoundary>
         <footer className='footer'>
