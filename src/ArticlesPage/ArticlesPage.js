@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useParams } from "react-router-dom"
+import { Link, useNavigate, useParams } from "react-router-dom"
 import AsideArticle from './AsideArticle'
 import './ArticlesPage.css'
 import { useSelector } from 'react-redux'
@@ -30,13 +30,28 @@ const useGet = ({id}) => {
 function PaginaArticuloId() {
     const [data, setData] = useState(null)
     const [name, setName] = useState(null)
+    const navigate = useNavigate()
     const datos = useSelector(d => d.userDatos)
+    const userToken = useSelector(s => s.user)
     const { id } = useParams()
     const {product,user} = useGet({id})
     useEffect(() => {
         if (product) setData(product)
         if (user) setName(user)
     },[product, user])
+
+    const handleClick = async ({id, idUser}) => {
+        const res = await fetch('http://localhost:3000/trading/userBuyer', {
+            method: 'POST',
+          body: JSON.stringify({"idSeller": idUser, "articleId": id}),
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + userToken?.token
+          }
+        })
+        if(res.ok)
+        navigate('user/actividad')
+    }
 
     return (
         <div className="ArticlePage">
@@ -66,9 +81,9 @@ function PaginaArticuloId() {
                             {datos ? (article.idUser === datos[0].id ?
                             <span className='tuProducto'>Es tuyo</span>
                             :
-                            <button type='button' className='irCompraArticle'><a href={'http://localhost:4000/article/' + article.id} className='enlaceArticle'>ir a comprar</a></button>)
+                            <button type='button' className='irCompraArticle'><a href='/user/actividad' onClick={() => handleClick({id:article.id, idUser:article.idUser})} className='enlaceArticle'>ir a comprar</a></button>)
                             :
-                            <button type='button' className='irCompraArticle'><a href={'http://localhost:4000/article/' + article.id} className='enlaceArticle'>ir a comprar</a></button>}
+                            <button type='button' className='irCompraArticle'><a href='/user/registre' className='enlaceArticle'>ir a comprar</a></button>}
                         </div>
                     </div>
                 </div>
