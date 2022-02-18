@@ -101,7 +101,7 @@ function ArticlesBuyer(){
             <div className='estado'>
               {(datosArticulos[i].buy === 1) && articulo.buyerId && <div> <h2>Estado de la venta</h2> <span>✅</span> </div>}
               {(datosArticulos[i].buy === 1) && !articulo.buyerId && <div><h2>Día de compra</h2> <p>{datosArticulos[i].saleDate.split('Z')[0].split('T')[0]}{' '}{datosArticulos[i].saleDate.split('Z')[0].split('T')[1].slice(0, -4)}</p> </div>}
-              {(datosArticulos[i].buy === 1) && !articulo.buyerId && datosArticulos[1].saleDate > new Date() && console.log('hola')}
+              {(datosArticulos[i].buy === 1) && !articulo.buyerId && datosArticulos[i].saleDate > new Date() && console.log('hola')}
               {(datosArticulos[i].buy === 0) && <span>❌</span>}
               {(datosArticulos[i].buy === null) && <div>
                   <h2>Estado de la venta</h2>
