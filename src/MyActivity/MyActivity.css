@@ -53,3 +53,7 @@
     display: flex;
     align-items: center;
 }
+
+.estado {
+    width: 65%;
+}
