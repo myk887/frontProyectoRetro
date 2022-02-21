@@ -1,9 +1,9 @@
 .HomePage {
   display: grid;
-  grid-template-columns: 200px 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows:  auto ;
   grid-template-areas:
-  'aside main main'
+  'main main'
   ;
 }
 .aside ul{
@@ -41,7 +41,6 @@ li:first-letter {
   padding: 20px;
 }
 .buttonShow {
-  /* background: linear-gradient(to top, white, #ddd 80%); */
   background-color: white;
   padding: 2.5px;
   height: 57.5px;

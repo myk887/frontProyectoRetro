@@ -9,7 +9,6 @@ import ArticlesSold from './ArticlesSold'
 
 function MyActivity() {
 
-  const datos = useSelector(d => d.userDatos)
   const userToken = useSelector(s => s.user)
   const navigate = useNavigate()
 
