@@ -29,3 +29,8 @@ a {
   justify-content: space-evenly;
   height: 790px;
 }
+
+.main1 {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}

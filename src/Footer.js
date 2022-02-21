@@ -24,10 +24,10 @@ function Footer () {
         </ul>
       </div>
       <div className="community">
-          <a title="link a twitter" href="https://twitter.com" target="_blank" rel="noopener noreferer" >
+          <a title="link a twitter"  href="https://twitter.com" rel="noopener noreferer" >
             <img src={twitter} alt="icono twitter"/>
           </a>
-          <a title="link a facebook" href="https://facebook.com" target="_blank" rel="noopener noreferer">
+          <a title="link a facebook" href="https://facebook.com"  rel="noopener noreferer">
             <img src={facebook} alt="icono facebook"/>
           </a>
       </div>

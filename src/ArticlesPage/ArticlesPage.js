@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { useNavigate, useParams } from "react-router-dom"
-import AsideArticle from './AsideArticle'
 import './ArticlesPage.css'
 import { useSelector } from 'react-redux'
 
@@ -55,9 +54,6 @@ function PaginaArticuloId() {
 
     return (
         <div className="ArticlePage">
-        <aside className='asideArticle'>
-          <AsideArticle />
-        </aside>
         <main className='mainArticle'>
             { (!data || !name) ?
             <div className='reloj-loading'></div>

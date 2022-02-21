@@ -106,7 +106,7 @@ function Session() {
               {error && <div className="error">{error.statusText}</div>}
             </fieldset>}
           <button>
-            <NavLink to='../user/registre' onClick={() => setShow(false)}>No estoy registrado</NavLink>
+            <NavLink to='./user/registre' onClick={() => setShow(false)}>No estoy registrado</NavLink>
           </button>
         </Modal>
       </div>

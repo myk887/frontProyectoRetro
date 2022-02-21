@@ -1,7 +1,6 @@
 
 .introductioPage {
   display: flex;
-  width: 100vw;
   background: linear-gradient(to bottom, gray    ,  #ffffff);
 }
 .home {
