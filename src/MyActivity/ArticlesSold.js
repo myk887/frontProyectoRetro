@@ -1,23 +1,15 @@
-import { Link, useNavigate } from 'react-router-dom'
-import React, { Suspense, useCallback, useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import React, { Suspense, useEffect, useState } from 'react'
 import './MyActivity.css'
 import { useSelector } from 'react-redux'
 import  useFetch  from "fetch-suspense"
 import Loading from '../Loading'
 
-const fetchFun = async ({id, opts}) => {
-  let res = await fetch('http://localhost:3000/articles/' + id, opts)
-  let data = await res.json()
-  return data
-}
-
 
 function ArticlesSold() {
-
-  const datos = useSelector(d => d.userDatos)
   const userToken = useSelector(s => s.user)
   const navigate = useNavigate()
-  const [array, setArry] = useState([])
+  const [vote, setVote] = useState(0)
 
   useEffect(() => {
     !userToken && navigate('user/registre')
@@ -32,28 +24,67 @@ function ArticlesSold() {
   datosArticulos = useFetch('http://localhost:3000/trading/userBuyer', opts)
   if (!userToken?.token) datosArticulos = undefined
 
-  const misArticlesPromises = datosArticulos?.map(async (element, i) => {
-    const article = await fetchFun({ id: element.idArtilce, opts})
+  const handleBuy = async ({articleId}) => {
+    console.log('hola')
+    const res = await fetch('http://localhost:3000/articles/sold', {
+      method: 'POST',
+      body: JSON.stringify({articleId}),
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + userToken?.token
+      }
+    })
+    if (res.ok) {
+      window.location.reload(true)
+    } else {
+      console.log(res)
+    }
+  }
+  const handleSubmit = async (e, {idSeller, articleId}) => {
+    e.preventDefault()
 
-    return article
-  });
-  let oa = []
-  const id = misArticlesPromises?.map(async element => {
-    const id = await element.then(v => v)
-    oa.push(id)
-    return oa
-  })
-  datosArticulos.length && !array.length && id[misArticlesPromises.length-1].then(v => setArry(v))
-  useCallback(() => id[misArticlesPromises.length-1].then(v => setArry(v)), [id, setArry, misArticlesPromises])
-
+    const res = await fetch('http://localhost:3000/votes/idVotedUser/votes', {
+      method: 'POST',
+      body: JSON.stringify({
+        idSeller,
+        vote,
+        articleId
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + userToken?.token
+      }
+    })
+    const res2 = await fetch('http://localhost:3000/trading/voted', {
+      method: 'POST',
+      body: JSON.stringify({
+        idSeller,
+        articleId
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + userToken?.token
+      }
+    })
+    if (res.ok) {
+      console.log(res)
+    } else {
+      console.log(res)
+    }
+    if (res2.ok) {
+      window.location.reload(true)
+    } else {
+      console.log(res2)
+    }
+  }
 
   return (
     <div className='soldBuy'>
       {
-        !array.length ?
+        !datosArticulos[0].length ?
         <span>NO TIENES PRODUCTOS COMPRADOS</span>
         :
-        array.map((articulo, i) =>
+        datosArticulos[0]?.map((articulo, i) =>
           <div key={articulo.id} className="comercio">
             <div  className="MyArticle">
                 <img className="image" src={`http://localhost:3000${articulo.photo.replace('./', '/')}`} alt={articulo.name} />
@@ -65,10 +96,27 @@ function ArticlesSold() {
                 </div>
             </div>
             <div className='estado'>
-              {(datosArticulos[i].buy === 1) && articulo.buyerId && <div> <h2>Estado de la venta</h2> <span>✅</span> </div>}
-              {(datosArticulos[i].buy === 1) && !articulo.buyerId && <div><h2>Día de compra</h2> <p>{datosArticulos[i].saleDate?.split('Z')[0].split('T')[0]}{' '}{datosArticulos[i].saleDate?.split('Z')[0].split('T')[1].slice(0, -4)}</p> </div>}
-              {(datosArticulos[i].buy === 0) && <span>❌</span>}
-              {(datosArticulos[i].buy === null) && <div> <h2>Estado de la venta</h2> <span>Pendiente de respuesta</span> </div>}
+              {(datosArticulos[1][i].buy === 1) && articulo.buyerId && <div> <h2>Estado de la venta</h2> <span>✅</span> </div>}
+              {(datosArticulos[1][i].buy === 1) && !articulo.buyerId && <div><h2>Día de compra</h2> <p>{datosArticulos[1][i].saleDate?.split('Z')[0].split('T')[0]}{' '}{datosArticulos[1][i].saleDate?.split('Z')[0].split('T')[1].slice(0, -4)}</p> </div>}
+              {(datosArticulos[1][i].buy === 1) && !articulo.buyerId && new Date(datosArticulos[1][i].saleDate) < new Date() && handleBuy({articleId: articulo.id})}
+              {(datosArticulos[1][i].buy === 1) && articulo.buyerId && (datosArticulos[1][i].voted === null) &&
+                  <form onSubmit={(e) => handleSubmit(e,{idSeller:articulo.idUser, articleId: articulo.id})}>
+                    <p class="clasificacion">
+                        <input id="radio1" type="radio" name="estrellas" value="5" onChange={e => setVote(e.target.value)}/>
+                        <label for="radio1">★</label>
+                        <input id="radio2" type="radio" name="estrellas" value="4" onChange={e => setVote(e.target.value)}/>
+                        <label for="radio2">★</label>
+                        <input id="radio3" type="radio" name="estrellas" value="3" onChange={e => setVote(e.target.value)}/>
+                        <label for="radio3">★</label>
+                        <input id="radio4" type="radio" name="estrellas" value="2" onChange={e => setVote(e.target.value)}/>
+                        <label for="radio4">★</label>
+                        <input id="radio5" type="radio" name="estrellas" value="1" onChange={e => setVote(e.target.value)}/>
+                        <label for="radio5">★</label>
+                    </p>
+                    <button>Enviar puntuación</button>
+                  </form>}
+              {(datosArticulos[1][i].buy === 0) && <span>❌</span>}
+              {(datosArticulos[1][i].buy === null) && <div> <h2>Estado de la venta</h2> <span>Pendiente de respuesta</span> </div>}
             </div>
           </div>
         )}
@@ -76,36 +124,7 @@ function ArticlesSold() {
   )
 }
 
-//   let misArticulos
-//   misArticulos = useFetch('http://localhost:3000/articles/sold', opts)
-//   if (!userToken?.token) misArticulos = [undefined]
 
-//   let datosArticulos
-//   datosArticulos = useFetch('http://localhost:3000/trading//userSeller', opts)
-//   if (!userToken?.token) datosArticulos = undefined
-
-//   console.log(datosArticulos)
-
-//   return (
-//     <div className='soldBuy'>
-//       {
-//         !misArticulos.length ?
-//         <span>NO TIENES PRODUCTOS VENDIDOS</span>
-//         :
-//         misArticulos?.map(articulo =>
-//             <div key={articulo.id} className="MyArticle">
-//                 <img className="image" src={`http://localhost:3000${articulo.photo.replace('./', '/')}`} alt={articulo.name} />
-//                 <div>
-//                   <h3>{articulo.name}</h3>
-//                   <div className="textMyArticle">
-//                       <h4>{articulo.price} euros</h4>
-//                   </div>
-//                 </div>
-//             </div>
-//         )}
-//     </div>
-//   )
-// }
 
 const ArticlesBuyerWrapper = () =>
   <Suspense fallback={<Loading />}>

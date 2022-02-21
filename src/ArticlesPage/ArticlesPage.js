@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Link, useNavigate, useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import AsideArticle from './AsideArticle'
 import './ArticlesPage.css'
 import { useSelector } from 'react-redux'
