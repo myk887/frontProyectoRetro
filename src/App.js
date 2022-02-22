@@ -52,6 +52,7 @@ function App() {
             <Route path="article/byCategory/:category" element={<Categories />} />
             <Route path="article/bySubCategory/:subcategory" element={<Categories />} />
             <Route path="user/registre" element={<Categories />} />
+            <Route path='*' element={''}/>
           </Routes>
         </ErrorBoundary>
         <ErrorBoundary fallback={<Loading/>}>
@@ -62,6 +63,7 @@ function App() {
             <Route path="article/byCategory/:category" element={<Category search={search} setSearch={setSearch} />} />
             <Route path="article/bySubCategory/:subcategory" element={<SubCategory search={search} setSearch={setSearch} />} />
             <Route path="user/registre" element={<RegistrePage />} />
+            <Route path='*' element={''}/>
           </Routes>
           </ErrorBoundary>
         </div>
@@ -76,6 +78,7 @@ function App() {
             <Route path="user/Comercio" element={<PageBuy />} />
             <Route path="privacity" element={<Privacity />} />
             <Route path="legal-notice" element={<LegalNotice />} />
+            <Route path='*' element={''}/>
           </Routes>
           </ErrorBoundary>
         <footer>
