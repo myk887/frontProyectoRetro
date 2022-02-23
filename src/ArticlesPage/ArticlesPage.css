@@ -67,6 +67,10 @@
     display: flex;
     justify-content: space-between;
 }
+.spanButtonArticle .span span:first-letter {
+    color: #ccc;
+    text-transform: uppercase;
+}
 .irCompraArticle {
     height: 20px;
     width: auto;
