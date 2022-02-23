@@ -35,6 +35,7 @@ function App() {
       <ErrorBoundary fallback={<Loading/>}>
         <Logo />
         <Routes>
+          <Route path='/' element={<Search setSearch={setSearch}/>} />
           <Route path='todos' element={<Search setSearch={setSearch}/>} />
           <Route path='article/byCategory/:category' element={<SearchCategory setSearch={setSearch}/>} />
           <Route path='article/bySubCategory/:subcategory' element={<SearchSubCategory setSearch={setSearch}/>}/>
