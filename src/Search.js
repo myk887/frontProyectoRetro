@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 
 const useFetch = (search='') => {
@@ -17,6 +18,12 @@ const useFetch = (search='') => {
 
 function Search({setSearch}) {
     const [search, setSearchFor] = useState('')
+    const navigate = useNavigate()
+
+    let location = useLocation()
+    const handleClick = () => {
+    if ('/todos' !== location.pathname) navigate('/todos')
+    }
 
     const data = useFetch(search)
     setSearch(data)
@@ -28,7 +35,7 @@ function Search({setSearch}) {
     return (
         <form onSubmit={handleSubmit}>
             <label>
-                <input value={search} name="username" onChange={(e)=>setSearchFor(e.target.value)} placeholder='🔍 Buscar'/>
+                <input value={search} name="username" onClick={handleClick} onChange={(e)=>setSearchFor(e.target.value)} placeholder='🔍 Buscar'/>
             </label>
             <button>Encontar</button>
         </form>
