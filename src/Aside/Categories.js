@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import './Categories.css'
 
 const categoriesBack = ['audio', 'electrónica', 'gaming', 'imagen', 'informática', 'música', 'teléfonos']
 

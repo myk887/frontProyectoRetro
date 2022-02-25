@@ -1,33 +1,5 @@
-.HomePage {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows:  auto ;
-  grid-template-areas:
-  'main main'
-  ;
-}
-.aside ul{
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-.aside {
+li {
   list-style: none;
-  background-color: #ddd;
-  flex: 0 0 auto;
-  min-height: 65vh;
-  padding: 20px;
-}
-.main {
-  grid-area: main;
-  min-height: 65vh;
-  justify-content: flex-start;
-  display: flex;
-  flex-direction: column;
-}
-li:first-letter {
-  list-style: none;
-  text-transform: uppercase;
 }
 .secondAside {
   width: 100%;
