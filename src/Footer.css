@@ -7,17 +7,24 @@
   padding: 20px;
 }
 
-ul >li:hover {
-  color: white;
+.link {
+  margin: 10px;
 }
 
-.link {
+ul >li:hover {
+  color: rgb(228, 131, 40);
+}
+
+.fiscal {
   color: white;
+  margin-top: 5px;
 }
 
 .community img {
   width: 45px;
+  margin: 5px;
 }
 .logo {
   height: 120px;
+  margin: 5px;
 }

@@ -61,3 +61,13 @@
   color: #FFFFFF;
   background-color: #ddd;
 }
+.session {
+  border: none;
+  background-color: white;
+  color: blue;
+  width: 120px;
+}
+.account {
+  height: 40px;
+}
+
