@@ -1,7 +1,10 @@
 .footer {
+  grid-area: footer;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: rgb(51, 83, 228);
+  padding: 20px;
 }
 
 ul >li:hover {
@@ -14,5 +17,7 @@ ul >li:hover {
 
 .community img {
   width: 45px;
-
+}
+.logo {
+  height: 120px;
 }
