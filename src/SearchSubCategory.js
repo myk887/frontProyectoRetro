@@ -31,9 +31,8 @@ function SearchCategory({setSearch}) {
     return (
         <form onSubmit={handleSubmit}>
             <label className="search">
-                <input value={search} name="username" onChange={(e)=>setSearchFor(e.target.value)} placeholder='🔍 Buscar'/>
+                <input value={search} name="username" onChange={(e)=>setSearchFor(e.target.value)} placeholder='🔍 Busca en Retros.com'/>
             </label>
-            <button className="find">Encontar</button>
         </form>
     )
 }

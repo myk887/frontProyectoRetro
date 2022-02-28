@@ -8,11 +8,7 @@
 }
 
 .link {
-  margin: 10px;
-}
-
-ul >li:hover {
-  color: rgb(228, 131, 40);
+  margin-bottom: 15px;
 }
 
 .fiscal {
@@ -20,11 +16,21 @@ ul >li:hover {
   margin-top: 5px;
 }
 
+.community {
+  text-align: center;
+}
+
 .community img {
   width: 45px;
   margin: 5px;
 }
+
 .logo {
   height: 120px;
   margin: 5px;
+}
+
+p {
+  color: white;
+  size: 20px;
 }
