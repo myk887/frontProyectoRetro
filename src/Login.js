@@ -4,6 +4,7 @@ import './Login.css'
 import Modal from './Modal'
 import {  Link, NavLink, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
+import account from './images/account.png'
 
 
 const perfil = async ({ token }) => {
@@ -85,7 +86,8 @@ function Session() {
       </div>)
       :
       <div>
-        <button onClick={() => setShow(!show)}>Iniciar sesión</button>
+        <img src={account} alt="account logo" className="account"/>
+        <button onClick={() => setShow(!show)} className="session">Iniciar sesión</button>
         <Modal show={show} setShow={setShow}>
           {loading ?
             <div className='reloj-loading'></div>

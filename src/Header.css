@@ -1,11 +1,20 @@
 .header {
   grid-area: header;
-  padding: 20px;
+  padding: 10px;
   display: flex;
+  flex-direction: row;
   gap: 20px;
   align-items: center;
   justify-content: space-between;
-  }
+}
 .logo {
   height: 120px;
+}
+.search {
+  display: flex;
+}
+.find {
+  height: 30px;
+  width: 90px;
+  margin-top: 15px;
 }
