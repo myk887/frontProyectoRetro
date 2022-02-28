@@ -1,21 +1,26 @@
 
-.header {
+/* .header {
 grid-area: header;
 padding: 20px;
 display: flex;
 gap: 20px;
 align-items: center;
 justify-content: space-between;
-}
-.footer {
+} */
+
+/* .footer {
   grid-area: footer;
   background-color: hsl(241, 73%, 75%);
   padding: 20px;
-}
+} */
 
+.body-structure {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
 a {
     text-decoration: none;
-    color: black;
+    color: rgb(228, 131, 40);
 }
 .active {
     font-style: italic;
@@ -30,7 +35,3 @@ a {
   height: 790px;
 }
 
-.main1 {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-}
