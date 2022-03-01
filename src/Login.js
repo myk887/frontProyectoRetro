@@ -85,9 +85,9 @@ function Session() {
           </div>
       </div>)
       :
-      <div>
+      <div className='login-link'>
         <img src={account} alt="account logo" className="account"/>
-        <button onClick={() => setShow(!show)} className="session">Iniciar sesión</button>
+        <button onClick={() => setShow(!show)} className="session">Entra o regístrate</button>
         <Modal show={show} setShow={setShow}>
           {loading ?
             <div className='reloj-loading'></div>

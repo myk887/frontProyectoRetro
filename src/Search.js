@@ -36,8 +36,7 @@ function Search({setSearch}) {
     return (
         <form onSubmit={handleSubmit}>
             <label className="search">
-                <input value={search} name="username" onClick={handleClick} onChange={(e)=>setSearchFor(e.target.value)} placeholder='🔍 Buscar'/>
-                <button className='find'>Encontar</button>
+                <input value={search} name="username" onClick={handleClick} onChange={(e)=>setSearchFor(e.target.value)} placeholder='🔍 Busca en Retros.com'/>
             </label>
             
         </form>

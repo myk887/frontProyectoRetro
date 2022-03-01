@@ -1,6 +1,6 @@
 .header {
   grid-area: header;
-  padding: 10px;
+  padding: 10px 40px 10px 40px;
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -13,8 +13,4 @@
 .search {
   display: flex;
 }
-.find {
-  height: 30px;
-  width: 90px;
-  margin-top: 15px;
-}
+
