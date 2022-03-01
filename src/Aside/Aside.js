@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import './Categories.css'
+import './Aside.css'
 
 const categoriesBack = ['audio', 'electrónica', 'gaming', 'imagen', 'informática', 'música', 'teléfonos']
 
@@ -7,7 +7,7 @@ const removeAccents = (str) => {
     return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   }
 
-function Categories () {
+function Aside () {
 
     return (
         <div className="aside">
@@ -22,4 +22,4 @@ function Categories () {
     )
 }
 
-export default Categories
+export default Aside

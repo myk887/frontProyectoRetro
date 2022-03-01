@@ -1,18 +1,19 @@
 import { Route, Routes } from "react-router-dom"
 import ErrorBoundary from "./ErrorBoundary"
 import Loading from "./Loading"
-import Logo from "./Logo"
+import logo from './images/LogoRetroTRANS.png'
 import Login from "./Login"
 import Search from "./Search"
 import SearchCategory from "./SearchCategory"
 import SearchSubCategory from "./SearchSubCategory"
+import './Header.css'
 
 function Header ({setSearch}) {
 
     return (
         <header className="header">
         <ErrorBoundary fallback={<Loading/>}>
-          <Logo />
+        <img src={logo} alt="logo image" className="logo"/>
           <Routes>
             <Route path='/' element={<Search setSearch={setSearch}/>} />
             <Route path='todos' element={<Search setSearch={setSearch}/>} />

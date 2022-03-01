@@ -1,22 +1,27 @@
 
-.header {
+/* .header {
 grid-area: header;
 padding: 20px;
 min-width: 750px;
 display: flex;
 align-items: center;
 justify-content: space-between;
-}
-.footer {
+} */
+
+/* .footer {
   grid-area: footer;
   min-width: 750px;
   background-color: hsl(241, 73%, 75%);
   padding: 20px;
-}
+} */
 
+.body-structure {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
 a {
     text-decoration: none;
-    color: black;
+    color: rgb(228, 131, 40);
 }
 .active {
     font-style: italic;
@@ -31,6 +36,7 @@ a {
   height: 790px;
 }
 
+<<<<<<< HEAD
 .main1 {
   display: grid;
   grid-template-columns: 200px 1fr;
@@ -39,3 +45,5 @@ a {
 .main2 {
   min-width: 790px;
 }
+=======
+>>>>>>> 0a9aad58b3dd16d15483acf36fbac820ff199e02

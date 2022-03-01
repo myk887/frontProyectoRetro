@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
+import './Header.css'
 
 
 const useFetch = (search='') => {
@@ -34,10 +35,10 @@ function Search({setSearch}) {
 
     return (
         <form onSubmit={handleSubmit}>
-            <label>
-                <input value={search} name="username" onClick={handleClick} onChange={(e)=>setSearchFor(e.target.value)} placeholder='🔍 Buscar'/>
+            <label className="search">
+                <input value={search} name="username" onClick={handleClick} onChange={(e)=>setSearchFor(e.target.value)} placeholder='🔍 Busca en Retros.com'/>
             </label>
-            <button>Encontar</button>
+            
         </form>
     )
 }

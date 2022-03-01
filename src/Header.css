@@ -1,0 +1,16 @@
+.header {
+  grid-area: header;
+  padding: 10px 40px 10px 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  height: 120px;
+}
+.search {
+  display: flex;
+}
+

@@ -6,22 +6,41 @@
   'main main'
   ;
 }
+/* Main: area principal pagina con productos. Aside en "Aside.js" */
+.main {
+  grid-area: main;
+  min-height: 65vh;
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+/* Main originalmente en "introductionPage.css" */
+/* main {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  height: 100%;
+} */
+
+/* //Pasado todo a Aside.css
+//aside: ven de "Category.css", de "SubCategory.css" e de "Aside.css"
+
+.aside {
+  list-style: none;
+  background-color: rgb(122, 87, 87);
+  flex: 0 0 auto;
+  min-height: 65vh;
+  padding: 20px;
+}
+//aside ul: ven de "Category.css", de "SubCategory.css" e de "Aside.css"
+
 .aside ul{
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
-.aside {
-  list-style: none;
-  background-color: #ddd;
-  flex: 0 0 auto;
-  min-height: 65vh;
-  padding: 20px;
-}
-.main {
-  grid-area: main;
-  min-height: 65vh;
-}
-li {
-  list-style: none;
-}
+//li:first-letter: ven de "Aside.css", de "Category.css" e de "SubCategory.css"
+
+li:first-letter {
+  text-transform: uppercase;
+} */

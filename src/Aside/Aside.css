@@ -1,0 +1,17 @@
+.aside {
+  list-style: none;
+  background-color: rgba(110, 114, 139, 0.849);
+  flex: 0 0 auto;
+  min-height: 65vh;
+  padding: 20px;
+}
+/* aside ul: ven de "Category.css", de "SubCategory.css" e de "Aside.css" */
+.aside ul{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+/*li:first-letter: ven de "Aside.css", de "Category.css" e de "SubCategory.css"*/
+li:first-letter {
+  text-transform: uppercase;
+}

@@ -1,18 +1,36 @@
 .footer {
+  grid-area: footer;
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
-
-ul >li:hover {
-  color: white;
+  background-color: rgb(51, 83, 228);
+  padding: 20px;
 }
 
 .link {
+  margin-bottom: 15px;
+}
+
+.fiscal {
   color: white;
+  margin-top: 5px;
+}
+
+.community {
+  text-align: center;
 }
 
 .community img {
   width: 45px;
+  margin: 5px;
+}
 
+.logo {
+  height: 120px;
+  margin: 5px;
+}
+
+p {
+  color: white;
+  size: 20px;
 }
