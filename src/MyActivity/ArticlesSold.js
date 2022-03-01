@@ -113,7 +113,7 @@ function ArticlesSold() {
                         <input id="radio5" type="radio" name="estrellas" value="1" onChange={e => setVote(e.target.value)}/>
                         <label for="radio5">★</label>
                     </p>
-                    <button>Enviar puntuación</button>
+                    <button className='buttonPuntua'>Enviar puntuación</button>
                   </form>}
               {(datosArticulos[1][i].buy === 0) && <span>❌</span>}
               {(datosArticulos[1][i].buy === null) && <div> <h2>Estado de la venta</h2> <span>Pendiente de respuesta</span> </div>}

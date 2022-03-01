@@ -2,13 +2,14 @@
 .header {
 grid-area: header;
 padding: 20px;
+min-width: 750px;
 display: flex;
-gap: 20px;
 align-items: center;
 justify-content: space-between;
 }
 .footer {
   grid-area: footer;
+  min-width: 750px;
   background-color: hsl(241, 73%, 75%);
   padding: 20px;
 }
@@ -33,4 +34,8 @@ a {
 .main1 {
   display: grid;
   grid-template-columns: 200px 1fr;
+  min-width: 750px;
+}
+.main2 {
+  min-width: 790px;
 }

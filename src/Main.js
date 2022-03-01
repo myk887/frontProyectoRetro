@@ -46,8 +46,9 @@ function Main ({search, setSearch}) {
                 <Route path="user/registre" element={<RegistrePage />} />
                 <Route path='*' element={''}/>
                 </Routes>
-                </ErrorBoundary>
+            </ErrorBoundary>
             </div>
+            <div className='main2'>
             <ErrorBoundary fallback={<Loading/>}>
                 <Routes>
                 <Route path="user/articles" element={<MyArticles />} />
@@ -61,7 +62,8 @@ function Main ({search, setSearch}) {
                 <Route path="legal-notice" element={<LegalNotice />} />
                 <Route path='*' element={''}/>
                 </Routes>
-                </ErrorBoundary>
+            </ErrorBoundary>
+            </div>
             </>
     )
   }
