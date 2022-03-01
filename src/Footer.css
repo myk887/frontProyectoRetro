@@ -4,7 +4,7 @@
   justify-content: space-around;
   align-items: center;
   /* background-color: rgb(51, 83, 228); */
-  background: linear-gradient(to right, #7c7c7c,#3353e4,#e48328);
+  background: linear-gradient(to right, #7c7c7c 20%,#3353e4 60%,#7c7c7c);
   padding: 20px;
   max-height: 150px;
 }

@@ -1,6 +1,8 @@
+@import '../Variables.css';
+
 .aside {
   list-style: none;
-  background: linear-gradient(#7c7c7c,#3353e4);
+  background-color: var(--azul);
   flex: 0 0 auto;
   min-height: 65vh;
   padding: 20px;

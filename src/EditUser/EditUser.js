@@ -99,7 +99,7 @@ function EditUser() {
       <div className='info'>
         <div className='userphoto'>
             {avatarURL ?
-            <img className='avatar avatarRegistre' src={avatarURL} alt='avatar'/>
+            <img className='user-photo' src={avatarURL} alt='avatar'/>
             :
             <img className='avatar avatarRegistre' src={`http://localhost:3000${datos[0].avatar.replace('./', '/')}`} alt={datos[0].username} />}
             <label>
