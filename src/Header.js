@@ -13,7 +13,7 @@ function Header ({setSearch}) {
     return (
         <header className="header">
         <ErrorBoundary fallback={<Loading/>}>
-        <img src={logo} alt="logo image" className="logo"/>
+        <img src={logo} alt="logoImage" className="logo"/>
           <Routes>
             <Route path='/' element={<Search setSearch={setSearch}/>} />
             <Route path='todos' element={<Search setSearch={setSearch}/>} />

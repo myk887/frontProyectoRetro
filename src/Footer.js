@@ -7,7 +7,7 @@ import './Footer.css'
 function Footer () {
 
   return (
-    <div className="footer"> 
+    <div className="footer">
       <div className="nav">
         <ul>
           <li className="link"><Link to="/">Home</Link></li>
@@ -18,7 +18,7 @@ function Footer () {
       </div>
       <div className="identification">
         <ul>
-          <img src={logo} alt="logo image" className="logo"/>
+          <img src={logo} alt="logoImage" className="logo"/>
           <li className="fiscal"> CIF A80192727</li>
           <li className="fiscal">Rúa Falperra nº11, Nigrán</li>
         </ul>
