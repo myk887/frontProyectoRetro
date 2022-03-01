@@ -1,6 +1,6 @@
 .aside {
   list-style: none;
-  background-color: rgba(110, 114, 139, 0.849);
+  background: linear-gradient(#7c7c7c,#3353e4);
   flex: 0 0 auto;
   min-height: 65vh;
   padding: 20px;
@@ -14,4 +14,8 @@
 /*li:first-letter: ven de "Aside.css", de "Category.css" e de "SubCategory.css"*/
 li:first-letter {
   text-transform: uppercase;
+}
+.aside ul a {
+  text-decoration: none;
+  color: white;
 }

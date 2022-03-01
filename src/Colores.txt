@@ -1,0 +1,7 @@
+Color azul rgb(51, 83, 228)
+    Utilizado en: 
+      - Footer
+      - Menú del usuario
+
+Color naranja rgb(228, 131, 40)
+    Utilizado para complementos, si se puede

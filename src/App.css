@@ -18,10 +18,10 @@ justify-content: space-between;
   display: grid;
   grid-template-columns: 200px 1fr;
 }
-a {
+/* a {
     text-decoration: none;
-    color: rgb(228, 131, 40);
-}
+    color: white;
+} */
 .active {
     font-style: italic;
     font-size: 20px;

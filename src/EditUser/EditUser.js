@@ -93,8 +93,8 @@ function EditUser() {
     loading ? <div className="datauser"><Loading /></div> :
     <div className="datauser">
       <div className='title'>
-        <Link className='casita' to={'/'} title='Pàgina principal'>⌂</Link>
-        <h1>Mi Perfil </h1>
+        <Link className='home-icon' to={'/'} title='Página Principal'>⌂</Link>
+        <h2>Mi Perfil </h2>
       </div>
       <div className='info'>
         <div className='userphoto'>

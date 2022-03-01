@@ -13,15 +13,16 @@
 .title {
     display: flex;
 }
-.title h1 {
+.title h2 {
     margin-left: 35vw;
 }
 .form {
     display: flex;
     flex-direction: column;
 }
-.casita {
+.home-icon {
     font-size: 60px;
+    color: black;
 }
 input {
     margin: 15px;

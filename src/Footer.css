@@ -3,12 +3,21 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: rgb(51, 83, 228);
+  /* background-color: rgb(51, 83, 228); */
+  background: linear-gradient(to right, #7c7c7c,#3353e4,#e48328);
   padding: 20px;
+  max-height: 150px;
 }
 
 .link {
   margin-bottom: 15px;
+}
+.link a {
+  text-decoration: none;
+  color: white;
+}
+.link a:hover {
+  color: black;
 }
 
 .fiscal {
