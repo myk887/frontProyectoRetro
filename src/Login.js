@@ -66,6 +66,8 @@ function Session() {
   }, [user, datos])
   const cerrarSesion = () => {
     localStorage.clear()
+    dispatch({ type: 'login'})
+    dispatch({ type: 'datos'})
     setUsuario(null)
   }
   return (

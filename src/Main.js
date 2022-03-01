@@ -33,7 +33,6 @@ function Main ({search, setSearch}) {
                             <Route path="article/:id" element={<Aside className='asideArticle'/>} />
                             <Route path="article/byCategory/:category" element={<Aside />} />
                             <Route path="article/bySubCategory/:subcategory" element={<Aside />} />
-                            <Route path="user/registre" element={<Aside />} />
                             <Route path='*' element={''}/>
                         </Routes>
                     </ErrorBoundary>
@@ -46,7 +45,6 @@ function Main ({search, setSearch}) {
                             <Route path="article/:id" element={<ArticlesPage />} />
                             <Route path="article/byCategory/:category" element={<Category search={search} setSearch={setSearch} />} />
                             <Route path="article/bySubCategory/:subcategory" element={<SubCategory search={search} setSearch={setSearch} />} />
-                            <Route path="user/registre" element={<RegistrePage />} />
                             <Route path='*' element={''}/>
                         </Routes>
                     </ErrorBoundary>
@@ -56,6 +54,7 @@ function Main ({search, setSearch}) {
                 <ErrorBoundary fallback={<Loading/>}>
                     <Routes>
                         <Route path="user/articles" element={<MyArticles />} />
+                        <Route path="user/registre" element={<RegistrePage />} />
                         <Route path="user/article/create" element={<CreateArticle />} />
                         <Route path="user/article/modify/:idActuallyArticle" element={<ModifyArticle />} />
                         <Route path="user/edit" element={<EditUser />} />

@@ -36,7 +36,6 @@ a {
   height: 790px;
 }
 
-<<<<<<< HEAD
 .main1 {
   display: grid;
   grid-template-columns: 200px 1fr;
@@ -45,5 +44,3 @@ a {
 .main2 {
   min-width: 790px;
 }
-=======
->>>>>>> 0a9aad58b3dd16d15483acf36fbac820ff199e02

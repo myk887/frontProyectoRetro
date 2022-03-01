@@ -3,17 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-.asideRegistre {
-    list-style: none;
-    background-color: #ddd;
-    border-right: 1px solid #ccc;
-    min-width: 80vw;
-    padding: 20px;
-}
-.asideRegistre ul{
-    display: flex;
-    justify-content: space-evenly;
+    margin-bottom: 20px;
 }
 .mainRegistre fieldset form {
     display: flex;
