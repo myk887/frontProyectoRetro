@@ -5,8 +5,9 @@
   align-items: center;
   /* background-color: rgb(51, 83, 228); */
   background: linear-gradient(to right, #7c7c7c 20%,#3353e4 60%,#7c7c7c);
-  padding: 20px;
+  padding: 20px 20px 30px 20px;
   max-height: 150px;
+  min-width: 750px;
 }
 
 .link {

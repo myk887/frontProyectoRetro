@@ -15,8 +15,10 @@ justify-content: space-between;
 } */
 
 .body-structure {
+  min-width: 750px;
   display: grid;
   grid-template-columns: 200px 1fr;
+  margin-top: 150px;
 }
 /* a {
     text-decoration: none;
@@ -34,4 +36,9 @@ justify-content: space-between;
   justify-content: space-evenly;
   height: 790px;
 }
-
+.registered-user {
+  min-width: 750px;
+}
+.principal {
+  min-height: 70vh;
+}

@@ -4,7 +4,7 @@
   list-style: none;
   background-color: var(--azul);
   flex: 0 0 auto;
-  min-height: 65vh;
+  min-height: 70vh;
   padding: 20px;
 }
 /* aside ul: ven de "Category.css", de "SubCategory.css" e de "Aside.css" */

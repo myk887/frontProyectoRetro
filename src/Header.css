@@ -6,6 +6,12 @@
   gap: 20px;
   align-items: center;
   justify-content: space-between;
+  min-width: 750px;
+  position: fixed;
+  background-color: white;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 .logo {
   height: 120px;
