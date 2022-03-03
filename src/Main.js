@@ -53,7 +53,7 @@ function Main ({search, setSearch}) {
                     </ErrorBoundary>
                 </>
             </div>
-            <div className="registered-user main2">
+            <div className="registered-user">
                 <ErrorBoundary fallback={<Loading/>}>
                     <Routes>
                         <Route path="user/articles" element={<MyArticles />} />

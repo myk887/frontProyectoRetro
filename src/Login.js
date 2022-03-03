@@ -4,7 +4,7 @@ import './Login.css'
 import Modal from './Modal'
 import {  Link, NavLink, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import account from './images/account.png'
+import account from './images//logos/account.png'
 
 
 const perfil = async ({ token }) => {
