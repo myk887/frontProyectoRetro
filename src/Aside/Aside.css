@@ -1,8 +1,10 @@
+@import '../variables.css';
+
 .aside {
   list-style: none;
-  background-color: rgba(110, 114, 139, 0.849);
+  background-color: var(--azul);
   flex: 0 0 auto;
-  min-height: 65vh;
+  min-height: 70vh;
   padding: 20px;
 }
 /* aside ul: ven de "Category.css", de "SubCategory.css" e de "Aside.css" */
@@ -14,4 +16,8 @@
 /*li:first-letter: ven de "Aside.css", de "Category.css" e de "SubCategory.css"*/
 li:first-letter {
   text-transform: uppercase;
+}
+.aside ul a {
+  text-decoration: none;
+  color: white;
 }

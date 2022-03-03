@@ -1,98 +1,95 @@
 .datauser {
-    display: flex;
-    flex-direction: column;
-    padding: 7vw;
+  display: flex;
+  flex-direction: column;
+  padding: 7vw;
 }
 .info {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
-    gap: 5vw;
-    background-color: #ddd;
-    padding: 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 5vw;
+  background-color: #ddd;
+  padding: 30px;
 }
 .title {
-    display: flex;
+  display: flex;
 }
 .title h1 {
-    margin-left: 35vw;
+  margin-left: 35vw;
 }
 .casita {
-    font-size: 60px;
+  font-size: 60px;
 }
 .info>p {
-    font-weight: bold;
-    font-style: italic;
-    font-size: 25px;
-    cursor: pointer;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 25px;
+  cursor: pointer;
 }
 
 .MyArticle {
-    width: 90%;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 3px solid black;
-    margin: 20px;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px solid black;
+  margin: 20px;
 }
 .image {
-    width: 150px;
-    height: 150px;
+  width: 150px;
+  height: 150px;
 }
 .textMyArticle {
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-}
-.buttonPuntua{
-  height: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
 }
 
 .soldBuy {
-    width: 100%;
+  width: 100%;
 }
 .comercio {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .estado {
-    width: 65%;
+  width: 65%;
 }
 
 #form {
-    width: 250px;
-    margin: 0 auto;
-    height: 50px;
-  }
+  width: 250px;
+  margin: 0 auto;
+  height: 50px;
+}
 
-  #form p {
-    text-align: center;
-  }
+#form p {
+  text-align: center;
+}
 
-  #form label {
-    font-size: 20px;
-  }
+#form label {
+  font-size: 20px;
+}
 
-  input[type="radio"] {
-    display: none;
-  }
+input[type="radio"] {
+  display: none;
+}
 
-  label {
-    color: grey;
-  }
+label {
+  color: grey;
+}
 
-  .clasificacion {
-    direction: rtl;
-    unicode-bidi: bidi-override;
-  }
+.clasificacion {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
 
-  label:hover,
-  label:hover ~ label {
-    color: orange;
-  }
+label:hover,
+label:hover ~ label {
+  color: orange;
+}
 
-  input[type="radio"]:checked ~ label {
-    color: orange;
-  }
+input[type="radio"]:checked ~ label {
+  color: orange;
+}

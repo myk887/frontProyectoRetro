@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
-import logo from './images/LogoRetroTRANS.png'
-import facebook from './images/facebook.png'
-import twitter from './images/twitter.png'
+import logo from './images/logos/LogoRetroTRANS.png'
+import facebook from './images/logos/facebook.png'
+import twitter from './images/logos/twitter.png'
 import './Footer.css'
 
 function Footer () {

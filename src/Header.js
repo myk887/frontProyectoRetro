@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom"
 import ErrorBoundary from "./ErrorBoundary"
 import Loading from "./Loading"
-import logo from './images/LogoRetroTRANS.png'
+import logo from './images/logos/LogoRetroTRANS.png'
 import Login from "./Login"
 import Search from "./Search"
 import SearchCategory from "./SearchCategory"
