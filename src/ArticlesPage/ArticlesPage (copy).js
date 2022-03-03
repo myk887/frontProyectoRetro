@@ -26,7 +26,7 @@ const useGet = ({id}) => {
     return {product, user}
 }
 
-function ArticlesPage() {
+function PaginaArticuloId() {
     const [data, setData] = useState(null)
     const [name, setName] = useState(null)
     const navigate = useNavigate()
@@ -54,35 +54,22 @@ function ArticlesPage() {
 
     return (
         <div className="ArticlePage">
-  
         <main className='mainArticle'>
             { (!data || !name) ?
-
             <div className='reloj-loading'></div>
             :
             [data]?.map(article =>
-            
-            
-            
             <div key={article.id} className='productArticle'>
-
-
-
                 <div className='containerArticle'>
                     <img src={`http://localhost:3000${article.photo.replace('./', '/')}`} alt={article.name} className='photoArticle'/>
                 </div>
-
                 <div className='contentArticle'>
-
-                    <a class="casita" title="Página principal" href="/"><span>⌂ </span>Volver a Home</a>
-
                     <div className="puntuacion">
                         <h1 className='tituloArticle'>{article.name}</h1>
                         <div>
                             <h1>{name && name[0].username}</h1><span>{'★★★★★☆☆☆☆☆'.substring(5 - article.userAverageVotes, 10 - article.userAverageVotes)}</span>
                         </div>
                     </div>
-
                     <div className='descriptionArticle'>
                         <p>{article.description}</p>
                         <div className='spanButtonArticle'>
@@ -95,9 +82,7 @@ function ArticlesPage() {
                             <button type='button' className='irCompraArticle'><a href='/user/registre' className='enlaceArticle'>ir a comprar</a></button>}
                         </div>
                     </div>
-
                 </div>
-
             </div>)
             }
         </main>
@@ -106,4 +91,4 @@ function ArticlesPage() {
     )
 }
 
-export default ArticlesPage
+export default PaginaArticuloId
