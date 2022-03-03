@@ -18,6 +18,7 @@ import MyActivity from './MyActivity/MyActivity';
 import PageBuy from './PageBuy/PageBuy';
 import Privacity from './Legal/Privacity'
 import LegalNotice from './Legal/LegalNotice'
+import ConfirmEmail from "./ConfirmEmail"
 
 
 function Main ({search, setSearch}) {
@@ -33,6 +34,7 @@ function Main ({search, setSearch}) {
                             <Route path="article/:id" element={<Aside className='asideArticle'/>} />
                             <Route path="article/byCategory/:category" element={<Aside />} />
                             <Route path="article/bySubCategory/:subcategory" element={<Aside />} />
+                            <Route path="confirmation/:code" element={<Aside />} />
                             <Route path='*' element={''}/>
                         </Routes>
                     </ErrorBoundary>
@@ -45,6 +47,7 @@ function Main ({search, setSearch}) {
                             <Route path="article/:id" element={<ArticlesPage />} />
                             <Route path="article/byCategory/:category" element={<Category search={search} setSearch={setSearch} />} />
                             <Route path="article/bySubCategory/:subcategory" element={<SubCategory search={search} setSearch={setSearch} />} />
+                            <Route path="confirmation/:code" element={<ConfirmEmail />} />
                             <Route path='*' element={''}/>
                         </Routes>
                     </ErrorBoundary>
