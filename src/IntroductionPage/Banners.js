@@ -11,7 +11,7 @@ function Banners () {
 
     const banners=[Banner1,Banner2,Banner3,Banner4]
 
-    const handleNext = useCallback(() => setBanner(banner<4? banner+1:1))
+    const handleNext = useCallback(() => setBanner(banner<4? banner+1:1),[setBanner,banner])
 
     useEffect(() => {
       const carousel = setInterval(() => {
