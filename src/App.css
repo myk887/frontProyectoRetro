@@ -30,6 +30,7 @@ justify-content: space-between;
     font-size: 20px;
     color: white;
 }
+
 .notFound {
   display: flex;
   flex-direction: column;
