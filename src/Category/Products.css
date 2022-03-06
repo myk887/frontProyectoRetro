@@ -42,10 +42,7 @@
     height: 20px;
     width: auto;
 }
-.enlace {
-    text-decoration: none;
-    color: black;
-}
+
 .buttons {
     display: flex;
     justify-content: space-between;

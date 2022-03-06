@@ -1,3 +1,5 @@
+@import './normalize.css';
+@import './variables.css';
 
 /* .header {
 grid-area: header;
@@ -43,4 +45,53 @@ justify-content: space-between;
 }
 .principal {
   min-height: 70vh;
+}
+
+/* casita es el link de volver a Home. El Span contiene el Unicode. */
+
+.casita{
+  color: var(--orange);
+  text-decoration: none;
+  font-size: 25px;
+  transition: font-size 0.3s ease
+}
+
+.casita>span {
+  font-size:60px;
+}
+
+.casita:hover {
+  font-size: 28px;
+}
+
+/* formato por defecto para todos los botones sin clase específica */
+
+button {
+  width: 30vw;
+  min-width: 0px;
+  max-width: 400px;
+  height: 5vh;
+  min-height: 60px;
+  align-self: center;
+  background-image: linear-gradient(#a6aeb6, #25292e);
+  border-radius: 10px;
+  font-size: 23px;
+  cursor: pointer;
+  margin: 20px;
+  box-shadow: 5px 5px 5px lightgrey;
+
+  transition: font-size 0.3s ease;
+  transition: font-weight 0.3s ease;
+  transition: box-shadow 0.2s ease
+}
+
+button a {
+  text-decoration: none;
+  color: white;
+}
+
+button:hover {
+  font-size:24px;
+  font-weight: bold;
+  box-shadow: 8px 8px 8px lightgrey;
 }

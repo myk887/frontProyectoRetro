@@ -1,112 +1,137 @@
-.ArticlePage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.headerArticle {
-    padding: 11px;
-    align-items: center;
-    justify-content: space-between;
-}
-.asideArticle {
-    list-style: none;
-    background-color: #ddd;
-    border-right: 1px solid #ccc;
-    min-width: 80vw;
-    padding: 20px;
-}
-.asideArticle ul{
-    display: flex;
-    justify-content: space-evenly;
-}
-.photoArticle {
-    width: 400px;
-    height: 300px;
-    border-radius: 15px;
-}
-.containerArticle {
-    min-width: 75vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.productArticle {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 15px;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    border: 2px solid black;
-    border-radius: 20px;
-    flex-direction: column;
-    min-height: 60vh;
-    text-align: left;
-    min-width: 75vw;
-}
-.contentArticle {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    width: 95%;
-    background-color: whitesmoke;
-    border-radius: 10px;
-}
-.descriptionArticle {
-    margin-left: 4%;
-    height: 80px;
-    width: 90%;
-    padding: 10px;
-    background-color: silver;
-    border-radius: 10px;
-}
-.spanButtonArticle {
-    display: flex;
-    justify-content: space-between;
-}
-.spanButtonArticle .span span:first-letter {
-    color: #ccc;
-    text-transform: uppercase;
-}
-.irCompraArticle {
-    height: 20px;
-    width: auto;
-}
-.enlaceArticle {
-    text-decoration: none;
-    color: black;
-}
-.enviarRegistro {
-    display: flex;
-    gap: 20px;
-    justify-content: space-around;
-}
-.puntuacion {
-    margin-left: 4%;
-    width: 92%;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    font-size: 10px;
-    justify-content: space-between;
-}
-.puntuacion>div {
-    text-align: left;
-}
-.puntuacion span {
-    font-size: 20px;
-    text-align: right;
-}
-.tituloArticle {
-    font-size: 40px;
-}
-.tuProducto {
-    background-color: black;
-    color: whitesmoke;
-    margin: auto 0;
-    padding: 5px;
+@import '../normalize.css';
+@import '../variables.css';
+
+.product-article{
+    display:flex;
+    margin: 0 100px;
 }
 
+.photo-container {
+    border: 1px solid rgb(205, 204, 208);
+    background-color: var(--light-grey);
+    border-radius: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 2vw;
+    margin: 20px;
+}
+
+.articles-page-photo{
+    width:40vw;
+    min-width:320px;
+    max-width:600px;
+}
+
+.content-article {
+    box-sizing: border-box;
+    border: 1px solid grey;
+    border-radius: 5px;
+    width:30vW;
+    min-width: 450px;
+    min-height:900px;
+    margin: 20px;
+}
+
+.title-artpage {
+    text-decoration:none;
+    text-align:left;
+    padding: 0 20px;
+    font-style: normal;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.price-artpage {
+    text-decoration:none;
+    text-align:right;
+    padding: 0 20px;
+    font-style: normal;
+    font-size: 35px;
+}
+
+.description-artpage  {
+    width: 85%;
+    min-height: 60px;
+    margin: auto;
+    padding:20px;
+    background-image: linear-gradient(#dfe2e6,#eff2f5);
+    border-radius: 5px;
+    font-size: 25px;
+}
+
+.description-title {
+    font-size: 25px;
+    font-weight: bold;
+    color:black;
+    text-align: left;
+    padding:30px;
+}
+.description-content {
+    font-size: 20px;
+    color:black;
+    text-align: left;
+    padding:30px;
+}
+
+.puntuacion {
+    display:block;
+    text-align:left;
+    font-size: 22px;
+    padding: 2vh;
+}
+
+.place-artpage {
+    display:block;
+    text-align:left;
+    font-size: 25px;
+    padding: 2vh;
+}
+
+.place-artpage-flag {
+    font-size: 30px;
+}
+
+.is-my-article {
+    width: 30vw;
+    min-width: 0px;
+    max-width: 400px;
+    height: 5vh;
+    min-height: 60px;
+    background-image: linear-gradient(#80858a, #25292e);
+    border-radius: 10px;   
+    margin: 20px;
+    display:grid;
+    place-items:center
+}
+
+.buy-article-button {
+    min-width: 400px;
+}
+
+.is-my-article-content {
+    font-size: 23px;
+    font-weight: bold;
+    color:white;
+}
+
+
+/* Casita recibe el CSS de App.css*/
+
+.casita-artpage {
+    width:30%;
+    min-width:250px;
+    margin: 0px;
+    margin: auto;
+
+}
+
+@media screen and (max-width: 1100px) and (orientation: portrait) {
+
+    .product-article{
+        display:flex;
+        flex-direction: column;
+    }
+    .photo-container {
+        min-width: 450px;
+    }
+}

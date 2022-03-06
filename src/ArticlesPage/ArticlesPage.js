@@ -26,7 +26,7 @@ const useGet = ({id}) => {
     return {product, user}
 }
 
-function PaginaArticuloId() {
+function ArticlesPage() {
     const [data, setData] = useState(null)
     const [name, setName] = useState(null)
     const navigate = useNavigate()
@@ -53,42 +53,67 @@ function PaginaArticuloId() {
     }
 
     return (
-        <div className="ArticlePage">
-        <main className='mainArticle'>
-            { (!data || !name) ?
-            <div className='reloj-loading'></div>
-            :
-            [data]?.map(article =>
-            <div key={article.id} className='productArticle'>
-                <div className='containerArticle'>
-                    <img src={`http://localhost:3000${article.photo.replace('./', '/')}`} alt={article.name} className='photoArticle'/>
-                </div>
-                <div className='contentArticle'>
-                    <div className="puntuacion">
-                        <h1 className='tituloArticle'>{article.name}</h1>
-                        <div>
-                            <h1>{name && name[0].username}</h1><span>{'★★★★★☆☆☆☆☆'.substring(5 - article.userAverageVotes, 10 - article.userAverageVotes)}</span>
-                        </div>
-                    </div>
-                    <div className='descriptionArticle'>
-                        <p>{article.description}</p>
-                        <div className='spanButtonArticle'>
-                            <div className='span'> Precio: {article.price}€ <br/>Lugar de venta: <span>{name && name[0].location.charAt(0).toUpperCase() + name[0].location.slice(1)}</span>, <span>{name && name[0].province.charAt(0).toUpperCase() + name[0].province.slice(1)}</span>  </div>
-                            {datos ? (article.idUser === datos[0].id ?
-                            <span className='tuProducto'>Es tuyo</span>
-                            :
-                            <button type='button' className='irCompraArticle'><a href='/user/actividad' onClick={() => handleClick({id:article.id, idUser:article.idUser})} className='enlaceArticle'>ir a comprar</a></button>)
-                            :
-                            <button type='button' className='irCompraArticle'><a href='/user/registre' className='enlaceArticle'>ir a comprar</a></button>}
-                        </div>
-                    </div>
-                </div>
-            </div>)
-            }
-        </main>
-      </div>
+        <main>
+        { (!data || !name) ?
 
+        <div className='reloj-loading'></div>
+        :
+        [data]?.map(article =>
+
+        <div key={article.id} className='product-article'>
+
+            <div className='photo-container'>
+                <img className='articles-page-photo' src={`http://localhost:3000${article.photo.replace('./', '/')}`} alt={article.name}/>
+            </div>
+
+            <div className='content-article'>
+
+                <h1 className='title-artpage'>{article.name}</h1>
+
+                <h2 className='price-artpage'>{article.price} €</h2>
+
+                <div className="description-artpage">
+                <span className="description-title">Descripción artículo:</span>
+                <h1 className="interline"></h1>
+                <span className="description-content" >{article.description}</span>
+                </div>
+
+                <div className="puntuacion">
+                        <span>Reputación del vendedor: </span> <br/><br/>
+                        <span>{name && name[0].username}</span>
+                        <span> {'★★★★★☆☆☆☆☆'.substring(5 - article.userAverageVotes, 10 - article.userAverageVotes)}</span>
+                </div>
+
+                <div className="place-artpage">
+                Ubicación: <br/>
+                <span className="place-artpage-flag">⚑  </span>
+                <span> {name && name[0].location.charAt(0).toUpperCase() + name[0].location.slice(1)}</span>,
+                <span> {name && name[0].province.charAt(0).toUpperCase() + name[0].province.slice(1)}</span>
+                </div>
+
+                <div className="buttons-artpage">
+
+                    {datos ? (article.idUser === datos[0].id ?
+                    <div className="is-my-article">
+                        <span class="is-my-article-content">Este artículo es tuyo</span>
+                    </div>
+                    :
+                    <button type='button' className='buy-article-button'><a href='/user/actividad' onClick={() => handleClick({id:article.id, idUser:article.idUser})}>Comprar artículo</a></button>)
+                    :
+                    <button type='button' className='user-not-registered-button'><a href='/user/registre'>Registrarse</a></button>}
+
+                </div>
+
+                <div class="casita-artpage">
+                    <a class="casita" title="Página principal" href="/"><span>⌂ </span>Volver a Home</a>
+                </div>
+
+            </div>
+
+        </div>)
+        }
+    </main>
     )
 }
 
-export default PaginaArticuloId
+export default ArticlesPage
