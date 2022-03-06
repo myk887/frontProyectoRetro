@@ -31,7 +31,7 @@ function Main ({search, setSearch}) {
                         <Routes>
                             <Route path="/" element={<Aside />} />
                             <Route path="todos" element={<Aside />} />
-                            <Route path="article/:id" element={<Aside className='asideArticle'/>} />
+                            {/* <Route path="article/:id" element={<Aside className='asideArticle'/>} /> */}
                             <Route path="article/byCategory/:category" element={<Aside />} />
                             <Route path="article/bySubCategory/:subcategory" element={<Aside />} />
                             <Route path="confirmation/:code" element={<Aside />} />

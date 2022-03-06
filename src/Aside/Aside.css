@@ -2,7 +2,7 @@
 
 .aside {
   list-style: none;
-  background-color: var(--azul);
+  background-color: var(--blue);
   flex: 0 0 auto;
   min-height: 70vh;
   padding: 20px;

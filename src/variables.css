@@ -1,5 +1,6 @@
 :root {
-  --azul: rgb(51, 83, 228);
-  --naranja: rgb(228, 131, 40);
-  --gris: rgb(124, 124, 124)
+  --blue: rgb(51, 83, 228);
+  --orange: rgb(228, 131, 40);
+  --grey: rgb(124, 124, 124);
+  --light-grey: rgb(240, 240, 240);
 }
