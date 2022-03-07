@@ -1,9 +1,23 @@
+/* AFECTA EN OTROS SITIOS 
 .datauser {
     display: flex;
     flex-direction: column;
     padding: 7vw;
-}
-.info {
+} */
+
+/*  AFECTA EN OTROS SITIOS
+.textMyArticle {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+} */
+
+
+
+
+
+
+/* .info {
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
@@ -37,13 +51,8 @@
     width: 150px;
     height: 150px;
 }
-/*  AFECTA EN OTROS SITIOS
-.textMyArticle {
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-} */
 
-.soldBuy {
+
+/* .soldBuy {
     width: 100%;
-}
+} */
