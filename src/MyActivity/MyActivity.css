@@ -37,11 +37,12 @@
   width: 150px;
   height: 150px;
 }
-.textMyArticle {
+/* AFECTA EN OTROS SITIOS
+ .textMyArticle {
   display: flex;
   flex-direction: column;
   text-align: right;
-}
+} */
 
 .soldBuy {
   width: 100%;

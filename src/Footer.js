@@ -7,7 +7,7 @@ import './Footer.css'
 function Footer () {
 
   return (
-    <div className="footer">
+    <div className="main-footer">
       <div className="nav">
         <ul>
           <li className="link"><Link to="/">Home</Link></li>

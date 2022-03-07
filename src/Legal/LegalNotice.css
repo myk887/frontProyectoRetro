@@ -2,11 +2,11 @@
   margin: 50px 200px 50px 200px;
 }
 
-h2 {
+.legal-notice h2 {
   font-size: 40px;
 }
 
-h3 {
+.legal-notice h3 {
   margin-top: 60px;
   margin-left: 20px;
 }

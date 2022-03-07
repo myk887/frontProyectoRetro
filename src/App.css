@@ -64,6 +64,42 @@ justify-content: space-between;
   font-size: 28px;
 }
 
+/* delete  es el link de borrar. El Span contiene el Unicode. */
+
+
+.delete{
+  color: var(--grey);
+  text-decoration: none;
+  font-size: 18px;
+  transition: font-size 0.3s ease
+}
+
+.delete>span {
+  font-size:20px;
+}
+
+.delete:hover {
+  font-size: 23px;
+  color: red;
+}
+
+.modify {
+  color: var(--grey);
+  text-decoration: none;
+  font-size: 18px;
+  transition: font-size 0.3s ease;
+}
+
+.modify>span {
+  font-size:20px;
+}
+
+.modify:hover {
+  font-size: 23px;
+  color: black;
+}
+
+
 /* formato por defecto para todos los botones sin clase específica */
 
 button {
@@ -73,7 +109,7 @@ button {
   height: 5vh;
   min-height: 60px;
   align-self: center;
-  background-image: linear-gradient(#a6aeb6, #25292e);
+  background-image: linear-gradient(var(--light-grey-button), var(--dark-grey-button));
   border-radius: 10px;
   font-size: 23px;
   cursor: pointer;
@@ -95,3 +131,4 @@ button:hover {
   font-weight: bold;
   box-shadow: 8px 8px 8px lightgrey;
 }
+

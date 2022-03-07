@@ -1,4 +1,4 @@
-.footer {
+.main-footer {
   grid-area: footer;
   display: flex;
   justify-content: space-around;
@@ -41,7 +41,7 @@
   margin: 5px;
 }
 
-p {
+.main-footer p {
   color: white;
   size: 20px;
 }
