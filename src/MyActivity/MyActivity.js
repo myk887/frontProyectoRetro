@@ -26,14 +26,14 @@ function MyActivity() {
       </div>
       <div className='info'>
           <div className='boySold'>
-            <p onClick={(e) => setShow(!show)}> Productos que interesan</p>
+            <p onClick={(e) => setShow(!show)}> Productos que interesan MyActivity.js</p>
             { show &&
             <div >
                 <ArticlesBuyer/>
             </div>}
           </div>
           <div className='boySold'>
-            <p onClick={(e) => setShow(!show)}>Productos te interesan</p>
+            <p onClick={(e) => setShow(!show)}>Productos te interesan MyActivity.js</p>
             { !show &&
             <div>
                 <ArticlesSold/>

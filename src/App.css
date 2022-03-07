@@ -71,6 +71,7 @@ justify-content: space-between;
   color: var(--grey);
   text-decoration: none;
   font-size: 18px;
+  cursor: pointer;
   transition: font-size 0.3s ease
 }
 
@@ -83,10 +84,13 @@ justify-content: space-between;
   color: red;
 }
 
+/* modify  es el link de editar. El Span contiene el Unicode. */
+
 .modify {
   color: var(--grey);
   text-decoration: none;
   font-size: 18px;
+  cursor: pointer;
   transition: font-size 0.3s ease;
 }
 

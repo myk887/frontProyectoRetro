@@ -1,8 +1,10 @@
-.datauser {
+/* AFECTA EN OTROS SITIOS
+ .datauser {
     display: flex;
     flex-direction: column;
     padding: 7vw;
-}
+} */
+
 .info {
     display: flex;
     align-items: center;

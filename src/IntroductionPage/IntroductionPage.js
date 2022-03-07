@@ -9,12 +9,11 @@ function IntroductionPage () {
       <div className='introductioPage'>
         <div className='ofertas'>
           <Banners/>
-          <ProductsLowcostWrapper />
           <LatestProductWrapper />
+          <ProductsLowcostWrapper />
         </div>
       </div>
     )
 }
-
 
 export default IntroductionPage

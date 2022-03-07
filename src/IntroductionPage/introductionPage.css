@@ -18,11 +18,15 @@
 .ofertas {
   width: 100%;
 }
+
+/* ESTE DIV, ESCRITO ASÍ, AFECTA EN OTROS SITIOS - HACERLO ESPECIFICANDO CLASE
+
   div>h1 {
       text-align: center;
       text-decoration: underline;
       font-style: italic;
-  }
+  } */
+
   main .photos {
     flex: 0 0 66%;
     display: flex;

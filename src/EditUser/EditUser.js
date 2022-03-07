@@ -5,7 +5,6 @@ import { useSelector } from 'react-redux'
 import Loading from '../Loading'
 
 
-
 function EditUser() {
 
   const datos = useSelector(d => d.userDatos)
@@ -89,30 +88,36 @@ function EditUser() {
         }
       }
     }
+
   return (
     loading ? <div className="datauser"><Loading /></div> :
+
     <div className="datauser">
+
       <div className='title'>
         <Link className='casita' to={'/'} title='Pàgina principal'>⌂</Link>
-        <h1>Mi Perfil </h1>
+        <h1>Mi Perfil EditUser.js </h1>
       </div>
+
       <div className='info'>
+
         <div className='userphoto'>
             {avatarURL ?
             <img className='avatar avatarRegistre' src={avatarURL} alt='avatar'/>
             :
             <img className='avatar avatarRegistre' src={`http://localhost:3000${datos[0].avatar.replace('./', '/')}`} alt={datos[0].username} />}
             <label>
-            <div type='button' className='changephoto'>Cambiar foto</div>
+            <div type='button' className='changephoto'>Cambiar foto EditUser.js</div>
             <input type="file" onChange={handlePhoto} accept="image/x-png,image/gif,image/jpeg" />
             </label>
         </div>
+
         {!show3 ?
-        <p onClick={(e) => setShow3(true)}>✎ Hacer cambios en mi perfil</p>
+        <p onClick={(e) => setShow3(true)}>✎ Hacer cambios en mi perfil EditUser.js</p>
         :
         <div>
           { show3 !== 2 ?
-            <p onClick={(e) => setShow3(2)}> ✎Editar datos de perfil</p>
+            <p onClick={(e) => setShow3(2)}> ✎Editar datos de perfil EditUser.js</p>
             :
             <form className='form' onSubmit={handleSubmit}>
               <label>
@@ -184,8 +189,10 @@ function EditUser() {
               </label>
               <button className='savedata'>Guardar datos</button>
           </form>}
+
+
           { show3 !== 3 ?
-          <p onClick={(e) => setShow3(3)}>✎ Cambiar contraseña</p>
+          <p onClick={(e) => setShow3(3)}>✎ Cambiar contraseña EditUser.js</p>
           :
           <form className='form' onSubmit={handleSubmitPass}>
             <label>
