@@ -73,9 +73,9 @@ function ArticlesPage() {
                 <h2 className='price-artpage'>{article.price} €</h2>
 
                 <div className="description-artpage">
-                <span className="description-title">Descripción artículo:</span>
-                <h1 className="interline"></h1>
-                <span className="description-content" >{article.description}</span>
+                    <span className="description-title">Descripción artículo:</span>
+                        <h1 className="interline"></h1>
+                    <span className="description-content" >{article.description}</span>
                 </div>
 
                 <div className="puntuacion">
@@ -85,10 +85,10 @@ function ArticlesPage() {
                 </div>
 
                 <div className="place-artpage">
-                Ubicación: <br/>
-                <span className="place-artpage-flag">⚑  </span>
-                <span> {name && name[0].location.charAt(0).toUpperCase() + name[0].location.slice(1)}</span>,
-                <span> {name && name[0].province.charAt(0).toUpperCase() + name[0].province.slice(1)}</span>
+                    Ubicación: <br/>
+                    <span className="place-artpage-flag">⚑  </span>
+                    <span> {name && name[0].location.charAt(0).toUpperCase() + name[0].location.slice(1)}</span>,
+                    <span> {name && name[0].province.charAt(0).toUpperCase() + name[0].province.slice(1)}</span>
                 </div>
 
                 <div className="buttons-artpage">

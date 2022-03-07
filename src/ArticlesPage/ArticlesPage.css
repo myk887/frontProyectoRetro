@@ -8,7 +8,7 @@
 
 .photo-container {
     border: 1px solid rgb(205, 204, 208);
-    background-color: var(--light-grey);
+    background-color: var(--light-grey-background);
     border-radius: 10px;
     box-sizing: border-box;
     text-align: center;
@@ -54,7 +54,7 @@
     min-height: 60px;
     margin: auto;
     padding:20px;
-    background-image: linear-gradient(#dfe2e6,#eff2f5);
+    background-image: linear-gradient(var(--dark-grey-gradient), var(--light-grey-gradient));
     border-radius: 5px;
     font-size: 25px;
 }
@@ -97,7 +97,7 @@
     max-width: 400px;
     height: 5vh;
     min-height: 60px;
-    background-image: linear-gradient(#80858a, #25292e);
+    background-image: linear-gradient(var(--light-grey-button), var(--dark-grey-button));
     border-radius: 10px;   
     margin: 20px;
     display:grid;
@@ -127,11 +127,22 @@
 
 @media screen and (max-width: 1100px) and (orientation: portrait) {
 
-    .product-article{
-        display:flex;
-        flex-direction: column;
-    }
-    .photo-container {
-        min-width: 450px;
-    }
+.product-article{
+    display:flex;
+    flex-direction: column;
+}
+
+.photo-container {
+    min-width: 450px;
+}
+
+
+.price-artpage {
+    text-decoration:none;
+    text-align:left;
+    padding: 0 20px;
+    font-style: normal;
+    font-size: 35px;
+}
+
 }

@@ -2,5 +2,9 @@
   --blue: rgb(51, 83, 228);
   --orange: rgb(228, 131, 40);
   --grey: rgb(124, 124, 124);
-  --light-grey: rgb(240, 240, 240);
+  --light-grey-background: rgb(240, 240, 240);
+  --light-grey-gradient:#eff2f5;
+  --dark-grey-gradient:#dfe2e6;
+  --light-grey-button:#a6aeb6;
+  --dark-grey-button:#25292e;
 }

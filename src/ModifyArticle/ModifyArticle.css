@@ -1,8 +1,9 @@
 
 
+/* AFECTA A OTROS CSS
 .myArticles {
     text-align: center;
-}
+} */
 .MyArticle {
     padding: 10px;
     display: flex;
@@ -16,22 +17,9 @@
     width: 150px;
     height: 150px;
 }
-.textMyArticle {
+/* AFECTA A OTROS CSS
+ .textMyArticle {
     display: flex;
     flex-direction: column;
     text-align: right;
-}
-.delete {
-    font-style: italic;
-    text-decoration: underline;
-    cursor: pointer;
-    color: blue;
-    margin-right: 10px;
-}
-.modify {
-    font-style: italic;
-    text-decoration: underline;
-    cursor: pointer;
-    color: blue;
-    margin-left: 10px;
-}
+} */
