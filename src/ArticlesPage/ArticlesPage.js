@@ -74,7 +74,9 @@ function ArticlesPage() {
 
                 <div className="description-artpage">
                     <span className="description-title">Descripción artículo:</span>
-                        <h1 className="interline"></h1>
+                        {/* <h1 className="interline"></h1> */}
+                        <br/>
+                        <br/>
                     <span className="description-content" >{article.description}</span>
                 </div>
 

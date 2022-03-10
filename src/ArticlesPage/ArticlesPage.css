@@ -1,9 +1,13 @@
 @import '../normalize.css';
 @import '../variables.css';
 
+
+
+
 .product-article{
+    width: 98vw;
     display:flex;
-    margin: 0 100px;
+    justify-content: center;
 }
 
 .photo-container {
@@ -14,6 +18,8 @@
     text-align: center;
     padding: 2vw;
     margin: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .articles-page-photo{
@@ -28,7 +34,7 @@
     border-radius: 5px;
     width:30vW;
     min-width: 450px;
-    min-height:900px;
+    min-height: 60vh;
     margin: 20px;
 }
 
@@ -98,7 +104,7 @@
     height: 5vh;
     min-height: 60px;
     background-image: linear-gradient(var(--light-grey-button), var(--dark-grey-button));
-    border-radius: 10px;   
+    border-radius: 10px;
     margin: 20px;
     display:grid;
     place-items:center

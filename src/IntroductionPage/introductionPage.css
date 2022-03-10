@@ -34,7 +34,7 @@
     border: 10px solid black;
   }
   main .photos .photo {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -43,6 +43,7 @@
     min-width: 0;
     text-align: center;
     animation: mymove 3s infinite;
+    position:unset;
   }
   main .photos .photo img {
     width: 120px;
@@ -66,9 +67,9 @@
     width: 90%;
   }
 
-  @keyframes mymove {
+  /* @keyframes mymove {
     0%   {transform: translatex(200px);}
     25%  {transform: translatex(50px);}
     75%  {transform: translatex(0px);}
     100% {transform: translatex(0px);}
-  }
+  } */
