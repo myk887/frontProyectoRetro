@@ -35,13 +35,13 @@ function LatestProduct () {
             </h1>
            <main>
              <div className="photos">
-             <span className='previous oferts' onClick={handlePrev}>⇦</span>
-               {articlesLowcost?.slice(step * perPage, (step + 1) * perPage).map(product =>
-                 <div key={product.id} className="photo">
-                   <img src={`http://localhost:3000${product.photo.replace('./', '/')}`} alt="" />
-                   <Link to={'/article/' + product.id}><span>{product.name}</span></Link>
-                 </div>
-               )}
+              <span className='previous oferts' onClick={handlePrev}>⇦</span>
+                {articlesLowcost?.slice(step * perPage, (step + 1) * perPage).map(product =>
+                  <div key={product.id} className="photo">
+                    <img src={`http://localhost:3000${product.photo.replace('./', '/')}`} alt="" />
+                    <Link to={'/article/' + product.id}><span>{product.name}</span></Link>
+                  </div>
+                )}
                <span className='next oferts' onClick={handleNext}>⇨</span>
              </div>
            </main>
