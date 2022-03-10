@@ -1,23 +1,62 @@
+@import '../normalize.css';
 @import '../variables.css';
 
 .aside {
-  list-style: none;
   background-color: var(--blue);
-  flex: 0 0 auto;
-  min-height: 70vh;
-  padding: 20px;
-}
-/* aside ul: ven de "Category.css", de "SubCategory.css" e de "Aside.css" */
-.aside ul{
-  display: flex;
+  display:flex;
   flex-direction: column;
-  gap: 30px;
+  flex-wrap: nowrap;
+  padding: 10px;
+  gap: 20px 0;
+  font-size:20px;
 }
-/*li:first-letter: ven de "Aside.css", de "Category.css" e de "SubCategory.css"*/
-li:first-letter {
+
+.aside-link:first-letter {
   text-transform: uppercase;
 }
-.aside ul a {
+
+.aside-link a{
   text-decoration: none;
-  color: white;
+  color:white;
+  transition: color 0.3s ease;
+  transition: transform 0.3s ease;
+}
+
+.aside-link {
+  transition: transform 0.3s ease;
+}
+
+.aside-link:hover {
+  transform: scale(1.1);
+}
+
+.aside-link a:hover{
+  color: var(--orange);
+}
+
+/* Formato para los links seleccionados */
+
+.aside-link .active {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--orange);
+}
+
+@media screen and (max-width: 1200px) and (orientation: portrait) {
+  .aside {
+    background-color: var(--blue);
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px 45px;
+
+  }
+
+  .aside-link {
+    width: 90px;
+  }
+
+  .aside-link a{
+    text-decoration: none;
+  }
 }

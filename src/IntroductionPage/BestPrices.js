@@ -4,19 +4,16 @@ import { Link } from 'react-router-dom'
 import Loading from '../Loading'
 import './introductionPage.css';
 
-function LatestProduct () {
+function BestPrices () {
     const articles = useFetch('http://localhost:3000/articles')
     const newArticles = [...articles]
-    const articlesLowcost = newArticles.sort(function(a, b){return a.createdAt - b.createdAt})
+    const articlesLowcost = newArticles.sort(function(a, b){return a.price - b.price})
     const [step, setStep] = useState(0)
     const perPage = 3
     const pags = Math.ceil(articlesLowcost.length / perPage)
 
     const handlePrev = () => setStep(step > 0 ? step - 1 : pags - 1)
     const handleNext = useCallback(() => setStep((step + 1) % pags), [setStep, step, pags])
-
-    //useCallback
-    //useMemo
 
     useEffect(() => {
       const carousel = setInterval(() => {
@@ -31,7 +28,7 @@ function LatestProduct () {
     return (
         <div>
             <h1>
-                Los productos mas nuevos LatestProduct.js
+                Precios para todos los bolsillos
             </h1>
            <main>
              <div className="photos">
@@ -49,9 +46,9 @@ function LatestProduct () {
     )
 }
 
-const LatestProductWrapper = () =>
+const BestPricesWrapper = () =>
   <Suspense fallback={<Loading />}>
-    <LatestProduct />
+    <BestPrices/>
   </Suspense>
 
-export default LatestProductWrapper
+export default BestPricesWrapper

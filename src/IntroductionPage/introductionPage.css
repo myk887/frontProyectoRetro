@@ -1,8 +1,106 @@
 
-.introductioPage {
+@import '../variables.css';
+@import '../normalize.css';
+
+
+.banners {
+  display:grid;
+  place-items: center;
+}
+
+.introductionpage-title {
+  color:var(--grey);
+  font-size: 25px;
+  padding: 1vw 5vw;
+}
+
+.introductionpage-banner {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5vw;
+  max-width: 1920px;
+}
+
+.introductionpage-container {
+  border: 1px solid lightgray;
+  border-radius: 0.5vw;
+  padding: 0.3vw;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  transition: background-color 0.3s ease;
+  transition: border 0.1s ease;
+  transition: box-shadow 0.3s ease;
+}
+
+.introductionpage-container:hover {
+  transform: scale(1.05);
+  background-color: var(--light-blue);
+  border: 1.5px solid var(--blue-transparent);
+  box-shadow: 5px 10px var(--light-grey-button);
+}
+
+.introductionpage-photos {
+  height: 15vw;
+  width: 15vw;
+  margin: 0.5vW auto;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.introductionpage-names {
+  color: black;
+  margin: 2vw 1vw;
+  max-width: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.introductionpage-container a {
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.introductionpage-arrows {
+  font-size: 4vw;
+  margin: auto 0;
+  color: var(--arrow-grey-transparent);
+  cursor: pointer;
+  transition: transform 0.5s ease;
+  transition: color 0.5s ease;
+}
+
+.introductionpage-arrows:hover {
+  transform: scale(1.2);
+  color: var(--arrow-grey);
+}
+
+
+@media screen and (max-width: 1100px) and (orientation: portrait) {
+
+  .introductionpage-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .introductioPage {
   display: flex;
   background: linear-gradient(to bottom, gray    ,  #ffffff);
-}
+} */
+
 .home {
   border-right: 1px solid black;
   border-top: 1px solid black;

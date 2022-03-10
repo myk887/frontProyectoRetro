@@ -6,6 +6,7 @@
   'main main'
   ;
 }
+
 /* Main: area principal pagina con productos. Aside en "Aside.js" */
 .main {
   grid-area: main;

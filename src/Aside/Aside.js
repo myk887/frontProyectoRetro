@@ -11,13 +11,11 @@ function Aside () {
 
     return (
         <div className="aside">
-            <ul>
-                <li><NavLink to={`/`}>Home</NavLink></li>
-                <li><NavLink to={`/todos`}>Todos</NavLink></li>
+                <div className="aside-link"><NavLink to={`/`}>Home</NavLink></div>
+                <div className="aside-link"><NavLink to={`/todos`}>Todos</NavLink></div>
                 {categoriesBack.map(category =>
-                    <li key={category}><NavLink to={`/article/byCategory/${removeAccents(category.toLocaleLowerCase())}`}>{category}</NavLink></li>
+                    <div key={category} className="aside-link"><NavLink to={`/article/byCategory/${removeAccents(category.toLocaleLowerCase())}`}>{category}</NavLink></div>
                     )}
-            </ul>
         </div>
     )
 }
