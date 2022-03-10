@@ -25,7 +25,7 @@ function EditUser() {
   const [avatar, setAvatar] = useState(false)
   const [show, setShow] = useState(false)
   const [show2, setShow2] = useState(false)
-  const [show3, setShow3] = useState(false)
+  const [show3, setShow3] = useState(2)
 
   const switchShow = () => setShow(!show)
   const switchShow2 = () => setShow2(!show2)
@@ -112,9 +112,7 @@ function EditUser() {
             </label>
         </div>
 
-        {!show3 ?
-        <p onClick={(e) => setShow3(true)}>✎ Hacer cambios en mi perfil EditUser.js</p>
-        :
+        {show3 &&
         <div>
           { show3 !== 2 ?
             <p onClick={(e) => setShow3(2)}> ✎Editar datos de perfil EditUser.js</p>
