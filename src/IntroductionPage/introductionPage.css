@@ -19,13 +19,12 @@
   width: 100%;
 }
 
-/* ESTE DIV, ESCRITO ASÍ, AFECTA EN OTROS SITIOS - HACERLO ESPECIFICANDO CLASE
 
-  div>h1 {
+  .ofertas h1 {
       text-align: center;
       text-decoration: underline;
       font-style: italic;
-  } */
+  }
 
   main .photos {
     flex: 0 0 66%;
@@ -44,6 +43,7 @@
     width: 120px;
     min-width: 0;
     text-align: center;
+    animation: mymove 3s infinite;
   }
   main .photos .photo img {
     width: 120px;
@@ -57,4 +57,12 @@
     font-style: italic;
     /* white-space: nowrap; */
     width: 100%;
+    color: black;
+  }
+
+  @keyframes mymove {
+    0%   {transform: translatex(200px);}
+    25%  {transform: translatex(50px);}
+    75%  {transform: translatex(0px);}
+    100% {transform: translatex(0px);}
   }
