@@ -1,7 +1,7 @@
 
 .introductioPage {
   display: flex;
-  background: linear-gradient(to bottom, gray    ,  #ffffff);
+  background: linear-gradient(to bottom, #ffffff, gray    ,  #ffffff);
 }
 .home {
   border-right: 1px solid black;
@@ -31,7 +31,6 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    overflow-y: auto;
     border: 10px solid black;
   }
   main .photos .photo {
@@ -58,6 +57,13 @@
     /* white-space: nowrap; */
     width: 100%;
     color: black;
+  }
+  .banners {
+    text-align: center;
+  }
+
+  .banners .bannersImg {
+    width: 90%;
   }
 
   @keyframes mymove {

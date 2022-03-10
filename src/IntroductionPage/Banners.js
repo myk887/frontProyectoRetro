@@ -25,7 +25,7 @@ function Banners () {
 
     return (
       <div className="banners">
-          <img src={banners[banner-1]} alt="" />
+          <img className="bannersImg" src={banners[banner-1]} alt="" />
       </div>
     )
   }
