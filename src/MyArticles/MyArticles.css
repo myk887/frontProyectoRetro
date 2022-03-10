@@ -1,8 +1,11 @@
 @import '../normalize.css';
 @import '../variables.css';
 
+.myarticles {
+    min-width: 750px;
+}
+
 .myarticles-header {
-    position:fixed;
     background-color:var(--light-grey-background);
     width: 100%;
     display:flex;
@@ -28,9 +31,9 @@
 }
 
 .myarticles-grid{
-    padding: 100px 0 0 0 ;
     display:flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .myarticles-card{
@@ -90,10 +93,11 @@
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
+        min-width: 750px;
     }
 
     .myarticles-grid{
-        padding: 200px 0 0 0 ;
+        min-width: 750px;
     }
 }
 
@@ -104,6 +108,7 @@
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
+        min-width: 750px;
     }
 
     .myarticles-card{
@@ -114,9 +119,10 @@
         margin: 20px;
         border-radius: 5px;
         background-color:var(--light-grey-background);
+        min-width: 700px;
     }
 
     .myarticles-grid{
-        padding: 200px 0 0 0 ;
+        min-width: 750px;
     }
 }
