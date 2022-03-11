@@ -38,7 +38,6 @@ function Search({setSearch}) {
             <label className="search">
                 <input value={search} name="username" onClick={handleClick} onChange={(e)=>setSearchFor(e.target.value)} placeholder='🔍 Busca en Retros.com'/>
             </label>
-            
         </form>
     )
 }
