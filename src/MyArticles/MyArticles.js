@@ -48,7 +48,7 @@ function MyArticles () {
                 <button><Link to={'/user/article/create'}>Crear Nuevo Anuncio</Link></button>
 
                 <div class="myarticles-casita">
-                    <a class="casita" title="Página principal" href="/"><span>⌂ </span>Volver a Home</a>
+                    <Link class="casita" title="Página principal" to={"/"}><span>⌂ </span>Volver a Home</Link>
                 </div>
             </div>
 

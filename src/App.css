@@ -1,20 +1,7 @@
 @import './normalize.css';
 @import './variables.css';
 
-/* .header {
-grid-area: header;
-padding: 20px;
-display: flex;
-gap: 20px;
-align-items: center;
-justify-content: space-between;
-} */
 
-/* .footer {
-  grid-area: footer;
-  background-color: hsl(241, 73%, 75%);
-  padding: 20px;
-} */
 
 .body-structure {
   min-width: 750px;
@@ -22,10 +9,7 @@ justify-content: space-between;
   grid-template-columns: 200px 1fr;
   margin-top: 150px;
 }
-/* a {
-    text-decoration: none;
-    color: white;
-} */
+
 
 .active {
     font-style: italic;
