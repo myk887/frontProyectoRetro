@@ -94,27 +94,27 @@ function ArticlesBuyer(){
 
   return (
     loading ?
-    <div className="datauser"><Loading /></div> :
-    <div className='soldBuy'>
+    <div className="datauser-activity"><Loading /></div> :
+    <div className='soldBuy-activity'>
       {
         !datosArticulos[0].length ?
-        <span>NO TIENES PRODUCTOS COMPRADOS</span>
+        <span>NO TIENES PRODUCTOS EN PROCESON DE VENTA</span>
         :
         datosArticulos[0]?.map((articulo, i) =>
-          <div key={articulo.id} className="comercio">
-            <div  className="MyArticle">
-                <img className="image" src={`http://localhost:3000${articulo.photo.replace('./', '/')}`} alt={articulo.name} />
+          <div key={articulo.id} className="comercio-activity">
+            <div  className="MyArticle-activity">
+                <img className="image-activity" src={`http://localhost:3000${articulo.photo.replace('./', '/')}`} alt={articulo.name} />
                 <div>
                   <h3>{articulo.name}</h3>
-                  <div className="textMyArticle">
-                      <h4>{articulo.price} euros</h4>
+                  <div className="textMyArticle-activity">
+                      <h4>{articulo.price} €</h4>
                   </div>
                 </div>
             </div>
-            <div className='estado'>
-              {(datosArticulos[1][i].buy === 1) && articulo.buyerId && <div> <h2>Estado de la venta</h2> <span>✅</span> </div>}
+            <div className='estado-activity'>
+              {(datosArticulos[1][i].buy === 1) && articulo.buyerId && <div> <h2>Estado de la venta</h2> <span>✅ Vendido</span> </div>}
               {(datosArticulos[1][i].buy === 1) && !articulo.buyerId && <div><h2>Día de compra</h2> <p>{datosArticulos[1][i].saleDate.split('Z')[0].split('T')[0]}{' '}{datosArticulos[1][i].saleDate.split('Z')[0].split('T')[1].slice(0, -4)}</p> </div>}
-              {(datosArticulos[1][i].buy === 0) && <span>❌</span>}
+              {(datosArticulos[1][i].buy === 0) && <div> <h2>Estado de la venta</h2> <span>❌ Rechazado</span> </div>}
               {(datosArticulos[1][i].buy === null) && <div>
                   <h2>Estado de la venta</h2>
                   <form onSubmit={(e)=> handleSubmit(e, {idArticle: articulo.id, idBuyer: datosArticulos[1][i].buyerId, location: articulo.location, province: articulo.province})}>

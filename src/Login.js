@@ -80,8 +80,7 @@ function Session() {
             <div class="dropdown-content">
             <Link to={'user/edit'}>Mi Perfil</Link>
             <Link to={'user/articles'}>Mis Productos</Link>
-            <Link to={'user/actividad'}>Mis Actividad</Link>
-            <Link to={'user/Comercio'}>Mis Negocios</Link>
+            <Link to={'user/actividad'}>Mi Actividad</Link>
             <Link to={'/'} onClick={cerrarSesion}>Cerrar Sesion</Link>
             </div>
           </div>

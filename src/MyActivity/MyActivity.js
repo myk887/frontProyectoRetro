@@ -19,26 +19,28 @@ function MyActivity() {
   const [show, setShow] = useState(true)
 
   return (
-    <div className="datauser">
-      <div className='title'>
-        <Link className='casita' to={'/'} title='Pàgina principal'>⌂</Link>
-        <h1>Mi Actividades </h1>
+    <div className="datauser-activity">
+      <div className='title-activity'>
+        <Link className='casita' to={'/'} title='Pàgina principal'>⌂ Volver al Home</Link>
+        <h1>Mi Actividad </h1>
       </div>
-      <div className='info'>
-          <div className='boySold'>
-            <p onClick={(e) => setShow(!show)}> Productos que interesan MyActivity.js</p>
-            { show &&
-            <div >
-                <ArticlesBuyer/>
-            </div>}
+      <div className='info-activity'>
+        <div className='info-title-activity'>
+          <div className='boySold-activity'>
+            <h2 className={show && 'mirando-activity'} onClick={(e) => setShow(!show)}> Productos en venta</h2>
           </div>
-          <div className='boySold'>
-            <p onClick={(e) => setShow(!show)}>Productos te interesan MyActivity.js</p>
-            { !show &&
-            <div>
-                <ArticlesSold/>
-            </div>}
+          <div className='boySold-activity'>
+            <h2 className={!show && 'mirando-activity'} onClick={(e) => setShow(!show)}>Productos que quiero</h2>
           </div>
+        </div>
+        { show &&
+          <div >
+              <ArticlesBuyer/>
+          </div>}
+          { !show &&
+          <div>
+              <ArticlesSold/>
+          </div>}
       </div>
     </div>
   )

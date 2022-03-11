@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import './CreateArticle.css'
 
 
@@ -70,7 +70,7 @@ function CreateArticle() {
                 verifica ?
                   <div className='verifica'>
                     <h1>Producto creado</h1>
-                    <Link to={'/article/' + id.id}> Ver producto</Link>
+                    <a href={'/article/' + id.id}> Ver producto</a>
                   </div>
                   :
                   <fieldset className='cretateForm'>

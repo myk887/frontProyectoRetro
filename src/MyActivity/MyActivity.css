@@ -1,102 +1,91 @@
-/* AFECTA EN OTROS SITIOS
-.datauser {
+@import '../variables.css';
+
+.datauser-activity {
   display: flex;
   flex-direction: column;
-  padding: 7vw;
-} */
+  justify-content: center;
+  padding: 3vw;
+}
 
-/* AFECTA EN OTROS SITIOS
- .textMyArticle {
+ .textMyArticle-activity {
   display: flex;
   flex-direction: column;
   text-align: right;
-} */
+}
 
-
-
-
-
-
-/* .info {
+.info-activity {
+  min-height: 50vh;
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-around;
   gap: 5vw;
-  background-color: #ddd;
-  padding: 30px;
+  padding: 2vw;
 }
-.title {
-  display: flex;
-}
-.title h1 {
-  margin-left: 35vw;
-}
-.info>p {
-  font-weight: bold;
-  font-style: italic;
-  font-size: 25px;
-  cursor: pointer;
-}
-
-.MyArticle {
-  width: 100%;
-  padding: 10px;
+.info-title-activity{
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  border: 3px solid black;
-  margin: 20px;
+  gap: 10vw;
+  cursor: pointer;
 }
-.image {
-  width: 150px;
-  height: 150px;
-}
-
-
-.soldBuy {
-  width: 100%;
-}
-.comercio {
+.title-activity {
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
+  background-color:var(--light-grey-background);
 }
 
-.estado {
-  width: 65%;
+.MyArticle-activity {
+  background-color:var(--light-grey-background);
+  width: 40vw;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5vw;
+  border: 2px solid silver;
+  border-radius: 5px;
+  margin: 20px;
+}
+.image-activity {
+  width: 20vw;
+  height: 15vw;
 }
 
-#form {
-  width: 250px;
-  margin: 0 auto;
-  height: 50px;
-}
 
-#form p {
+.soldBuy-activity {
+  width: 100%;
+}
+.comercio-activity {
+  display: flex;
+  justify-content: center;
   text-align: center;
 }
 
-#form label {
-  font-size: 20px;
+.mirando-activity {
+  color: darkblue;
 }
 
-input[type="radio"] {
+
+.buttonPuntua-activity {
+  color: white;
+}
+
+.estado-activity input[type="radio"] {
   display: none;
 }
 
-label {
-  color: grey;
-}
 
-.clasificacion {
+.estado-activity .clasificacion {
   direction: rtl;
   unicode-bidi: bidi-override;
 }
 
-label:hover,
-label:hover ~ label {
+.estado-activity label:hover,
+.estado-activity label:hover ~ label {
   color: orange;
 }
 
-input[type="radio"]:checked ~ label {
+.estado-activity input[type="radio"]:checked ~ label {
   color: orange;
-} */
+}
