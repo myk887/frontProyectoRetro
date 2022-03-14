@@ -13,13 +13,16 @@ li {
   padding: 20px;
 }
 .buttonShow {
-  background-color: white;
-  padding: 2.5px;
+  /* background-color: rgb(87, 87, 233); */
+  background-image: none;
+  padding:0 2.5px;
+  background: linear-gradient(to right, #3353e4, #7c7c7c,#3353e4);
   height: 57.5px;
   width: 22.5px;
   border: none;
   border-radius: 0;
-  margin-bottom: 16px;
+  margin: 0;
+  align-self:flex-start;
 }
 
 .subCategories ul {
