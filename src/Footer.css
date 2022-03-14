@@ -1,47 +1,98 @@
-.main-footer {
+@import 'normalize.css';
+@import 'variables.css';
+
+/* .main-footer {
   grid-area: footer;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  /* background-color: rgb(51, 83, 228); */
-  background: linear-gradient(to right, #7c7c7c 20%,#3353e4 60%,#7c7c7c);
-  padding: 20px 20px 30px 20px;
-  max-height: 150px;
-  min-width: 750px;
+  background: linear-gradient(to left, #7c7c7c 20%,#3353e4 60%,#7c7c7c);
+  max-width: 1600px;
+  width: 100%;
+} */
+
+.main-footer {
+  grid-area: footer;
+  display: grid;
+  background: linear-gradient(to left, #7c7c7c 20%,#3353e4 60%,#7c7c7c);
+  width:100%;
+  margin: 5px 0 0 0;
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-areas:
+  'navegation company community' ;
 }
 
-.link {
+.footer-nav {
+  grid-area: navegation;
+  flex: 0 0 250px;
+}
+
+.footer-datos-empresa {
+  grid-area: company;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.footer-logo-image {
+  height:150px;
+  margin: 0 50px;
+}
+
+.footer-community {
+  grid-area: community;
+}
+
+.footer-link {
   margin-bottom: 15px;
 }
 
-.link a {
+.footer-link a {
   text-decoration: none;
   color: white;
 }
-.link a:hover {
+.footer-link a:hover {
   color: black;
 }
 
-.fiscal {
-  color: white;
+.footer-fiscal {
+  color: black;
   margin-top: 5px;
 }
 
-.community {
+.footer-community {
   text-align: center;
 }
 
-.community img {
+.footer-community img {
   width: 45px;
   margin: 5px;
 }
 
-.logo {
-  height: 120px;
-  margin: 5px;
+@media screen and (max-width: 1100px){
+
+  .footer-datos-empresa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  } 
 }
 
-.main-footer p {
-  color: white;
-  size: 20px;
+@media screen and (max-width: 640px){
+
+  .main-footer {
+    grid-template-columns: 150px 1fr 150px;
+    grid-template-areas:
+    'navegation company'
+    'community  company' ;
+  }
+
+  .footer-datos-empresa {
+    grid-area: company;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  } 
 }

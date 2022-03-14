@@ -1,9 +1,9 @@
 import { useCallback,  useEffect,  useState } from 'react'
 import './introductionPage.css';
-import Banner1 from '../images/banners/Banner1.png'
-import Banner2 from '../images/banners/Banner2.png'
-import Banner3 from '../images/banners/Banner3.png'
-import Banner4 from '../images/banners/Banner4.png'
+import Banner1 from '../images/banners/Banner1.jpg'
+import Banner2 from '../images/banners/Banner2.jpg'
+import Banner3 from '../images/banners/Banner3.jpg'
+import Banner4 from '../images/banners/Banner4.jpg'
 
 function Banners () {
 
@@ -25,7 +25,7 @@ function Banners () {
 
     return (
       <div className="banners">
-          <img src={banners[banner-1]} alt="" />
+          <img className="banners-image" src={banners[banner-1]} alt="" />
       </div>
     )
   }

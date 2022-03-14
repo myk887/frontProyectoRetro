@@ -74,7 +74,7 @@ function Session() {
     usuario ?
       (datosUsuario &&
         <div className='perfil'>
-          <img className='avatar' src={`http://localhost:3000${datosUsuario[0].avatar.replace('./', '/')}`} alt={datosUsuario[0].username}></img>
+          <img className='avatar-image' src={`http://localhost:3000${datosUsuario[0].avatar.replace('./', '/')}`} alt={datosUsuario[0].username}></img>
           <div class="dropdown">
             <button className='buttonUsername'>{datosUsuario[0].username}</button>
             <div class="dropdown-content">

@@ -1,9 +1,10 @@
 :root {
-  --blue: rgb(51, 83, 228);
+  --blue: rgb(2, 57, 174);
   --light-blue:rgb(215, 227, 250);
   --blue-transparent: rgb(51, 83, 228,0.3);
   --orange: rgb(228, 131, 40);
   --light-orange: rgb(253, 250, 234);
+  --dark-grey: rgb(79, 78, 78);
   --grey: rgb(124, 124, 124);
   --light-grey-background: rgb(240, 240, 240);
   --light-grey-gradient:#eff2f5;
@@ -12,5 +13,5 @@
   --dark-grey-button:#25292e;
   --arrow-grey:grey;
   --arrow-grey-transparent:rgb(128, 128, 128,0.3);
-  --shadows-grey: rgb(191, 194, 211);
+  --shadows-grey: rgb(226, 227, 232);
 }

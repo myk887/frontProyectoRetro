@@ -6,10 +6,15 @@
 .banners {
   display:grid;
   place-items: center;
+  margin: 0 10px;
+}
+
+.banners-image {
+  height: 35vh;
 }
 
 .introductionpage-title {
-  color:var(--grey);
+  color:var(--dark-grey);
   font-size: 25px;
   padding: 1vw 5vw;
 }
@@ -36,7 +41,7 @@
   transform: scale(1.05);
   background-color: var(--light-blue);
   border: 1.5px solid var(--blue-transparent);
-  box-shadow: 5px 10px var(--light-grey-button);
+  box-shadow: 7px 10px var(--shadows-grey);
 }
 
 .introductionpage-photos {
@@ -78,6 +83,15 @@
 
 @media screen and (max-width: 1100px) and (orientation: portrait) {
 
+  .banners {
+    margin: 10px auto;
+  }
+
+  .banners-image {
+    height:auto;
+    width: 100%;
+  }
+
   .introductionpage-banner {
     display: flex;
     flex-direction: column;
@@ -87,19 +101,8 @@
 }
 
 
+/* ESTE CODIGO ES DE MYKELL */
 
-
-
-
-
-
-
-
-
-/* .introductioPage {
-  display: flex;
-  background: linear-gradient(to bottom, gray    ,  #ffffff);
-} */
 
 .home {
   border-right: 1px solid black;
@@ -116,14 +119,6 @@
 .ofertas {
   width: 100%;
 }
-
-/* ESTE DIV, ESCRITO ASÍ, AFECTA EN OTROS SITIOS - HACERLO ESPECIFICANDO CLASE
-
-  div>h1 {
-      text-align: center;
-      text-decoration: underline;
-      font-style: italic;
-  } */
 
   main .photos {
     flex: 0 0 66%;
