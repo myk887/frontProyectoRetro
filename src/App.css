@@ -48,8 +48,6 @@
   font-size: 28px;
 }
 
-/* delete  es el link de borrar. El Span contiene el Unicode. */
-
 
 .delete{
   color: var(--grey);
@@ -67,8 +65,6 @@
   font-size: 23px;
   color: red;
 }
-
-/* modify  es el link de editar. El Span contiene el Unicode. */
 
 .modify {
   color: var(--grey);
@@ -88,8 +84,6 @@
 }
 
 
-/* formato por defecto para todos los botones sin clase específica */
-
 button {
   width: 30vw;
   min-width: 0px;
@@ -103,6 +97,7 @@ button {
   cursor: pointer;
   margin: 20px;
   box-shadow: 5px 5px 5px lightgrey;
+  color: white;
 
   transition: font-size 0.3s ease;
   transition: font-weight 0.3s ease;

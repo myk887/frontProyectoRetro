@@ -31,7 +31,7 @@ function LatestProduct () {
     return (
         <div>
             <h1>
-                Los productos mas nuevos LatestProduct.js
+                Los productos más nuevos
             </h1>
            <main>
              <div className="photos">

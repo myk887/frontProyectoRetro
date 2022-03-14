@@ -1,3 +1,5 @@
+@import '../variables.css';
+
 .HomePage {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -8,10 +10,16 @@
 }
 .subCategories ul {
   margin-top: 0;
-  padding: 20px;
+  padding: 21px;
   background-color: #ddd;
-  /* background: linear-gradient(to right bottom, #ccc 60%, #ddd); */
+  background:  var(--blue);
   display: flex;
   justify-content: space-around;
   gap: 30px;
 }
+
+.subCategories ul li a {
+  color: white;
+  text-decoration: none;
+}
+
