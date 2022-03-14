@@ -1,6 +1,6 @@
 .photo {
     width: 200px;
-    height: 200px;
+    /* height: 200px; */
     border-radius: 15px;
     flex-shrink: 0;
 }
@@ -49,7 +49,6 @@
 }
 .enlace {
     text-decoration: none;
-    color: black;
 }
 .buttons {
     display: flex;
