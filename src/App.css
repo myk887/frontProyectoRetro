@@ -31,7 +31,7 @@
   min-height: 70vh;
 }
 
-/* casita es el link de volver a Home. El Span contiene el Unicode. */
+/* En casita / delete / modify el Span contiene el Unicode. */
 
 .casita{
   color: var(--orange);
@@ -47,7 +47,6 @@
 .casita:hover {
   font-size: 28px;
 }
-
 
 .delete{
   color: var(--grey);
