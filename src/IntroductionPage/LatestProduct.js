@@ -15,8 +15,8 @@ function LatestProduct () {
     const handlePrev = () => setStep(step > 0 ? step - 1 : pags - 1)
     const handleNext = useCallback(() => setStep((step + 1) % pags), [setStep, step, pags])
 
-    //useCallback
-    //useMemo
+    // //useCallback
+    // //useMemo
 
     useEffect(() => {
       const carousel = setInterval(() => {

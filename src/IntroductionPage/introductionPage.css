@@ -43,7 +43,8 @@
     min-width: 0;
     text-align: center;
     animation: mymove 3s infinite;
-    position:unset;
+    z-index: 1;
+    position: relative;
   }
   main .photos .photo img {
     width: 120px;
@@ -67,9 +68,9 @@
     width: 90%;
   }
 
-  /* @keyframes mymove {
-    0%   {transform: translatex(200px);}
-    25%  {transform: translatex(50px);}
-    75%  {transform: translatex(0px);}
-    100% {transform: translatex(0px);}
-  } */
+  @keyframes mymove {
+    0%   {transform: translateX(200px);}
+    25%  {transform: translateX(50px);}
+    75%  {transform: translateX(0px);}
+    100% {transform: translateX(0px);}
+  }
