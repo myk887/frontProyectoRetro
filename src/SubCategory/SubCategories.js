@@ -10,37 +10,40 @@ const removeAccents = (str) => {
 function SubCategories () {
     const { subcategory } = useParams()
 
-    if (subcategory === 'altavoces') subCategoriesBack = ['altavoces', 'mp3', 'radios', 'tocadiscos', 'walkman']
-    if (subcategory === 'mp3') subCategoriesBack = ['altavoces', 'mp3', 'radios', 'tocadiscos', 'walkman']
-    if (subcategory === 'radios') subCategoriesBack = ['altavoces', 'mp3', 'radios', 'tocadiscos', 'walkman']
-    if (subcategory === 'tocadiscos') subCategoriesBack = ['altavoces', 'mp3', 'radios', 'tocadiscos', 'walkman']
-    if (subcategory === 'walkman') subCategoriesBack = ['altavoces', 'mp3', 'radios', 'tocadiscos', 'walkman']
-    if (subcategory === 'cables') subCategoriesBack = ['cables', 'despertadores', 'gps', 'librosElectronicos', 'maquinasEscribir', 'tdt']
-    if (subcategory === 'despertadores') subCategoriesBack = ['cables', 'despertadores', 'gps', 'librosElectronicos', 'maquinasEscribir', 'tdt']
-    if (subcategory === 'gps') subCategoriesBack = ['cables', 'despertadores', 'gps', 'librosElectronicos', 'maquinasEscribir', 'tdt']
-    if (subcategory === 'librosElectronicos') subCategoriesBack = ['cables', 'despertadores', 'gps', 'librosElectronicos', 'maquinasEscribir', 'tdt']
-    if (subcategory === 'maquinasEscribir') subCategoriesBack = ['cables', 'despertadores', 'gps', 'librosElectronicos', 'maquinasEscribir', 'tdt']
-    if (subcategory === 'tdt') subCategoriesBack = ['cables', 'despertadores', 'gps', 'librosElectronicos', 'maquinasEscribir', 'tdt']
-    if (subcategory === 'cartuchos') subCategoriesBack = ['cartuchos', 'consolas']
-    if (subcategory === 'consolas') subCategoriesBack = ['cartuchos', 'consolas']
-    if (subcategory === 'accesorios') subCategoriesBack = ['accesorios', 'monitores', 'ordenadores', 'teclados']
-    if (subcategory === 'monitores') subCategoriesBack = ['accesorios', 'monitores', 'ordenadores', 'teclados']
-    if (subcategory === 'ordenadores') subCategoriesBack = ['accesorios', 'monitores', 'ordenadores', 'teclados']
-    if (subcategory === 'teclados') subCategoriesBack = ['accesorios', 'monitores', 'ordenadores', 'teclados']
-    if (subcategory === 'cintas') subCategoriesBack = ['cintas', 'vinilos']
-    if (subcategory === 'vinilos') subCategoriesBack = ['cintas', 'vinilos']
-    if (subcategory === 'fijos') subCategoriesBack = ['fijos', 'moviles']
-    if (subcategory === 'moviles') subCategoriesBack = ['fijos', 'moviles']
-    if (subcategory === 'camaraFotos') subCategoriesBack = ['camaraFotos', 'camaraVideo', 'televisores']
-    if (subcategory === 'camaraVideo') subCategoriesBack = ['camaraFotos', 'camaraVideo', 'televisores']
-    if (subcategory === 'televisores') subCategoriesBack = ['camaraFotos', 'camaraVideo', 'televisores']
+    if (subcategory === 'altavoces') subCategoriesBack = 'altavoces'
+    if (subcategory === 'mp3') subCategoriesBack = 'mp3'
+    if (subcategory === 'radios') subCategoriesBack = 'radios'
+    if (subcategory === 'tocadiscos') subCategoriesBack = 'tocadiscos'
+    if (subcategory === 'walkman') subCategoriesBack = 'walkman'
+    if (subcategory === 'cables') subCategoriesBack = 'cables'
+    if (subcategory === 'despertadores') subCategoriesBack = 'despertadores'
+    if (subcategory === 'gps') subCategoriesBack = 'gps'
+    if (subcategory === 'libroselectronicos') subCategoriesBack = 'libros Electrónicos'
+    if (subcategory === 'maquinasescribir') subCategoriesBack = 'maquinas Escribir'
+    if (subcategory === 'tdt') subCategoriesBack = 'tdt'
+    if (subcategory === 'cartuchos') subCategoriesBack = 'cartuchos'
+    if (subcategory === 'consolas') subCategoriesBack = 'consolas'
+    if (subcategory === 'accesorios') subCategoriesBack = 'accesorios'
+    if (subcategory === 'monitores') subCategoriesBack = 'monitores'
+    if (subcategory === 'ordenadores') subCategoriesBack =  'ordenadores'
+    if (subcategory === 'teclados') subCategoriesBack = 'teclados'
+    if (subcategory === 'cintas') subCategoriesBack = 'cintas'
+    if (subcategory === 'vinilos') subCategoriesBack = 'vinilos'
+    if (subcategory === 'fijos') subCategoriesBack = 'fijos'
+    if (subcategory === 'moviles') subCategoriesBack = 'moviles'
+    if (subcategory === 'camarafotos') subCategoriesBack = 'cámara Fotos'
+    if (subcategory === 'camaravideo') subCategoriesBack = 'cámara Video'
+    if (subcategory === 'televisores') subCategoriesBack =  'televisores'
 
     return (
-        <ul>
-            {subCategoriesBack.map(subCategory =>
-                <li key={subCategory}><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>
-                )}
-        </ul>
+        // <ul>
+        //     {subCategoriesBack.map(subCategory =>
+        //         <li key={subCategory}><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>
+        //         )}
+        // </ul>
+        <h1>
+            {subCategoriesBack}
+        </h1>
     )
 }
 

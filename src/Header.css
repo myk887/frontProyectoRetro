@@ -12,6 +12,7 @@
   top: 0;
   right: 0;
   left: 0;
+  z-index: 10000000;
 }
 .logo {
   height: 120px;
