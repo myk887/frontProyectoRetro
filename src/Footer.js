@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import logo from './images/logos/LogoRetroTRANS.png'
+import logo from './images/logos/LogoRetro.png'
 import facebook from './images/logos/facebook.png'
 import twitter from './images/logos/twitter.png'
 import './Footer.css'
@@ -18,7 +18,7 @@ function Footer () {
       </div>
       <div className="identification">
         <ul>
-          <img src={logo} alt="logoImage" className="logo"/>
+          <img src={logo} alt="logoImage" className="footer-logo"/>
           <li className="fiscal"> CIF A80192727</li>
           <li className="fiscal">Rúa Falperra nº11, Nigrán</li>
         </ul>

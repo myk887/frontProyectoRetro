@@ -1,10 +1,13 @@
+@import 'normalize.css';
+@import 'variables.css';
+
 .reloj-loading{
     animation: 1s rotate linear infinite;
-    border: 16px solid silver;
-    border-top: 16px solid black;
+    border: 1rem solid silver;
+    border-top: 1rem solid black;
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
+    width: 8rem;
+    height: 8rem;
 }
 
 @keyframes rotate {
@@ -15,31 +18,28 @@
       transform: rotate(360deg);
     }}
 
-.login {
+.login-form {
     display: flex;
     flex-direction: column;
 }
-.avatar {
-  width: 60px;
-  height: 60px;
-  border-radius: 30px;
+.login-avatar-image {
+  height: 5rem;
+  border-radius: 1.5rem;
 }
 
-.perfil {
+.login-perfil {
   display: flex;
   align-items: center;
-  z-index: 1000000;
+  z-index: 100;
 }
 
-.buttonUsername {
-  width: 150px;
-  height: 20px;
+.login-buttonUsername {
+  width: 10rem;
   border: none;
   background: white;
   color: rgb(51, 83, 228);
 }
-.dropdown {
-  height: 20px;
+.login-dropdown {
   display: inline-block;
   align-items: center;
 }
@@ -47,18 +47,18 @@
   background-color: white;
   display: none;
   position: relative;
-  top: -15px;
-  width: 150px;
+  top: -1rem;
+  width: 10rem;
   overflow: auto;
-  box-shadow: 0px 15px 15px 0px rgba(0,0,0,0.4);
+  box-shadow: 0 1rem 1rem 0 rgba(0,0,0,0.4);
 }
-.dropdown:hover .dropdown-content {
+.login-dropdown:hover .dropdown-content {
   display: block;
 }
 .dropdown-content a {
   display: block;
   color: #000000;
-  padding: 15px;
+  padding: 1rem;
   text-decoration: none;
 }
 .dropdown-content a:hover {
@@ -68,18 +68,18 @@
 .login-link {
   display: flex;
   align-items: center;
-  z-index: 1000000;
+  z-index: 100;
 }
-.session {
+.login-session {
   border: none;
   background-color: white;
   color: blue;
-  width: 150px;
-  height: 20px;
+  width: 9rem;
+  height: 1.2rem;
   margin-top: auto;
   margin-bottom: auto;
 }
-.account {
-  height: 50px;
+.login-account {
+  height: 3rem;
 }
 

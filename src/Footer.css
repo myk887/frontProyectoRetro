@@ -1,17 +1,19 @@
+@import 'normalize.css';
+@import 'variables.css';
+
 .main-footer {
   grid-area: footer;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /* background-color: rgb(51, 83, 228); */
   background: linear-gradient(to right, #7c7c7c 20%,#3353e4 60%,#7c7c7c);
-  padding: 20px 20px 30px 20px;
-  max-height: 150px;
-  min-width: 750px;
+  padding: 1rem 1rem 1.5rem 1.5rem;
+  max-height: 10rem;
+  min-width: 40rem;
 }
 
 .link {
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
 }
 
 .link a {
@@ -24,7 +26,7 @@
 
 .fiscal {
   color: white;
-  margin-top: 5px;
+  margin-top: 0.3rem;
 }
 
 .community {
@@ -32,16 +34,16 @@
 }
 
 .community img {
-  width: 45px;
-  margin: 5px;
+  width: 3rem;
+  margin: 0.3rem;
 }
 
-.logo {
-  height: 120px;
-  margin: 5px;
+.footer-logo {
+  height: 8rem;
+  margin: 0.3rem;
 }
 
 .main-footer p {
   color: white;
-  size: 20px;
+  size: 1rem;
 }

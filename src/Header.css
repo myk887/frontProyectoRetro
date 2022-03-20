@@ -1,22 +1,30 @@
+@import 'normalize.css';
+@import 'variables.css';
+
 .header {
   grid-area: header;
-  padding: 10px 40px 10px 40px;
+  padding: 0.8rem 2rem 1rem 2rem;
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 2rem;
   align-items: center;
   justify-content: space-between;
-  min-width: 750px;
+  min-width: 45rem;
   position: fixed;
   background-color: white;
   top: 0;
   right: 0;
   left: 0;
-  z-index: 10000000;
+  z-index: 100;
 }
-.logo {
-  height: 120px;
+.header-logo-image {
+  height: 8rem;
 }
-.search {
-  display: flex;
+
+@media screen and (max-width: 600px) {
+  
+  .header-logo-image {
+    height: 5rem;
+  }
+
 }

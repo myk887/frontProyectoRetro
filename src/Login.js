@@ -73,10 +73,10 @@ function Session() {
   return (
     usuario ?
       (datosUsuario &&
-        <div className='perfil'>
-          <img className='avatar' src={`http://localhost:3000${datosUsuario[0].avatar.replace('./', '/')}`} alt={datosUsuario[0].username}></img>
-          <div class="dropdown">
-            <button className='buttonUsername'>{datosUsuario[0].username}</button>
+        <div className='login-perfil'>
+          <img className='login-avatar-image' src={`http://localhost:3000${datosUsuario[0].avatar.replace('./', '/')}`} alt={datosUsuario[0].username}></img>
+          <div class="login-dropdown">
+            <button className='login-buttonUsername'>{datosUsuario[0].username}</button>
             <div class="dropdown-content">
             <Link to={'user/edit'}>Mi Perfil</Link>
             <Link to={'user/articles'}>Mis Productos</Link>
@@ -87,15 +87,15 @@ function Session() {
       </div>)
       :
       <div className='login-link'>
-        <img src={account} alt="account logo" className="account"/>
-        <button onClick={() => setShow(!show)} className="session">Entra o regístrate</button>
+        <img src={account} alt="account logo" className="login-account"/>
+        <button onClick={() => setShow(!show)} className="login-session">Entra o regístrate</button>
         <Modal show={show} setShow={setShow}>
           {loading ?
             <div className='reloj-loading'></div>
             :
             <fieldset>
               <legend>Login</legend>
-              <form onSubmit={handleSubmit} className='login'>
+              <form onSubmit={handleSubmit} className='login-form'>
                 <label>
                   Usuario:
                   <input required type="email" name="email" value={email} onChange={e => setEmail(e.target.value)} />

@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom"
 import ErrorBoundary from "./ErrorBoundary"
 import Loading from "./Loading"
-import logo from './images/logos/LogoRetroTRANS.png'
+import logo from './images/logos/LogoRetroText.png'
 import Login from "./Login"
 import Search from "./Search"
 import SearchCategory from "./SearchCategory"
@@ -13,7 +13,7 @@ function Header ({setSearch}) {
     return (
         <header className="header">
         <ErrorBoundary fallback={<Loading/>}>
-        <img src={logo} alt="logoImage" className="logo"/>
+        <img src={logo} alt="header-logo-image" className="header-logo-image"/>
           <Routes>
             <Route path='/' element={<Search setSearch={setSearch}/>} />
             <Route path='todos' element={<Search setSearch={setSearch}/>} />
