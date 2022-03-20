@@ -6,10 +6,17 @@
 .body-structure {
   min-width: 750px;
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 10rem 1fr;
   margin-top: 150px;
 }
 
+@media screen and (max-width: 75rem) {
+  .body-structure {
+    display: flex;
+    flex-direction: column;
+    margin-top: 400px;
+  }
+}
 
 .active {
     font-style: italic;

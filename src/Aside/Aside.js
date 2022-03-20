@@ -22,6 +22,7 @@ const removeAccents = (str) => {
 //         </div>
 //     )
 // }
+
 function Aside () {
     const [show, setShow] = useState(false)
     const [show2, setShow2] = useState(false)
@@ -111,25 +112,25 @@ function Aside () {
                         <NavLink to={`/article/byCategory/${removeAccents(category.toLocaleLowerCase())}`}>
                             {category}
                         </NavLink>
-                        {category === 'audio' && <div className="flecha-subcategories" onClick={click}>↳</div>}
+                        {category === 'audio' && <div className="subcategories-arrow" onClick={click}>↳</div>}
                         {show && category === 'audio' && ['altavoces', 'mp3', 'radios', 'tocadiscos', 'walkman'].map(subCategory =>
                         <li key={subCategory}><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>)}
-                        {category === 'electrónica' && <div className="flecha-subcategories"  onClick={click2}>↳</div>}
+                        {category === 'electrónica' && <div className="subcategories-arrow"  onClick={click2}>↳</div>}
                         {show2 && category === 'electrónica' && ['cables', 'despertadores', 'gps', 'librosElectronicos', 'maquinasEscribir', 'tdt'].map(subCategory =>
                         <li key={subCategory}><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>)}
-                        {category === 'gaming' && <div className="flecha-subcategories"  onClick={click3}>↳</div>}
+                        {category === 'gaming' && <div className="subcategories-arrow"  onClick={click3}>↳</div>}
                         {show3 && category === 'gaming' && ['cartuchos', 'consolas'].map(subCategory =>
                         <li key={subCategory}><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>)}
-                        {category === 'informática' && <div className="flecha-subcategories"  onClick={click4}>↳</div>}
+                        {category === 'informática' && <div className="subcategories-arrow"  onClick={click4}>↳</div>}
                         {show4 && category === 'informática' && ['accesorios', 'monitores', 'ordenadores', 'teclados'].map(subCategory =>
                         <li key={subCategory}><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>)}
-                        {category === 'música' && <div className="flecha-subcategories"  onClick={click5}>↳</div>}
+                        {category === 'música' && <div className="subcategories-arrow"  onClick={click5}>↳</div>}
                         {show5 && category === 'música' && ['cintas', 'vinilos'].map(subCategory =>
                         <li key={subCategory}><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>)}
-                        {category === 'teléfonos' && <div className="flecha-subcategories"  onClick={click6}>↳</div>}
+                        {category === 'teléfonos' && <div className="subcategories-arrow"  onClick={click6}>↳</div>}
                         {show6 && category === 'teléfonos' && ['fijos', 'moviles'].map(subCategory =>
                         <li key={subCategory}><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>)}
-                        {category === 'imagen' && <div className="flecha-subcategories"  onClick={click7}>↳</div>}
+                        {category === 'imagen' && <div className="subcategories-arrow"  onClick={click7}>↳</div>}
                         {show7 && category === 'imagen' && ['camaraFotos', 'camaraVideo', 'televisores'].map(subCategory =>
                         <li key={subCategory}><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>)}
                     </li>

@@ -96,24 +96,23 @@ function EditUser() {
     }
 
   return (
-    loading ? <div className="datauser-edit"><Loading /></div> :
+    loading ? <div className="edituser-data"><Loading /></div> :
 
-    <div className="datauser-edit">
+    <div className="edituser-data">
 
-      <div className='title-edit'>
+      <div className='edituser-title-edit'>
         <Link className='casita' to={'/'} title='Pàgina principal'><h4>⌂ Volver al home</h4></Link>
-        <h1>Mi Perfil EditUser.js </h1>
       </div>
 
-      <div className='info-edit'>
+      <div className='edituser-info-edit'>
 
-      { show3 !== 3 && <div className='userphoto-edit'>
+      { show3 !== 3 && <div className='edituser-userphoto'>
             {avatarURL ?
-            <img className='avatar avatarRegistre' src={avatarURL} alt='avatar'/>
+            <img className='edituser-avatar-photo' src={avatarURL} alt='avatar'/>
             :
-            <img className='avatar avatarRegistre' src={`http://localhost:3000${datos[0].avatar.replace('./', '/')}`} alt={datos[0].username} />}
+            <img className='edituser-avatar-photo' src={`http://localhost:3000${datos[0].avatar.replace('./', '/')}`} alt={datos[0].username} />}
             <label>
-            <div type='button' className='changephoto-edit'>Cambiar foto EditUser.js</div>
+            <div type='button' className='edituser-changephoto-button'>Cambiar foto</div>
             <input type="file" onChange={handlePhoto} accept="image/x-png,image/gif,image/jpeg" />
             </label>
         </div> }
@@ -121,22 +120,23 @@ function EditUser() {
         {show3 &&
         <div>
           { show3 !== 2 ?
-            <p onClick={(e) => setShow3(2)}> ✎Editar datos de perfil</p>
+            <p className="back-to-my-profile" onClick={(e) => setShow3(2)}> ✎ Volver a Mi Perfil</p>
             :
-            <form className='form-edit' onSubmit={handleSubmit}>
+            <form className='edituser-form-edit' onSubmit={handleSubmit}>
               <label>
-              *Nombre
+              Nombre:
               <input name="name" value={name} required onChange={e => setName(e.target.value)}></input>
               </label>
               <label>
-              *Email
+              Email:
               <input name="email" value={email} type="email" required onChange={e => setEmail(e.target.value)}></input>
               </label>
               <label>
-              *Ciudad
+              Ciudad:
               <input name="address" value={address} required onChange={e => setAddress(e.target.value)}></input>
               </label>
               <label>
+              Provincia: <span></span>
                 <select name="provinces" value={provinces} required onChange={e => setProvinces(e.target.value)}>
                   <option value=''>{provinces}</option>
                   <option value="coruña">A Coruña/La Coruña</option>
@@ -195,22 +195,22 @@ function EditUser() {
           </form>}
 
           { show3 !== 3 ?
-          <p onClick={(e) => setShow3(3)}>✎ Cambiar contraseña</p>
+          <p className="edituser-change-password" onClick={(e) => setShow3(3)}>✎ Cambiar contraseña</p>
           :
           <fieldset>
-            <legend>Cambiando contraseña</legend>
-            <form className='form-edit' onSubmit={handleSubmitPass}>
+            <legend>Cambio de contraseña</legend>
+            <form className='edituser-form-edit' onSubmit={handleSubmitPass}>
               <label>
-                  *Contraseña actual
+                  Contraseña actual
                   <input name="password" value={password} required type={show ? 'text' : 'password'}  onChange={e => setPassword(e.target.value)}></input>
-                  <span className='button-edit' onClick={switchShow}>{show ? 'Ocultar' : 'Mostrar'}</span>
+                  <span className='edituser-showpass' onClick={switchShow}>{show ? 'Ocultar' : 'Mostrar'}</span>
                   </label>
                   <label >
-                  *Nueva Contraseña
+                  Nueva Contraseña
                   <input name="newPassword" value={newPassword} required type={show2 ? 'text' : 'password'}  onChange={e => setNewPassword(e.target.value)}></input>
-                  <span className='button-edit' onClick={switchShow2}>{show2 ? 'Ocultar' : 'Mostrar'}</span>
+                  <span className='edituser-showpass' onClick={switchShow2}>{show2 ? 'Ocultar' : 'Mostrar'}</span>
               </label>
-              <button className='savedata-edit'>Cambiar Contraseña</button>
+              <button className='savedata-button'>Cambiar Contraseña</button>
             </form>
           </fieldset>}
         </div>}

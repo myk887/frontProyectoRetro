@@ -21,10 +21,13 @@
   height: 8rem;
 }
 
-@media screen and (max-width: 600px) {
-  
-  .header-logo-image {
-    height: 5rem;
+@media screen and (max-width: 75rem) {
+
+  .header {
+    grid-area: header;
+    background-color: red;
+    flex-direction:column;
+    min-width: 30rem;
   }
 
 }
