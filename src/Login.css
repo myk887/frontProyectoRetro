@@ -1,22 +1,6 @@
 @import 'normalize.css';
 @import 'variables.css';
 
-.reloj-loading{
-    animation: 1s rotate linear infinite;
-    border: 1rem solid silver;
-    border-top: 1rem solid black;
-    border-radius: 50%;
-    width: 8rem;
-    height: 8rem;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-    to {
-      transform: rotate(360deg);
-    }}
 
 .login-form {
     display: flex;
@@ -37,9 +21,10 @@
   width: 10rem;
   border: none;
   background: white;
-  color: rgb(51, 83, 228);
+  color: var(--blue);
 }
 .login-dropdown {
+  height: 7rem;
   display: inline-block;
   align-items: center;
 }
@@ -83,3 +68,19 @@
   height: 3rem;
 }
 
+.reloj-loading{
+  animation: 1s rotate linear infinite;
+  border: 1rem solid silver;
+  border-top: 1rem solid black;
+  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
+}
+
+@keyframes rotate {
+from {
+  transform: rotate(0deg);
+}
+  to {
+    transform: rotate(360deg);
+  }}
