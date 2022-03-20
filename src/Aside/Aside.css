@@ -3,28 +3,27 @@
 .aside {
   list-style: none;
   background-color: var(--blue);
-  flex: 0 0 auto;
-  min-height: 70vh;
-  padding: 20px;
+  padding: 1.2rem;
 }
-/* aside ul: ven de "Category.css", de "SubCategory.css" e de "Aside.css" */
+
 .aside ul{
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 1.5rem;
   padding: 0;
 }
-/*li:first-letter: ven de "Aside.css", de "Category.css" e de "SubCategory.css"*/
-li:first-letter {
-  text-transform: uppercase;
-}
+
 .aside ul a {
   text-decoration: none;
   color: white;
   font-size: larger;
 }
 
-.flecha-subcategories {
+.aside li:first-letter {
+  text-transform: uppercase;
+}
+
+.subcategories-arrow {
   color: white;
 }
 
@@ -32,4 +31,13 @@ li:first-letter {
   margin-left: 2vw;
   padding: 3px;
   font-size:smaller;
+}
+
+@media screen and (max-width: 75rem) {
+  .aside ul{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 0;
+  }
 }
