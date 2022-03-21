@@ -25,9 +25,28 @@
 
   .header {
     grid-area: header;
-    background-color: red;
-    flex-direction:column;
+    background-color: green;
     min-width: 30rem;
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    grid-template-rows: 5rem 2rem;
+    grid-template-areas:
+      'header-logo-image    header-login'
+      'header-search        header-search'
   }
 
+  .header-logo-image {
+    grid-area: header-logo-image;
+    height: 5rem;
+  }
+
+  .search {
+    grid-area: header-search;
+  }
+
+  .login-perfil {
+    grid-area: header-login;
+    margin: 0 1rem 0 auto;
+
+  }
 }
