@@ -86,30 +86,31 @@ function Session() {
           </div>
       </div>)
       :
-      <div className='login-link'>
-        <img src={account} alt="account logo" className="login-account"/>
-        <button onClick={() => setShow(!show)} className="login-session">Entra o regístrate</button>
+      <div className='login-perfil'>
+        <img src={account} alt="account logo" className="login-avatar-image"/>
+        <button onClick={() => setShow(!show)} className="login-buttonUsername">Inicia sesión</button>
         <Modal show={show} setShow={setShow}>
           {loading ?
             <div className='reloj-loading'></div>
             :
             <fieldset>
-              <legend>Login</legend>
               <form onSubmit={handleSubmit} className='login-form'>
-                <label>
-                  Usuario:
-                  <input required type="email" name="email" value={email} onChange={e => setEmail(e.target.value)} />
+                <label className="login-user-label">
+                  <span>Usuario: </span>
+                  <input required type="email" name="email" className="login-user-input"
+                    value={email} onChange={e => setEmail(e.target.value)} />
                 </label>
-                <label>
-                  Contraseña:
-                  <input required type="password" name="password" value={password} onChange={e => setPassword(e.target.value)} />
+                <label className="login-user-label">
+                  <span>Contraseña: </span>
+                  <input required type="password" name="password" className="login-user-input"
+                    value={password} onChange={e => setPassword(e.target.value)} />
                 </label>
-                <button>Entrar</button>
+                <button>Identificarme</button>
               </form>
               {error && <div className="error">{error.statusText}</div>}
             </fieldset>}
           <button>
-            <NavLink to='./user/registre' onClick={() => setShow(false)}>No estoy registrado</NavLink>
+            <NavLink to='./user/registre' onClick={() => setShow(false)}>Abrir una cuenta</NavLink>
           </button>
         </Modal>
       </div>
