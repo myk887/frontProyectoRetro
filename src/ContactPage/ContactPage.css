@@ -1,8 +1,12 @@
-form{
+
+
+/* INTERFIERE */
+
+/* form{
   display: flex;
   flex-direction: column;
   text-align: center;
-}
+} */
 
 input {
   width: 35vw;

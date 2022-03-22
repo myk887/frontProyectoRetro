@@ -109,7 +109,7 @@ function Aside () {
                 <li><NavLink to={`/todos`}>Todos</NavLink></li>
                 {categoriesBack.map(category =>
                     <li key={category}>
-                        <NavLink to={`/article/byCategory/${removeAccents(category.toLocaleLowerCase())}`}>
+                        <NavLink to={`/article/byCategory/${removeAccents(category.toLocaleLowerCase())}`} className="aside-link">
                             {category}
                         </NavLink>
                         {category === 'audio' && <div className="subcategories-arrow" onClick={click}>↳</div>}

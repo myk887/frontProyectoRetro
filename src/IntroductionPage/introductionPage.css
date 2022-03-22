@@ -3,6 +3,13 @@
   display: flex;
   background: linear-gradient(to bottom, #ffffff, gray    ,  #ffffff);
 }
+
+@media screen and (max-width: 75rem) {
+  .introductioPage {
+    margin-top: 1rem;
+  }
+}
+
 .home {
   border-right: 1px solid black;
   border-top: 1px solid black;

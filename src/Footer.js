@@ -19,9 +19,8 @@ function Footer () {
       <div className="footer-company">
         <ul>
           <img src={logo} alt="logoImage" className="footer-logo"/>
-          <li className="footer-address"> Grupo JSB08VI</li>
-          <li className="footer-address">HAB - García Barbón</li>
-          <li className="footer-address">CP 36.201, Vigo</li>
+          <li className="footer-address"> Grupo Retro JSB08VI</li>
+          <li className="footer-address">Hack a Boss, Vigo</li>
         </ul>
       </div>
       <div className="footer-community">
