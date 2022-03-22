@@ -7,43 +7,113 @@
   justify-content: space-around;
   align-items: center;
   background: linear-gradient(to right, #7c7c7c 20%,#3353e4 60%,#7c7c7c);
-  padding: 1rem 1rem 1.5rem 1.5rem;
-  max-height: 10rem;
-  min-width: 40rem;
 }
 
-.link {
-  margin-bottom: 1rem;
+.footer-nav ul{
+  min-width: 18rem;
+  padding: 1rem;
 }
 
-.link a {
+.footer-link {
+  margin-bottom: 0.5rem;
+}
+
+.footer-link a {
   text-decoration: none;
   color: white;
+  font-size: 1.5rem;
 }
-.link a:hover {
+
+.footer-link a:hover {
   color: black;
-}
-
-.fiscal {
-  color: white;
-  margin-top: 0.3rem;
-}
-
-.community {
-  text-align: center;
-}
-
-.community img {
-  width: 3rem;
-  margin: 0.3rem;
+  text-shadow: 0.05rem 0.05rem var(--light-blue);
 }
 
 .footer-logo {
-  height: 8rem;
+  height: 10rem;
   margin: 0.3rem;
 }
 
-.main-footer p {
-  color: white;
-  size: 1rem;
+.footer-company ul {
+  margin: 0.5rem 0 2rem 0;
+  min-width: 11rem;
+  text-align: center;
 }
+
+.footer-address {
+  color: black;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.footer-community {
+  text-align: center;
+  min-width: 12rem;
+}
+
+.main-footer p {
+  color: black;
+  size: 1rem;
+  margin: 1rem;
+}
+
+.footer-community img {
+  width: 4rem;
+  margin: 0 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.footer-community img:hover {
+  transform: scale(1.15);
+ }
+
+ @media screen and (max-width: 40rem) {
+
+  .footer-nav ul{
+    min-width: 10rem;
+    padding: 1rem;
+  }
+
+  .footer-link {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-link a {
+    font-size: 0.75rem;
+  }
+
+  .footer-logo {
+    height: 6rem;
+    margin: 0.3rem;
+  }
+
+  .footer-company ul {
+    margin-bottom: 1rem;
+    min-width: 8rem;
+  }
+
+  .footer-address {
+    font-size: 0.7rem;
+  }
+
+  .footer-community {
+    min-width: 5rem;
+    margin-right: 1rem;
+  }
+
+  .main-footer p {
+    font-size: 0.7rem;
+    margin: 1rem;
+  }
+
+  .footer-community img {
+    width: 2rem;
+    margin: 0 0.2rem;
+    transition: transform 0.3s ease;
+  }
+ }
+
+
+
+
+

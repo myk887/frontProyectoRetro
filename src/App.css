@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+.html {
+  font-size: 50px;
+}
+
 .body {
   min-width: 100vw;
 }
@@ -22,7 +26,13 @@
   .body-structure {
     display: flex;
     flex-direction: column;
-    margin-top: 11.5rem;
+    margin-top: 10.5rem;
+  }
+}
+
+@media screen and (max-width: 35rem) {
+  .body-structure {
+    margin-top: 10rem;
   }
 }
 
@@ -100,7 +110,7 @@
 
 button {
   width: 30vw;
-  min-width: 0px;
+  min-width: 50px;
   max-width: 400px;
   height: 5vh;
   min-height: 60px;

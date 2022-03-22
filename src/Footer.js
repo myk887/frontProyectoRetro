@@ -8,22 +8,23 @@ function Footer () {
 
   return (
     <div className="main-footer">
-      <div className="nav">
+      <div className="footer-nav">
         <ul>
-          <li className="link"><Link to="/">Home</Link></li>
-          <li className="link"><Link to="legal-notice">Aviso Legal</Link></li>
-          <li className="link"><Link to="privacity">Política de Privacidad</Link></li>
-          <li className="link"><Link to="contact">Contacto</Link></li>
+          <li className="footer-link"><Link to="/">Home</Link></li>
+          <li className="footer-link"><Link to="legal-notice">Aviso Legal</Link></li>
+          <li className="footer-link"><Link to="privacity">Política de Privacidad</Link></li>
+          <li className="footer-link"><Link to="contact">Contacto</Link></li>
         </ul>
       </div>
-      <div className="identification">
+      <div className="footer-company">
         <ul>
           <img src={logo} alt="logoImage" className="footer-logo"/>
-          <li className="fiscal"> CIF A80192727</li>
-          <li className="fiscal">Rúa Falperra nº11, Nigrán</li>
+          <li className="footer-address"> Grupo JSB08VI</li>
+          <li className="footer-address">HAB - García Barbón</li>
+          <li className="footer-address">CP 36.201, Vigo</li>
         </ul>
       </div>
-      <div className="community">
+      <div className="footer-community">
           <p>Nuestra comunidad</p>
           <a title="link a twitter"  href="https://twitter.com" rel="noopener noreferer" >
             <img src={twitter} alt="icono twitter"/>
