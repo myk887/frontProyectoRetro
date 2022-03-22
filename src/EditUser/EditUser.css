@@ -35,8 +35,21 @@
     padding: 1vw;
 }
 
+.edituser-form-edit label{
+    display: flex;
+}
+.edituser-form-edit span{
+    display:flex;
+    align-items: center;
+    flex: 1 1 5rem;
+}
+
 .edituser-form-edit input {
-    margin: 15px;
+    margin: 0.8rem;
+}
+
+.provinces {
+    margin: 0.3rem auto;
 }
 
 .edituser-avatar-photo {

@@ -124,20 +124,20 @@ function EditUser() {
             :
             <form className='edituser-form-edit' onSubmit={handleSubmit}>
               <label>
-              Nombre:
+              <span>Nombre: </span>
               <input name="name" value={name} required onChange={e => setName(e.target.value)}></input>
               </label>
               <label>
-              Email:
+              <span>Email: </span>
               <input name="email" value={email} type="email" required onChange={e => setEmail(e.target.value)}></input>
               </label>
               <label>
-              Ciudad:
+              <span>Ciudad: </span>
               <input name="address" value={address} required onChange={e => setAddress(e.target.value)}></input>
               </label>
               <label>
-              Provincia: <span></span>
-                <select name="provinces" value={provinces} required onChange={e => setProvinces(e.target.value)}>
+              Provincia:
+                <select className="provinces" name="provinces" value={provinces} required onChange={e => setProvinces(e.target.value)}>
                   <option value=''>{provinces}</option>
                   <option value="coruña">A Coruña/La Coruña</option>
                   <option value="araba">Araba/Alava</option>

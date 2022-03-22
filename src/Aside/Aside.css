@@ -17,6 +17,20 @@
   text-decoration: none;
   color: white;
   font-size: larger;
+  transition: color 0.2s ease;
+  transition: font-size 0.2s ease;
+  transition: font-weight 0.2s ease;
+}
+
+.active {
+  color: var(--orange);
+  text-style: bold;
+}
+
+.aside ul a:hover {
+  color: var(--orange);
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
 .aside li:first-letter {
@@ -34,10 +48,34 @@
 }
 
 @media screen and (max-width: 75rem) {
+
+  .aside {
+    padding: 1rem;
+  }
+
   .aside ul{
     display: flex;
     flex-direction: row;
-    gap: 1.5rem;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 2rem;
     padding: 0;
   }
+
+  .aside ul a {
+    font-size: 1.1rem;
+  }
+
+}
+
+@media screen and (max-width: 35rem) {
+
+  .aside {
+    padding: 0.5rem;
+  }
+
+  .aside ul{
+    gap: 0.9rem;
+  }
+
 }
