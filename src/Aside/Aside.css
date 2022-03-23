@@ -24,7 +24,7 @@
 
 .active {
   color: var(--orange);
-  text-style: bold;
+  font-weight: bold;
 }
 
 .aside ul a:hover {
