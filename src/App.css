@@ -14,8 +14,13 @@
 .body-structure {
   min-width: 375px;
   display: grid;
-  grid-template-columns: 10rem 1fr;
+  grid-template-columns: 14rem 1fr;
   margin-top: 150px;
+}
+
+.active {
+  color: var(--orange);
+  font-weight: bold;
 }
 
 @media screen and (max-width: 75rem) {

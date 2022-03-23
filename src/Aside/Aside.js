@@ -90,10 +90,10 @@ function Aside () {
     return (
         <div className="aside">
             <ul>
-                <li><NavLink to={`/`}>Home</NavLink></li>
-                <li><NavLink to={`/todos`}>Todos</NavLink></li>
+                <li className="aside-category"><NavLink to={`/`}>Home</NavLink></li>
+                <li className="aside-category"><NavLink to={`/todos`}>Todos</NavLink></li>
                 {categoriesBack.map(category =>
-                    <li key={category}>
+                    <li key={category} className="aside-category">
                         {category === 'audio' && <div  onClick={category === 'audio' && click}>
                             <NavLink to={`/article/byCategory/${removeAccents(category.toLocaleLowerCase())}`} className="aside-link">
                                 {category}

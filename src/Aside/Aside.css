@@ -3,7 +3,7 @@
 .aside {
   list-style: none;
   background-color: var(--blue);
-  padding: 1.2rem;
+  padding: 1.5rem 1rem;
 }
 
 .aside ul{
@@ -16,15 +16,10 @@
 .aside ul a {
   text-decoration: none;
   color: white;
-  font-size: larger;
+  font-size: 1.3rem;
   transition: color 0.2s ease;
   transition: font-size 0.2s ease;
   transition: font-weight 0.2s ease;
-}
-
-.active {
-  color: var(--orange);
-  font-weight: bold;
 }
 
 .aside ul a:hover {
@@ -37,10 +32,30 @@
   text-transform: uppercase;
 }
 
+.aside-category {
+  list-style: none;
+}
+
 .aside ul li li {
-  margin-left: 2vw;
-  padding: 3px;
-  font-size:smaller;
+  margin-left: 0.3rem;
+  padding: 0.5rem;
+}
+
+
+.aside ul li li a {
+  font-size: 1.1rem;
+}
+
+.aside ul li li .active {
+    color: var(--orange);
+    font-weight: bold;
+    margin-left: 0.5rem;
+}
+
+.aside-category .active {
+  color: var(--orange);
+  font-weight: bold;
+  font-size: 1.3rem;
 }
 
 @media screen and (max-width: 75rem) {
@@ -67,11 +82,34 @@
 @media screen and (max-width: 35rem) {
 
   .aside {
-    padding: 0.5rem;
+    padding: 1rem;
   }
 
   .aside ul{
-    gap: 0.9rem;
+    gap: 0.5rem;
+  }
+
+  .aside ul a {
+    font-size:1rem;
+  }
+
+  .aside ul a:hover {
+    font-size: 1.1rem;
+  }
+
+  .aside ul li li {
+    margin-left: 0.3rem;
+    padding: 0.15rem;
+  }
+
+  .aside ul li li a {
+    font-size: 0.9rem;
+  }
+
+  .aside ul li li .active {
+      color: var(--orange);
+      font-weight: bold;
+      font-size: 1rem;
   }
 
 }
