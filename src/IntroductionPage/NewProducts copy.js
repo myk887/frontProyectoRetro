@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import Loading from '../Loading'
 import './introductionPage.css';
 
-function LatestProduct () {
+function NewProducts () {
     const articles = useFetch('http://localhost:3000/articles')
     const newArticles = [...articles]
     const articlesLowcost = newArticles.sort(function(a, b){return a.createdAt - b.createdAt})
@@ -31,7 +31,7 @@ function LatestProduct () {
     return (
         <div>
             <h1>
-                Los productos más nuevos
+                ULTIMAS INCORPORACIONES
             </h1>
            <main>
              <div className="photos">
@@ -49,9 +49,9 @@ function LatestProduct () {
     )
 }
 
-const LatestProductWrapper = () =>
+const NewProductsWrapper = () =>
   <Suspense fallback={<Loading />}>
-    <LatestProduct />
+    <NewProducts />
   </Suspense>
 
-export default LatestProductWrapper
+export default NewProductsWrapper

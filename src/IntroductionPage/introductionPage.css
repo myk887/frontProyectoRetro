@@ -1,83 +1,127 @@
 
-.introductioPage {
-  display: flex;
-  background: linear-gradient(to bottom, #ffffff, gray    ,  #ffffff);
+@import '../variables.css';
+@import '../normalize.css';
+
+
+.banners {
+  display:grid;
+  place-items: center;
+  margin: 0 10px;
 }
+
+.banners-image {
+    width:90%;
+}
+
+.introductionpage-title {
+  color:var(--dark-grey);
+  font-size: 25px;
+  padding: 1vw 5vw;
+}
+
+.introductionpage-banner {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  gap: 1vw;
+  height: 40vh ;
+}
+
+.introductionpage-container {
+  border: 1px solid lightgray;
+  border-radius: 0.5vw;
+  height: 95%;
+  min-height: 25rem;
+  width: 25rem;
+  padding: 0.3vw;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  transition: background-color 0.3s ease;
+  transition: border 0.1s ease;
+  transition: box-shadow 0.3s ease;
+}
+
+.introductionpage-container:hover {
+  transform: scale(1.05);
+  background-color: var(--light-blue);
+  border: 1.5px solid var(--blue-transparent);
+  box-shadow: 7px 10px var(--shadows-grey);
+}
+
+.introductionpage-photos {
+  height: 70%;
+  margin: 0.5vW auto;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* .introductionpage-names {
+  color: black;
+  margin: 5% 1vw;
+  max-width: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.introductionpage-prices {
+  color: black;
+  margin: 5% 1vw;
+  max-width: 200px;
+  display: flex;
+  justify-content: center;
+} */
+
+.introductionpage-productinfo {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.introductionpage-names {
+  color: black;
+  margin: 10% 1rem;
+  max-width: 45%; 
+}
+
+.introductionpage-prices {
+  color: black;
+  margin: 10% 1rem;
+  font-style: bold;
+  font-size: 1.6rem;
+}
+
+
+
+
+
+
+
+
+.introductionpage-container a {
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.introductionpage-arrows {
+  font-size: 4vw;
+  margin: auto 0;
+  color: var(--arrow-grey-transparent);
+  cursor: pointer;
+  transition: transform 0.5s ease;
+  transition: color 0.5s ease;
+}
+
+.introductionpage-arrows:hover {
+  transform: scale(1.2);
+  color: var(--arrow-grey);
+}
+
 
 @media screen and (max-width: 75rem) {
-  .introductioPage {
-    margin-top: 1rem;
+
+  .introductionpage-title {
+    color:red;
   }
+
 }
-
-.home {
-  border-right: 1px solid black;
-  border-top: 1px solid black;
-}
-.home ul {
-  width: 90%;
-  height: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin-right: 10px;
-}
-.ofertas {
-  width: 100%;
-}
-
-
-  .ofertas h1 {
-      text-align: center;
-      text-decoration: underline;
-      font-style: italic;
-  }
-
-  main .photos {
-    flex: 0 0 66%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border: 10px solid black;
-  }
-  main .photos .photo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
-    width: 120px;
-    min-width: 0;
-    text-align: center;
-    animation: mymove 3s infinite;
-    z-index: 1;
-    position: relative;
-  }
-  main .photos .photo img {
-    width: 120px;
-    height: 120px;
-  }
-  main .photos .photo span {
-    margin-top: 5px;
-    overflow: hidden;
-    text-align: center;
-    text-overflow: clip;
-    font-style: italic;
-    /* white-space: nowrap; */
-    width: 100%;
-    color: black;
-  }
-  .banners {
-    text-align: center;
-  }
-
-  .banners .bannersImg {
-    width: 90%;
-  }
-
-  @keyframes mymove {
-    0%   {transform: translateX(200px);}
-    25%  {transform: translateX(50px);}
-    75%  {transform: translateX(0px);}
-    100% {transform: translateX(0px);}
-  }
