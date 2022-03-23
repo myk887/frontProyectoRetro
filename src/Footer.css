@@ -9,6 +9,10 @@
   background: linear-gradient(to right, #7c7c7c 20%,#3353e4 60%,#7c7c7c);
 }
 
+.main-footer li {
+  list-style: none;
+}
+
 .footer-nav ul{
   min-width: 18rem;
   padding: 1rem;
