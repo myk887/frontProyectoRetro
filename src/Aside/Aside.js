@@ -8,21 +8,6 @@ const removeAccents = (str) => {
     return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   }
 
-// function Aside () {
-
-//     return (
-//         <div className="aside">
-//             <ul>
-//                 <li><NavLink to={`/`}>Home</NavLink></li>
-//                 <li><NavLink to={`/todos`}>Todos</NavLink></li>
-//                 {categoriesBack.map(category =>
-//                     <li key={category}><NavLink to={`/article/byCategory/${removeAccents(category.toLocaleLowerCase())}`}>{category}</NavLink></li>
-//                     )}
-//             </ul>
-//         </div>
-//     )
-// }
-
 function Aside () {
     const [show, setShow] = useState(false)
     const [show2, setShow2] = useState(false)
@@ -109,9 +94,41 @@ function Aside () {
                 <li><NavLink to={`/todos`}>Todos</NavLink></li>
                 {categoriesBack.map(category =>
                     <li key={category}>
-                        <NavLink to={`/article/byCategory/${removeAccents(category.toLocaleLowerCase())}`} className="aside-link">
-                            {category}
-                        </NavLink>
+                        {category === 'audio' && <div  onClick={category === 'audio' && click}>
+                            <NavLink to={`/article/byCategory/${removeAccents(category.toLocaleLowerCase())}`} className="aside-link">
+                                {category}
+                            </NavLink>
+                        </div>}
+                        {category === 'electrónica' && <div  onClick={category === 'electrónica' && click2}>
+                            <NavLink to={`/article/byCategory/${removeAccents(category.toLocaleLowerCase())}`} className="aside-link">
+                                {category}
+                            </NavLink>
+                        </div>}
+                        {category === 'gaming' && <div  onClick={category === 'gaming' && click3}>
+                            <NavLink to={`/article/byCategory/${removeAccents(category.toLocaleLowerCase())}`} className="aside-link">
+                                {category}
+                            </NavLink>
+                        </div>}
+                        {category === 'informática' && <div  onClick={category === 'informática' && click4}>
+                            <NavLink to={`/article/byCategory/${removeAccents(category.toLocaleLowerCase())}`} className="aside-link">
+                                {category}
+                            </NavLink>
+                        </div>}
+                        {category === 'música' && <div  onClick={category === 'música' && click5}>
+                            <NavLink to={`/article/byCategory/${removeAccents(category.toLocaleLowerCase())}`} className="aside-link">
+                                {category}
+                            </NavLink>
+                        </div>}
+                        {category === 'teléfonos' && <div  onClick={category === 'teléfonos' && click6}>
+                            <NavLink to={`/article/byCategory/${removeAccents(category.toLocaleLowerCase())}`} className="aside-link">
+                                {category}
+                            </NavLink>
+                        </div>}
+                        {category === 'imagen' && <div  onClick={category === 'imagen' && click7}>
+                            <NavLink to={`/article/byCategory/${removeAccents(category.toLocaleLowerCase())}`} className="aside-link">
+                                {category}
+                            </NavLink>
+                        </div>}
                         {category === 'audio' && <div className="subcategories-arrow" onClick={click}>↳</div>}
                         {show && category === 'audio' && ['altavoces', 'mp3', 'radios', 'tocadiscos', 'walkman'].map(subCategory =>
                         <li key={subCategory}><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>)}
