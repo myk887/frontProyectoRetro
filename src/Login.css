@@ -23,9 +23,11 @@
   border: none;
   background: white;
   color: var(--blue);
+  margin: 0 0 0 1rem;
 }
 .login-dropdown {
-  height: 7rem;
+  /* height: 7rem; */
+  height: 4rem;
   display: inline-block;
   align-items: center;
 }
