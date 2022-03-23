@@ -98,12 +98,12 @@
   }
 
   .aside ul li li {
-    margin-left: 0.3rem;
+    margin-left: 0.5rem;
     padding: 0.15rem;
   }
 
   .aside ul li li a {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .aside ul li li .active {

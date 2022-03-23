@@ -1,7 +1,7 @@
 import './introductionPage.css';
 import Banners from './Banners';
-import LatestProductWrapper from './LatestProduct';
-import ProductsLowcostWrapper from './ProductsLowcost';
+import NewProductsWrapper from './NewProducts';
+import BestPricesWrapper from './BestPrices';
 
 function IntroductionPage () {
 
@@ -9,8 +9,8 @@ function IntroductionPage () {
       <div className='introductioPage'>
         <div className='ofertas'>
           <Banners/>
-          <LatestProductWrapper />
-          <ProductsLowcostWrapper />
+          <NewProductsWrapper />
+          <BestPricesWrapper />
         </div>
       </div>
     )
