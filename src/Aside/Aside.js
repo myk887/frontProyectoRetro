@@ -8,6 +8,7 @@ const removeAccents = (str) => {
     return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   }
 
+
 function Aside () {
     const [show, setShow] = useState(false)
     const [show2, setShow2] = useState(false)
@@ -94,61 +95,57 @@ function Aside () {
                 <li className="aside-category"><NavLink to={`/todos`}>Todos</NavLink></li>
                 {categoriesBack.map(category =>
                     <li key={category} className="aside-category">
-                        {category === 'audio' && <div  onClick={category === 'audio' && click}>
+                        {category === 'audio' && <div  onClick={category === 'audio' && click} className="aside-login">
                             <NavLink to={`/article/byCategory/${removeAccents(category.toLocaleLowerCase())}`} className="aside-link">
                                 {category}
                             </NavLink>
+                            <ul>
+                                {show && category === 'audio' && ['altavoces', 'mp3', 'radios', 'tocadiscos', 'walkman'].map(subCategory =>
+                                <li key={subCategory} className="aside-dropdown" ><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>)}
+                            </ul>
                         </div>}
                         {category === 'electrónica' && <div  onClick={category === 'electrónica' && click2}>
                             <NavLink to={`/article/byCategory/${removeAccents(category.toLocaleLowerCase())}`} className="aside-link">
                                 {category}
                             </NavLink>
+                            {show2 && category === 'electrónica' && ['cables', 'despertadores', 'gps', 'librosElectronicos', 'maquinasEscribir', 'tdt'].map(subCategory =>
+                            <li key={subCategory}><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>)}
                         </div>}
                         {category === 'gaming' && <div  onClick={category === 'gaming' && click3}>
                             <NavLink to={`/article/byCategory/${removeAccents(category.toLocaleLowerCase())}`} className="aside-link">
                                 {category}
                             </NavLink>
+                            {show3 && category === 'gaming' && ['cartuchos', 'consolas'].map(subCategory =>
+                            <li key={subCategory}><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>)}
                         </div>}
                         {category === 'informática' && <div  onClick={category === 'informática' && click4}>
                             <NavLink to={`/article/byCategory/${removeAccents(category.toLocaleLowerCase())}`} className="aside-link">
                                 {category}
                             </NavLink>
+                            {show4 && category === 'informática' && ['accesorios', 'monitores', 'ordenadores', 'teclados'].map(subCategory =>
+                            <li key={subCategory}><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>)}
                         </div>}
                         {category === 'música' && <div  onClick={category === 'música' && click5}>
                             <NavLink to={`/article/byCategory/${removeAccents(category.toLocaleLowerCase())}`} className="aside-link">
                                 {category}
                             </NavLink>
+                            {show5 && category === 'música' && ['cintas', 'vinilos'].map(subCategory =>
+                            <li key={subCategory}><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>)}
                         </div>}
                         {category === 'teléfonos' && <div  onClick={category === 'teléfonos' && click6}>
-                            <NavLink to={`/article/byCategory/${removeAccents(category.toLocaleLowerCase())}`} className="aside-link">
+                            <NavLink to={`/article/byCategory/${removeAccents(category.toLocaleLowerCase())}`} className="aside-link aside-login-dropdown">
                                 {category}
                             </NavLink>
+                            {show6 && category === 'teléfonos' && ['fijos', 'moviles'].map(subCategory =>
+                            <li key={subCategory}><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>)}
                         </div>}
                         {category === 'imagen' && <div  onClick={category === 'imagen' && click7}>
                             <NavLink to={`/article/byCategory/${removeAccents(category.toLocaleLowerCase())}`} className="aside-link">
                                 {category}
                             </NavLink>
+                            {show7 && category === 'imagen' && ['camaraFotos', 'camaraVideo', 'televisores'].map(subCategory =>
+                            <li key={subCategory}><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>)}
                         </div>}
-                        {show && category === 'audio' && ['altavoces', 'mp3', 'radios', 'tocadiscos', 'walkman'].map(subCategory =>
-                        <li key={subCategory}><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>)}
-
-                        {show2 && category === 'electrónica' && ['cables', 'despertadores', 'gps', 'librosElectronicos', 'maquinasEscribir', 'tdt'].map(subCategory =>
-                        <li key={subCategory}><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>)}
-
-                        {show3 && category === 'gaming' && ['cartuchos', 'consolas'].map(subCategory =>
-                        <li key={subCategory}><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>)}
-
-                        {show4 && category === 'informática' && ['accesorios', 'monitores', 'ordenadores', 'teclados'].map(subCategory =>
-                        <li key={subCategory}><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>)}
-
-                        {show5 && category === 'música' && ['cintas', 'vinilos'].map(subCategory =>
-                        <li key={subCategory}><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>)}
-
-                        {show6 && category === 'teléfonos' && ['fijos', 'moviles'].map(subCategory =>
-                        <li key={subCategory}><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>)}
-
-                        {show7 && category === 'imagen' && ['camaraFotos', 'camaraVideo', 'televisores'].map(subCategory =>
-                        <li key={subCategory}><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>)}
                     </li>
                     )}
             </ul>
