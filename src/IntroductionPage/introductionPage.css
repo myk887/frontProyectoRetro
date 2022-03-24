@@ -56,22 +56,6 @@
   background-repeat: no-repeat;
 }
 
-/* .introductionpage-names {
-  color: black;
-  margin: 5% 1vw;
-  max-width: 200px;
-  display: flex;
-  justify-content: center;
-}
-
-.introductionpage-prices {
-  color: black;
-  margin: 5% 1vw;
-  max-width: 200px;
-  display: flex;
-  justify-content: center;
-} */
-
 .introductionpage-productinfo {
   display: flex;
   justify-content: space-between;
@@ -90,13 +74,6 @@
   font-style: bold;
   font-size: 1.6rem;
 }
-
-
-
-
-
-
-
 
 .introductionpage-container a {
   text-decoration: none;
