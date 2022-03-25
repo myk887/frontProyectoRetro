@@ -88,6 +88,78 @@ function Aside () {
         setShow(false)
     }
 
+
+    const over = (e) => {
+        e.preventDefault()
+        setShow(true)
+        setShow2(false)
+        setShow3(false)
+        setShow4(false)
+        setShow5(false)
+        setShow6(false)
+        setShow7(false)
+    }
+    const over2 = (e) => {
+        e.preventDefault()
+        setShow2(true)
+        setShow(false)
+        setShow3(false)
+        setShow4(false)
+        setShow5(false)
+        setShow6(false)
+        setShow7(false)
+    }
+    const over3 = (e) => {
+        e.preventDefault()
+        setShow3(true)
+        setShow2(false)
+        setShow(false)
+        setShow4(false)
+        setShow5(false)
+        setShow6(false)
+        setShow7(false)
+    }
+    const over4 = (e) => {
+        e.preventDefault()
+        setShow4(true)
+        setShow2(false)
+        setShow3(false)
+        setShow(false)
+        setShow5(false)
+        setShow6(false)
+        setShow7(false)
+    }
+    const over5 = (e) => {
+        e.preventDefault()
+        setShow5(true)
+        setShow2(false)
+        setShow3(false)
+        setShow4(false)
+        setShow(false)
+        setShow6(false)
+        setShow7(false)
+    }
+    const over6 = (e) => {
+        e.preventDefault()
+        setShow6(true)
+        setShow2(false)
+        setShow3(false)
+        setShow4(false)
+        setShow5(false)
+        setShow(false)
+        setShow7(false)
+    }
+    const over7 = (e) => {
+        e.preventDefault()
+        setShow7(true)
+        setShow2(false)
+        setShow3(false)
+        setShow4(false)
+        setShow5(false)
+        setShow6(false)
+        setShow(false)
+    }
+
     return (
         <div className="aside">
             <ul>
@@ -95,7 +167,7 @@ function Aside () {
                 <li className="aside-category"><NavLink to={`/todos`}>Todos</NavLink></li>
                 {categoriesBack.map(category =>
                     <li key={category} className="aside-category">
-                        {category === 'audio' && <div  onClick={category === 'audio' && click} className="aside-login">
+                        {category === 'audio' && <div  onClick={category === 'audio' && click} onMouseOver={over} className="aside-login">
                             <NavLink to={`/article/byCategory/${removeAccents(category.toLocaleLowerCase())}`} className="aside-link">
                                 {category}
                             </NavLink>
@@ -104,47 +176,59 @@ function Aside () {
                                 <li key={subCategory} className="aside-dropdown" ><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>)}
                             </ul>
                         </div>}
-                        {category === 'electrónica' && <div  onClick={category === 'electrónica' && click2}>
+                        {category === 'electrónica' && <div  onClick={category === 'electrónica' && click2} onMouseOver={over2}  className="aside-login">
                             <NavLink to={`/article/byCategory/${removeAccents(category.toLocaleLowerCase())}`} className="aside-link">
                                 {category}
                             </NavLink>
-                            {show2 && category === 'electrónica' && ['cables', 'despertadores', 'gps', 'librosElectronicos', 'maquinasEscribir', 'tdt'].map(subCategory =>
-                            <li key={subCategory}><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>)}
+                            <ul>
+                                {show2 && category === 'electrónica' && ['cables', 'despertadores', 'gps', 'librosElectronicos', 'maquinasEscribir', 'tdt'].map(subCategory =>
+                                <li key={subCategory} className="aside-dropdown"><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>)}
+                            </ul>
                         </div>}
-                        {category === 'gaming' && <div  onClick={category === 'gaming' && click3}>
+                        {category === 'gaming' && <div  onClick={category === 'gaming' && click3} onMouseOver={over3} className="aside-login">
                             <NavLink to={`/article/byCategory/${removeAccents(category.toLocaleLowerCase())}`} className="aside-link">
                                 {category}
                             </NavLink>
-                            {show3 && category === 'gaming' && ['cartuchos', 'consolas'].map(subCategory =>
-                            <li key={subCategory}><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>)}
+                            <ul>
+                                {show3 && category === 'gaming' && ['cartuchos', 'consolas'].map(subCategory =>
+                                <li key={subCategory} className="aside-dropdown"><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>)}
+                            </ul>
                         </div>}
-                        {category === 'informática' && <div  onClick={category === 'informática' && click4}>
+                        {category === 'informática' && <div  onClick={category === 'informática' && click4} onMouseOver={over4} className="aside-login">
                             <NavLink to={`/article/byCategory/${removeAccents(category.toLocaleLowerCase())}`} className="aside-link">
                                 {category}
                             </NavLink>
-                            {show4 && category === 'informática' && ['accesorios', 'monitores', 'ordenadores', 'teclados'].map(subCategory =>
-                            <li key={subCategory}><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>)}
+                            <ul>
+                                {show4 && category === 'informática' && ['accesorios', 'monitores', 'ordenadores', 'teclados'].map(subCategory =>
+                                <li key={subCategory} className="aside-dropdown"><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>)}
+                            </ul>
                         </div>}
-                        {category === 'música' && <div  onClick={category === 'música' && click5}>
+                        {category === 'música' && <div  onClick={category === 'música' && click5} onMouseOver={over5} className="aside-login">
                             <NavLink to={`/article/byCategory/${removeAccents(category.toLocaleLowerCase())}`} className="aside-link">
                                 {category}
                             </NavLink>
-                            {show5 && category === 'música' && ['cintas', 'vinilos'].map(subCategory =>
-                            <li key={subCategory}><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>)}
+                            <ul>
+                                {show5 && category === 'música' && ['cintas', 'vinilos'].map(subCategory =>
+                                <li key={subCategory} className="aside-dropdown"><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>)}
+                            </ul>
                         </div>}
-                        {category === 'teléfonos' && <div  onClick={category === 'teléfonos' && click6}>
+                        {category === 'teléfonos' && <div  onClick={category === 'teléfonos' && click6} onMouseOver={over6} className="aside-login">
                             <NavLink to={`/article/byCategory/${removeAccents(category.toLocaleLowerCase())}`} className="aside-link aside-login-dropdown">
                                 {category}
                             </NavLink>
-                            {show6 && category === 'teléfonos' && ['fijos', 'moviles'].map(subCategory =>
-                            <li key={subCategory}><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>)}
+                            <ul>
+                                {show6 && category === 'teléfonos' && ['fijos', 'moviles'].map(subCategory =>
+                                <li key={subCategory} className="aside-dropdown"><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>)}
+                            </ul>
                         </div>}
-                        {category === 'imagen' && <div  onClick={category === 'imagen' && click7}>
+                        {category === 'imagen' && <div  onClick={category === 'imagen' && click7} onMouseOver={over7} className="aside-login">
                             <NavLink to={`/article/byCategory/${removeAccents(category.toLocaleLowerCase())}`} className="aside-link">
                                 {category}
                             </NavLink>
-                            {show7 && category === 'imagen' && ['camaraFotos', 'camaraVideo', 'televisores'].map(subCategory =>
-                            <li key={subCategory}><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>)}
+                            <ul>
+                                {show7 && category === 'imagen' && ['camaraFotos', 'camaraVideo', 'televisores'].map(subCategory =>
+                                <li key={subCategory} className="aside-dropdown"><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>)}
+                            </ul>
                         </div>}
                     </li>
                     )}
