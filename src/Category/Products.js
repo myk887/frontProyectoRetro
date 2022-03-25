@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import NotFound from '../NotFound'
-// import './Products.css'
+import './Products.css'
 
 
 function Products({products}) {
@@ -20,13 +20,16 @@ function Products({products}) {
     const handleNext = () => setStep((step + 1) % pags)
 
     return (
-      <div className='container'>
-        <div className='filtro'>
+      <div className='products-container'>
+
+        <div className='products-filter'>
+
           <select name="select" onChange={e => setOrder(e.target.value)}>
               <option value="" disabled selected>Ordenar por..</option>
               <option value="1" >Precio menor a mayor </option>
               <option value="2" >Precio mayor a menor </option>
           </select>
+
           <select name="provinces" required onChange={e => setOrder2(e.target.value)}>
             <option value='' selected>Provincia</option>
             <option value="coruña">A Coruña/La Coruña</option>
@@ -81,30 +84,32 @@ function Products({products}) {
             <option value="zaragoza">Zaragoza</option>
           </select>
         </div>
+
         {!productsOrder.length ?
         <NotFound/>
         :
         productsOrder?.slice(step * perPage, (step + 1) * perPage).map(product =>
-        <div key={product.id} className='product'>
-            <img src={`http://localhost:3000${product.photo.replace('./', '/')}`} alt={product.name} className='photo'/>
-            <div className='content'>
+          
+        <div key={product.id} className='products-item-card'>
+            <img src={`http://localhost:3000${product.photo.replace('./', '/')}`} alt={product.name} className='products-item-photo'/>
+            <div className='products-card-content'>
                 <h1>{product.name}</h1>
-                <div className='description'>
+                <div className='products-item-description'>
                     <p>{product.description}</p>
-                    <div className='spanButton'>
+                    <div className='products-spanButton'>
                         <span> Precio: {product.price}€</span>
-                        <button type='button' className='irCompra'><Link to={'/article/' +product.id} className='enlace'>ver producto</Link></button>
+                        <button type='button' className='products-buying-button'><Link to={'/article/' +product.id} className='enlace'>ver producto</Link></button>
                     </div>
                 </div>
             </div>
         </div>
         )}
-        <div className='buttons'>
-          <div onClick={handlePrev} className='previous'>
+        <div className='products-arrows'>
+          <div onClick={handlePrev} className='products-arrow-prev'>
           ⇦
           </div>
           {'  '}
-          <div onClick={handleNext} className='next'>
+          <div onClick={handleNext} className='products-arrow-next'>
           ⇨
           </div>
         </div>

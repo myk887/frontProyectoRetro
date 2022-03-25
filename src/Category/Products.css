@@ -1,16 +1,16 @@
-.photo {
+.products-item-photo {
     width: 200px;
     height: 200px;
     border-radius: 15px;
     flex-shrink: 0;
     vertical-align: middle;
 }
-.container {
+.products-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.product {
+.products-item-card {
     display: flex;
     width: 95%;
     gap: 15px;
@@ -20,7 +20,7 @@
     border-radius: 20px;
     align-items: center;
 }
-.content {
+.products-card-content {
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -30,38 +30,42 @@
     background-color: whitesmoke;
     border-radius: 10px;
 }
-.description {
+.products-item-description {
     width: 80%;
     padding: 10px;
     background-color: silver;
     border-radius: 10px;
 }
-.spanButton {
+.products-spanButton {
     display: flex;
     justify-content: space-between;
 }
-.irCompra {
+.products-buying-button {
     height: 20px;
     width: auto;
 }
 
-.buttons {
+.products-arrows {
     display: flex;
     justify-content: space-between;
     height: 100px;
     width: 300px;
 }
-.next {
+.products-arrow-next {
     font-size: 90px;
 }
-.next:hover {
+.products-arrow-next:hover {
     font-size: 100px;
     cursor: pointer;
 }
-.previous {
+.products-arrow-prev {
     font-size: 90px;
 }
-.previous:hover {
+.products-arrow-prev:hover {
     font-size: 100px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 20rem) {
+
 }
