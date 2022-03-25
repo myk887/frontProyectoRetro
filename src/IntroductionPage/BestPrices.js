@@ -30,13 +30,16 @@ function BestPrices () {
     }, [handleNext])
 
     return (
-        <div>
+        <div className="introductionpage-carousel-block">
+
           <h1 className="introductionpage-title">PRECIOS PARA TODOS LOS BOLSILLOS</h1>
+
             <main>
 
              <div className="introductionpage-banner">
 
-             <span className='introductionpage-arrows' onClick={handlePrev}>❮</span>
+                  <span className='introductionpage-arrow ip-arrow1' onClick={handlePrev}>❮</span>
+                  <span className='introductionpage-arrow ip-arrow2' onClick={handleNext}>❯</span>
 
                {articlesLowcost?.slice(step * perPage, (step + 1) * perPage).map(product =>
 
@@ -62,8 +65,6 @@ function BestPrices () {
 
                 </div>
               )}
-
-              <span className='introductionpage-arrows' onClick={handleNext}>❯</span>
 
             </div>
          </main>

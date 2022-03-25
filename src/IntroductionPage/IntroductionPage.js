@@ -6,13 +6,11 @@ import BestPricesWrapper from './BestPrices';
 function IntroductionPage () {
 
     return (
-      <div className='introductioPage'>
-        <div className='ofertas'>
+        <div className='introductionpage-carousel'>
           <Banners/>
           <NewProductsWrapper />
           <BestPricesWrapper />
         </div>
-      </div>
     )
 }
 
