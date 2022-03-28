@@ -118,6 +118,82 @@
   }
  }
 
+ @media screen and (min-width: 140rem) {
+
+  .footer-link {
+    margin-bottom: 1rem;
+  }
+
+  .footer-link a {
+    font-size: 2.5rem;
+  }
+
+  .footer-logo {
+    height: 15rem;
+    margin: 0.3rem;
+  }
+
+  .footer-company ul {
+    margin-bottom: 1rem;
+  }
+
+  .footer-address {
+    font-size: 2rem;
+  }
+
+  .footer-community {
+    margin-right: 1rem;
+  }
+
+  .main-footer p {
+    font-size: 2.5rem;
+    margin: 1rem;
+  }
+
+  .footer-community img {
+    width: 6rem;
+    margin: 0 1.5rem;
+  }
+ }
+
+ @media screen and (min-width: 180rem) {
+
+  .footer-link {
+    margin-bottom: 1rem;
+  }
+
+  .footer-link a {
+    font-size: 5rem;
+  }
+
+  .footer-logo {
+    height: 25rem;
+    margin: 0.3rem;
+  }
+
+  .footer-company ul {
+    margin-bottom: 3rem;
+  }
+
+  .footer-address {
+    font-size: 4rem;
+  }
+
+  .footer-community {
+    margin-right: 1rem;
+  }
+
+  .main-footer p {
+    font-size: 4rem;
+    margin: 3rem;
+  }
+
+  .footer-community img {
+    width: 10rem;
+    margin: 0 2rem;
+  }
+ }
+
 
 
 

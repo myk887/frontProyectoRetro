@@ -1,9 +1,14 @@
 @import '../variables.css';
 
 .subcategoriesjs-categoryname {
-    color:var(--grey);
-    font-size: 3rem;
+    color:red;
+    font-size: 2.5rem;
+    font-weight: 500;
     margin: 0 2rem;
+}
+
+.subcategoriesjs-categoryname::first-letter {
+    text-transform: uppercase;
 }
 
 .products-header {
@@ -64,13 +69,13 @@
 }
 
 .products-item-photo {
-    width: 25%;
+    width: 20%;
     margin: 1rem;
     border-radius: 0.5rem;
 }
 
 .products-card-info {
-    width: 70%;
+    width: 75%;
     display: flex;
     padding: 1rem 0;
     flex-direction: column;
@@ -80,6 +85,8 @@
 
 .products-name {
     font-size: 1.8rem;
+    margin: 0;
+    margin-bottom: 0.5rem;
 }
 
 .products-item-description {
@@ -95,7 +102,7 @@
 }
 
 .products-description-price {
-    margin: 1.5rem 2rem 0;
+    margin: 0.5rem 2rem 0;
     font-size: 1.3rem;
     text-align: right;
 }
@@ -108,6 +115,7 @@
 }
 
 .products-button {
+    margin: 0 0 0.5rem 0.5rem;
     min-height: auto;
     min-width: 9rem;
     width: 30%;
@@ -174,10 +182,11 @@
     }
 }
 
-@media screen and (min-width: 105rem) {
+@media screen and (min-width: 140rem) {
 
     .subcategoriesjs-categoryname {
-        font-size: 4rem;
+        color: violet;
+        font-size: 3rem;
         margin: 0 3rem;
     }
 
@@ -214,6 +223,7 @@
 
     .products-name {
         font-size: 2.5rem;
+        margin-bottom: 1rem;
     }
 
     .products-description-text {
@@ -222,7 +232,7 @@
     }
 
     .products-description-price {
-        margin: 1.5rem 4rem 0;
+        margin: 0.8rem 4rem 0;
         font-size: 2rem;
         text-align: right;
     }
@@ -235,10 +245,10 @@
     }
 
     .products-button {
+        margin: 0 0 1rem 1rem;
         max-width: none;
         height: 4rem;
         border-radius: 1rem;
-        margin: 1rem;
     }
 
     .products-button a {
@@ -247,83 +257,11 @@
 }
 
 
-@media screen and (min-width: 150rem) {
+@media screen and (min-width: 220rem) {
 
     .subcategoriesjs-categoryname {
-        font-size: 5rem;
-        margin: 0 5rem;
-    }
-
-    .products-header {
-        margin: 3rem 0;
-    }
-
-    .products-filters select {
-        font-size: 3rem;
-    }
-
-    .products-arrows div {
-        font-size: 5rem;
-    }
-
-    .products-arrows span {
-        font-size: 4rem;
-    }
-
-    .products-arrows-gap {
-        width:7rem;
-    }
-
-    .products-item-card {
-        gap: 5rem;
-        margin: 2rem auto;
-        border: 2px solid var(--grey);
-    }
-
-    .products-item-photo {
-        margin: 3rem;
-        border-radius: 1.5rem;
-    }
-
-    .products-name {
-        font-size: 5rem;
-    }
-
-    .products-description-text {
-        margin: 3rem;
-        font-size: 4rem;
-    }
-
-    .products-description-price {
-        margin: 1.5rem 8rem 0;
-        font-size: 3.5rem;
-        text-align: right;
-    }
-
-    .products-description-price span {
-        font-size: 5rem;
-        font-weight: 400;
-        margin-left: 3rem;
-        text-align: right;
-    }
-
-    .products-button {
-        max-width: none;
-        height: 7rem;
-        border-radius: 1.5rem;
-        margin: 3rem;
-    }
-
-    .products-button a {
-        font-size: 3.5rem;
-    }
-}
-
-
-@media screen and (min-width: 250rem) {
-
-    .subcategoriesjs-categoryname {
-        font-size: 10rem;
+        color: blue;
+        font-size: 8rem;
         margin: 0 5rem;
     }
 
@@ -359,35 +297,36 @@
     }
 
     .products-name {
-        font-size: 8rem;
+        font-size: 5.5rem;
+        margin-bottom: 2rem;
     }
 
     .products-description-text {
         margin: 5rem;
-        font-size: 5rem;
+        font-size: 4.5rem;
     }
 
     .products-description-price {
         margin: 1.5rem 10rem 0;
-        font-size: 5rem;
+        font-size: 3rem;
         text-align: right;
     }
 
     .products-description-price span {
-        font-size: 8rem;
+        font-size: 6rem;
         font-weight: 400;
         margin-left: 5rem;
         text-align: right;
     }
 
     .products-button {
+        margin: 0 0 1rem 5rem;
         max-width: none;
         height: 10rem;
         border-radius: 3rem;
-        margin: 3rem;
     }
 
     .products-button a {
-        font-size: 5rem;
+        font-size: 4.5rem;
     }
 }

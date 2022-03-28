@@ -15,7 +15,7 @@
   min-width: 375px;
   display: grid;
   grid-template-columns: 14rem 1fr;
-  margin-top: 150px;
+  margin-top: 10rem;
 }
 
 .active {
@@ -107,7 +107,6 @@
   color: black;
 }
 
-
 button {
   width: 30vw;
   min-width: 50px;
@@ -138,4 +137,20 @@ button:hover {
   font-weight: bold;
   box-shadow: 8px 8px 8px lightgrey;
 }
+
+
+@media screen and (min-width: 140rem) {
+  .body-structure {
+    margin-top: 12rem;
+  }
+}
+
+@media screen and (min-width: 220rem) {
+  .body-structure {
+    margin-top: 23rem;
+  }
+}
+
+
+
 

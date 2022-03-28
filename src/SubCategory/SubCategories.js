@@ -36,14 +36,9 @@ function SubCategories () {
     if (subcategory === 'televisores') subCategoriesBack =  'televisores'
 
     return (
-        // <ul>
-        //     {subCategoriesBack.map(subCategory =>
-        //         <li key={subCategory}><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>
-        //         )}
-        // </ul>
-        <h1>
+        <div className="subcategoriesjs-categoryname">
             {subCategoriesBack}
-        </h1>
+        </div>
     )
 }
 
