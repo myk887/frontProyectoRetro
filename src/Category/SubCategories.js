@@ -20,9 +20,9 @@ function SubCategories () {
     if (category === 'imagen') subCategoriesBack = ['camaraFotos', 'camaraVideo', 'televisores']
 
     return (
-            <h1 className="subcategoriesjs-categoryname">
+            <div className="subcategoriesjs-categoryname">
                 {category}
-            </h1>
+            </div>
     )
 }
 
