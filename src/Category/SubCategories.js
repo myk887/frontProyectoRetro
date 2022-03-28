@@ -20,22 +20,7 @@ function SubCategories () {
     if (category === 'imagen') subCategoriesBack = ['camaraFotos', 'camaraVideo', 'televisores']
 
     return (
-            // !show ?
-            // <button className="buttonShow" onClick={() => setShow(!show)}>
-            //     ☰
-            // </button>
-            // :
-            // <div className="secondAside">
-            //     <button className="buttonShow" onClick={() => setShow(!show)}>
-            //         ☰
-            //     </button>
-            //     <ul>
-            //         {subCategoriesBack.map(subCategory =>
-            //             <li key={subCategory}><NavLink to={`/article/bySubCategory/${removeAccents(subCategory.toLocaleLowerCase())}`}>{subCategory}</NavLink></li>
-            //             )}
-            //     </ul>
-            // </div>
-            <h1>
+            <h1 className="subcategoriesjs-categoryname">
                 {category}
             </h1>
     )

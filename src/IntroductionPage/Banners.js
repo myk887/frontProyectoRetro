@@ -16,7 +16,7 @@ function Banners () {
     useEffect(() => {
       const carousel = setInterval(() => {
         handleNext();
-      }, 5000);
+      }, 4000);
 
       return () => {
         clearInterval(carousel)
