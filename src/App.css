@@ -139,3 +139,19 @@ button:hover {
   box-shadow: 8px 8px 8px lightgrey;
 }
 
+
+@media screen and (min-width: 150rem) {
+  .body-structure {
+    margin-top: 15rem;
+  }
+}
+
+@media screen and (min-width: 250rem) {
+  .body-structure {
+    margin-top: 25rem;
+  }
+}
+
+
+
+

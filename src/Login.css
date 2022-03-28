@@ -80,6 +80,15 @@
   height: 8rem;
 }
 
+
+@keyframes rotate {
+from {
+  transform: rotate(0deg);
+}
+  to {
+    transform: rotate(360deg);
+  }}
+
 @media screen and (max-width: 35rem) {
 
   .login-user-label span{
@@ -95,10 +104,107 @@
   }
 }
 
-@keyframes rotate {
-from {
-  transform: rotate(0deg);
+@media screen and (min-width: 110rem) {
+
+  .login-avatar-image {
+    height: 7rem;
+    border-radius: 3rem;
+  }
+  .dropdown-content a {
+    font-size: 2rem;
+  }
+  .login-perfil button {
+    font-size: 2rem;
+    width: 15rem;
+  }
+  .dropdown-content {
+    width: 15rem;
+  }
 }
-  to {
-    transform: rotate(360deg);
-  }}
+
+@media screen and (min-width: 110rem) {
+
+  .login-avatar-image {
+    height: 7rem;
+    border-radius: 3rem;
+  }
+
+  .dropdown-content a {
+    font-size: 2rem;
+  }
+
+  .dropdown-content {
+    width: 20rem;
+  }
+
+  .login-form {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+
+  .login-user-label {
+    margin: 1rem;
+  }
+
+  .login-user-label span {
+    font-size: 3rem;
+  }
+
+  .login-user-label input {
+    font-size: 3rem;
+    height: 5rem;
+  }
+
+  .login-perfil button {
+    min-height: 0;
+    min-width: 0;
+    max-width: none;
+    font-size: 3rem;
+    width: 30rem;
+    border-radius: 0.8rem;
+  }
+}
+
+
+@media screen and (min-width: 200rem) {
+
+  .login-avatar-image {
+    height: 11rem;
+    border-radius: 4rem;
+  }
+  .dropdown-content a {
+    font-size: 4rem;
+  }
+
+  .dropdown-content {
+    width: 30rem;
+  }
+
+  .login-form {
+    padding: 3rem;
+    margin: 1rem;
+  }
+
+  .login-user-label {
+    margin: 2rem;
+  }
+
+  .login-user-label span {
+    font-size: 5rem;
+  }
+
+  .login-user-label input {
+    font-size: 5rem;
+    height: 7rem;
+  }
+
+  .login-perfil button {
+    font-size: 4rem;
+    min-height: 0;
+    min-width: 0;
+    max-width: none;
+    font-size: 5rem;
+    width: 50rem;
+    border-radius: 2rem;
+  }
+}
