@@ -1,4 +1,3 @@
-import './SubCategory.css';
 import Products from './Products';
 import NotFound from '../NotFound';
 import SubCategories from './SubCategories';

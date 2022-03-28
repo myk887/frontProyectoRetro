@@ -118,7 +118,7 @@
   }
  }
 
- @media screen and (min-width: 110rem) {
+ @media screen and (min-width: 140rem) {
 
   .footer-link {
     margin-bottom: 1rem;
@@ -156,7 +156,7 @@
   }
  }
 
- @media screen and (min-width: 200rem) {
+ @media screen and (min-width: 180rem) {
 
   .footer-link {
     margin-bottom: 1rem;

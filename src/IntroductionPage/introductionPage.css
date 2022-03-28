@@ -10,7 +10,7 @@
 }
 
 .banners-image {
-    width:90%;
+    width:70%;
 }
 
 .introductionpage-carousel-block {
@@ -19,8 +19,8 @@
 
 .introductionpage-title {
   color:var(--dark-grey);
-  font-size: 2rem;
-  padding: 1vw 5vw;
+  font-size: 1.7rem;
+  padding: 0.5vw 5vw;
 }
 
 .introductionpage-banner {
@@ -34,8 +34,8 @@
   border: 1px solid lightgray;
   border-radius: 0.5vw;
   height: 95%;
-  min-height: 25rem;
-  width: 25rem;
+  min-height: 23rem;
+  width: 23rem;
   padding: 0.3vw;
   cursor: pointer;
   transition: transform 0.3s ease;

@@ -7,6 +7,10 @@
     margin: 0 2rem;
 }
 
+.subcategoriesjs-categoryname::first-letter {
+    text-transform: uppercase;
+}
+
 .products-header {
     display: flex;
     justify-content:space-evenly;
@@ -178,7 +182,7 @@
     }
 }
 
-@media screen and (min-width: 105rem) {
+@media screen and (min-width: 140rem) {
 
     .subcategoriesjs-categoryname {
         color: violet;
@@ -253,82 +257,7 @@
 }
 
 
-@media screen and (min-width: 140rem) {
-
-    .subcategoriesjs-categoryname {
-        color: orange;
-        font-size: 4rem;
-        margin: 0 5rem;
-    }
-
-    .products-header {
-        margin: 3rem 0;
-    }
-
-    .products-filters select {
-        font-size: 3rem;
-    }
-
-    .products-arrows div {
-        font-size: 5rem;
-    }
-
-    .products-arrows span {
-        font-size: 4rem;
-    }
-
-    .products-arrows-gap {
-        width:7rem;
-    }
-
-    .products-item-card {
-        gap: 5rem;
-        margin: 2rem auto;
-        border: 2px solid var(--grey);
-    }
-
-    .products-item-photo {
-        margin: 3rem;
-        border-radius: 1.5rem;
-    }
-
-    .products-name {
-        font-size: 3.5rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .products-description-text {
-        margin: 3rem;
-        font-size: 3rem;
-    }
-
-    .products-description-price {
-        margin: 1.3rem 8rem 0;
-        font-size: 3rem;
-        text-align: right;
-    }
-
-    .products-description-price span {
-        font-size: 4rem;
-        font-weight: 400;
-        margin-left: 3rem;
-        text-align: right;
-    }
-
-    .products-button {
-        margin: 0 0 1rem 3rem;
-        max-width: none;
-        height: 7rem;
-        border-radius: 1.5rem;
-     }
-
-    .products-button a {
-        font-size: 3rem;
-    }
-}
-
-
-@media screen and (min-width: 250rem) {
+@media screen and (min-width: 220rem) {
 
     .subcategoriesjs-categoryname {
         color: blue;

@@ -105,7 +105,7 @@
 
 }
 
-@media screen and (min-width: 110rem) {
+@media screen and (min-width: 140rem) {
   .header {
     padding: 0.8rem 2rem 1rem 2rem;
     gap: 2rem;
@@ -126,7 +126,7 @@
   }
 }
 
-@media screen and (min-width: 250rem) {
+@media screen and (min-width: 220rem) {
   .header {
     padding: 0.8rem 2rem 2rem 2rem;
     gap: 2rem;

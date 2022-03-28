@@ -104,25 +104,7 @@ from {
   }
 }
 
-@media screen and (min-width: 110rem) {
-
-  .login-avatar-image {
-    height: 7rem;
-    border-radius: 3rem;
-  }
-  .dropdown-content a {
-    font-size: 2rem;
-  }
-  .login-perfil button {
-    font-size: 2rem;
-    width: 15rem;
-  }
-  .dropdown-content {
-    width: 15rem;
-  }
-}
-
-@media screen and (min-width: 110rem) {
+@media screen and (min-width: 140rem) {
 
   .login-avatar-image {
     height: 7rem;
@@ -134,7 +116,7 @@ from {
   }
 
   .dropdown-content {
-    width: 20rem;
+    width: 15rem;
   }
 
   .login-form {
@@ -166,7 +148,7 @@ from {
 }
 
 
-@media screen and (min-width: 200rem) {
+@media screen and (min-width: 220rem) {
 
   .login-avatar-image {
     height: 11rem;
