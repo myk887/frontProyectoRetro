@@ -20,26 +20,8 @@
 
 .active {
   color: var(--orange);
+  font-size: 1.2rem;
   font-weight: bold;
-}
-
-@media screen and (max-width: 75rem) {
-  .body-structure {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10.5rem;
-  }
-}
-
-@media screen and (max-width: 35rem) {
-  .body-structure {
-    margin-top: 10rem;
-  }
-}
-
-.active {
-    font-size: 1.2rem;
-    color: white;
 }
 
 .notFound {
@@ -49,6 +31,7 @@
   justify-content: space-evenly;
   height: 790px;
 }
+
 .registered-user {
   min-width: 750px;
 }
@@ -138,6 +121,19 @@ button:hover {
   box-shadow: 8px 8px 8px lightgrey;
 }
 
+@media screen and (max-width: 75rem) {
+  .body-structure {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10.5rem;
+  }
+}
+
+@media screen and (max-width: 35rem) {
+  .body-structure {
+    margin-top: 10rem;
+  }
+}
 
 @media screen and (min-width: 140rem) {
   .body-structure {
