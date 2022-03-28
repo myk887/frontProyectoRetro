@@ -112,7 +112,6 @@ function Products({products}) {
                       <p className="products-description-text">{product.description}</p>
                       <p className="products-description-price">Precio: <span>{product.price}€</span></p>
                       <button type='button' className='products-button'><Link to={'/article/' +product.id} className='enlace'>ver producto</Link></button>
-
                   </div>
               </div>
           </div>
