@@ -22,7 +22,7 @@ function NewProducts () {
     useEffect(() => {
       const carousel = setInterval(() => {
         handleNext();
-      }, 3000);
+      }, 2500);
 
       return () => {
         clearInterval(carousel)
