@@ -34,7 +34,6 @@
 
   .header {
     grid-area: header;
-    width: 100vw;
     padding: 0.5rem 2rem ;
     gap: 1rem;
     display: grid;
