@@ -27,26 +27,31 @@ function ContactPage() {
   return (
     <div className="contactpage">
       <h1>Contacta con nosotros</h1>
-      <form className="contacForm" onSubmit={handleSubmit}>
-        <label className="completeName">
+      <form className="contactpage-form" onSubmit={handleSubmit}>
+
+        <label className="contactpage-info">
           <input name="name" placeholder="* Nombre..." value={name} required onChange={e => setName(e.target.value)} ></input>
           <input name="surname" placeholder="Apellidos..." value={surname} onChange={e => setSurname(e.target.value)}></input>
         </label>
-        <label className="contactForm">
+
+        <label className="contactpage-info">
           <input placeholder="* Email.." required value={email} onChange={e => setEmail(e.target.value)} ></input>
           <input placeholder="Telefono..." value={phone} onChange={e => setPhone(e.target.value)}></input>
+          <textarea placeholder="Escribe aquí tu mensaje..." value={message} onChange={e => setMessage(e.target.value)}></textarea>
         </label>
-        <textarea placeholder="Escribe aquí tu mensaje..." value={message} onChange={e => setMessage(e.target.value)}></textarea>
-        <label>
+
+        <p>* Campos obligatorios</p>
+
+        <label className="contactpage-check">
           <input className='check' type="checkbox" required value={checked} onChange={e => setChecked(e.target.value)}></input>
-          He leído y acepto la <Link to="/privacity" className='link'> Política de Privacidad</Link>
-          <p>*Campos obligatorios</p>
+          <span>He leído y acepto la</span> <Link to="/privacity" className='contactpage-link'> Política de Privacidad</Link>
         </label>
-        <button className="submit" type="submit" value="Submit" onClick={handleSubmit}>Enviar mensaje</button>
+
+        <button className="contactpage-button" type="submit" value="Submit" onClick={handleSubmit}>Enviar mensaje</button>
+
       </form>
     </div>
   )
 }
-
 
 export default ContactPage

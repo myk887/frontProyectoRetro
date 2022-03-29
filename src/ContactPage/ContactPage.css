@@ -1,28 +1,176 @@
 
+@import '../variables.css';
+@import '../normalize.css';
 
-/* INTERFIERE */
 
-/* form{
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-} */
-
-input {
-  width: 35vw;
-  height: 25px;
+.contactpage {
+  width: 100vw;
 }
 
-textarea {
-  width: 73vw;
-  height: 200px;
-  align-self: center;
+.contactpage h1 {
+  color: var(--grey);
+  margin-left: 1rem;
 }
 
-.check {
-  width: 20px;
+.contactpage-info {
+  display: block;
 }
 
-.link {
-  color: blue;
+.contactpage-form{
+  display: block;
 }
+
+.contactpage-info input {
+  width: 22rem;
+  margin: 0.5rem 1rem;
+}
+
+.contactpage-info textarea {
+  display: block;
+  width: 46rem;
+  height: 5rem;
+  margin: 0.5rem 1rem;
+}
+
+.contactpage-form p{
+  margin: 1rem;
+}
+
+.contactpage-check {
+  display: inline-block;
+  margin: 1rem;
+}
+
+.contactpage-check input {
+  margin-right: 1rem;
+}
+
+.contactpage-link{
+  margin-left: 1rem;
+}
+
+.contactpage-button {
+  min-width:0;
+  min-height:0;
+  width: 15rem;
+  margin-left: 8rem;
+  font-size: 1.3rem;
+}
+
+@media screen and (max-width: 48rem) {
+
+  .contactpage-info textarea {
+    width: 22rem;
+  }
+
+  .contactpage-link {
+    display: block;
+    margin-left: 1.8rem;
+  }
+  
+}
+
+@media screen and (min-width: 140rem) {
+
+  .contactpage h1 {
+    font-size: 4rem;
+    margin-left: 3rem;
+  }
+
+  .contactpage-info input {
+    width: 47rem;
+    margin: 3rem 3rem;
+    font-size: 2rem;
+  }
+  
+  .contactpage-info textarea {
+    width: 100rem;
+    height: 15rem;
+    margin: 3rem 3rem;
+    font-size: 2rem;
+  }
+
+  .contactpage-form p{
+    margin: 3rem;
+    font-size: 2rem;
+  }
+
+  .contactpage-check input {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .contactpage-link{
+    margin-left: 3rem;
+    font-size: 2rem;
+  }
+
+  .contactpage-check span{
+    font-size: 2rem;
+  }
+  
+  .contactpage-button {
+    min-width:0;
+    min-height:0;
+    max-width: none;
+    width: 30rem;
+    margin-left: 15rem;
+    font-size: 3rem;
+  }
+}
+
+
+@media screen and (min-width: 250rem) {
+
+  .contactpage h1 {
+    font-size: 8rem;
+    margin-left: 3rem;
+  }
+
+  .contactpage-info input {
+    width: 150rem;
+    margin: 3rem 3rem;
+    font-size: 4rem;
+  }
+
+  .contactpage-info textarea {
+    width: 306rem;
+    height: 30rem;
+    margin: 3rem 3rem;
+    font-size: 4rem;
+  }
+
+  .contactpage-form p{
+    margin: 3rem;
+    font-size: 4rem;
+  }
+
+  .contactpage-check input {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    width: 4rem;
+    height: 4rem;
+  }
+  
+  .contactpage-link{
+    margin-left: 3rem;
+    font-size: 4rem;
+  }
+
+  .contactpage-check span{
+    font-size: 4rem;
+  }
+  
+  .contactpage-button {
+    min-width:0;
+    min-height:0;
+    max-width: none;
+    width: 50rem;
+    margin-left: 30rem;
+    font-size: 5rem;
+  }
+}
+
+
