@@ -9,14 +9,14 @@ const removeAccents = (str) => {
   }
 
 
-function Aside () {
-    const [show, setShow] = useState(false)
-    const [show2, setShow2] = useState(false)
-    const [show3, setShow3] = useState(false)
-    const [show4, setShow4] = useState(false)
-    const [show5, setShow5] = useState(false)
-    const [show6, setShow6] = useState(false)
-    const [show7, setShow7] = useState(false)
+function Aside ({setShow, show, setShow2, show2, setShow3, show3, setShow4, show4, setShow5, show5, setShow6, show6, setShow7, show7}) {
+    // const [show, setShow] = useState(false)
+    // const [show2, setShow2] = useState(false)
+    // const [show3, setShow3] = useState(false)
+    // const [show4, setShow4] = useState(false)
+    // const [show5, setShow5] = useState(false)
+    // const [show6, setShow6] = useState(false)
+    // const [show7, setShow7] = useState(false)
     const click = (e) => {
         e.preventDefault()
         setShow(!show)

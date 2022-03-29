@@ -18,9 +18,17 @@ import MyActivity from './MyActivity/MyActivity';
 import Privacity from './Legal/Privacity'
 import LegalNotice from './Legal/LegalNotice'
 import ConfirmEmail from "./ConfirmEmail"
+import { useState } from "react"
 
 
 function Main ({search, setSearch}) {
+    const [show, setShow] = useState(false)
+    const [show2, setShow2] = useState(false)
+    const [show3, setShow3] = useState(false)
+    const [show4, setShow4] = useState(false)
+    const [show5, setShow5] = useState(false)
+    const [show6, setShow6] = useState(false)
+    const [show7, setShow7] = useState(false)
 
     return (
         <div>
@@ -28,12 +36,12 @@ function Main ({search, setSearch}) {
                 <>
                     <ErrorBoundary fallback={<Loading/>}>
                         <Routes>
-                            <Route path="/" element={<Aside />} />
-                            <Route path="todos" element={<Aside />} />
+                            <Route path="/" element={<Aside show={show} setShow={setShow} show2={show2} setShow2={setShow2} show3={show3} setShow3={setShow3} show4={show4} setShow4={setShow4} show5={show5} setShow5={setShow5} show6={show6} setShow6={setShow6} show7={show7} setShow7={setShow7}/>} />
+                            <Route path="todos" element={<Aside show={show} setShow={setShow} show2={show2} setShow2={setShow2} show3={show3} setShow3={setShow3} show4={show4} setShow4={setShow4} show5={show5} setShow5={setShow5} show6={show6} setShow6={setShow6} show7={show7} setShow7={setShow7}/>} />
                             {/* <Route path="article/:id" element={<Aside className='asideArticle'/>} /> */}
-                            <Route path="article/byCategory/:category" element={<Aside />} />
-                            <Route path="article/bySubCategory/:subcategory" element={<Aside />} />
-                            <Route path="confirmation/:code" element={<Aside />} />
+                            <Route path="article/byCategory/:category" element={<Aside show={show} setShow={setShow} show2={show2} setShow2={setShow2} show3={show3} setShow3={setShow3} show4={show4} setShow4={setShow4} show5={show5} setShow5={setShow5} show6={show6} setShow6={setShow6} show7={show7} setShow7={setShow7}/>} />
+                            <Route path="article/bySubCategory/:subcategory" element={<Aside show={show} setShow={setShow} show2={show2} setShow2={setShow2} show3={show3} setShow3={setShow3} show4={show4} setShow4={setShow4} show5={show5} setShow5={setShow5} show6={show6} setShow6={setShow6} show7={show7} setShow7={setShow7}/>} />
+                            <Route path="confirmation/:code" element={<Aside show={show} setShow={setShow} show2={show2} setShow2={setShow2} show3={show3} setShow3={setShow3} show4={show4} setShow4={setShow4} show5={show5} setShow5={setShow5} show6={show6} setShow6={setShow6} show7={show7} setShow7={setShow7}/>} />
                             <Route path='*' element={''}/>
                         </Routes>
                     </ErrorBoundary>
@@ -41,12 +49,12 @@ function Main ({search, setSearch}) {
                 <>
                     <ErrorBoundary fallback={<Loading/>}>
                         <Routes>
-                            <Route path="/" element={<IntroductionPage />} />
-                            <Route path="todos" element={<HomePage search={search} setSearch={setSearch} />} />
-                            <Route path="article/:id" element={<ArticlesPage />} />
-                            <Route path="article/byCategory/:category" element={<Category search={search} setSearch={setSearch} />} />
-                            <Route path="article/bySubCategory/:subcategory" element={<SubCategory search={search} setSearch={setSearch} />} />
-                            <Route path="confirmation/:code" element={<ConfirmEmail />} />
+                            <Route path="/" element={<IntroductionPage  setShow={setShow} setShow2={setShow2} setShow3={setShow3} setShow4={setShow4} setShow5={setShow5} setShow6={setShow6} setShow7={setShow7}/>} />
+                            <Route path="todos" element={<HomePage search={search} setSearch={setSearch} setShow={setShow} setShow2={setShow2} setShow3={setShow3} setShow4={setShow4} setShow5={setShow5} setShow6={setShow6} setShow7={setShow7}/>} />
+                            <Route path="article/:id" element={<ArticlesPage setShow={setShow} setShow2={setShow2} setShow3={setShow3} setShow4={setShow4} setShow5={setShow5} setShow6={setShow6} setShow7={setShow7}/>} />
+                            <Route path="article/byCategory/:category" element={<Category search={search} setSearch={setSearch} setShow={setShow} setShow2={setShow2} setShow3={setShow3} setShow4={setShow4} setShow5={setShow5} setShow6={setShow6} setShow7={setShow7}/>} />
+                            <Route path="article/bySubCategory/:subcategory" element={<SubCategory search={search} setSearch={setSearch} setShow={setShow} setShow2={setShow2} setShow3={setShow3} setShow4={setShow4} setShow5={setShow5} setShow6={setShow6} setShow7={setShow7}/>} />
+                            <Route path="confirmation/:code" element={<ConfirmEmail setShow={setShow} setShow2={setShow2} setShow3={setShow3} setShow4={setShow4} setShow5={setShow5} setShow6={setShow6} setShow7={setShow7}/>} />
                             <Route path='*' element={''}/>
                         </Routes>
                     </ErrorBoundary>
