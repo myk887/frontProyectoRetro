@@ -26,7 +26,7 @@ const useGet = ({id}) => {
     return {product, user}
 }
 
-function ArticlesPage() {
+function ArticlesPage({setShow, setShow2, setShow3, setShow4, setShow5, setShow6, setShow7}) {
     const [data, setData] = useState(null)
     const [name, setName] = useState(null)
     const navigate = useNavigate()
@@ -53,7 +53,15 @@ function ArticlesPage() {
     }
 
     return (
-        <main>
+        <main onMouseOver={()=>{
+            setShow(false)
+            setShow2(false)
+            setShow3(false)
+            setShow4(false)
+            setShow5(false)
+            setShow6(false)
+            setShow7(false)
+          }}>
         { (!data || !name) ?
 
         <div className='reloj-loading'></div>
