@@ -24,6 +24,9 @@ function ArticlesSold() {
   datosArticulos = useFetch('http://localhost:3000/trading/userBuyer', opts)
   if (!userToken?.token) datosArticulos = undefined
 
+  // const [{username}] = useFetch('http://localhost:3000/users/name/' + datosArticulos[0][0].idUser)
+  // console.log(username)
+
   const handleBuy = async ({articleId}) => {
     console.log('hola')
     const res = await fetch('http://localhost:3000/articles/sold', {

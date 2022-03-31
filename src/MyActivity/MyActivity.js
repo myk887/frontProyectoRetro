@@ -17,6 +17,7 @@ function MyActivity() {
   }, [userToken, navigate])
 
   const [show, setShow] = useState(true)
+  console.log(show)
 
   return (
     <div className="datauser-activity">
@@ -27,15 +28,15 @@ function MyActivity() {
       <div className='info-activity'>
         <div className='info-title-activity'>
           <div className='boySold-activity'>
-            <h2 className={show && 'mirando-activity'} onClick={(e) => setShow(!show)}> Productos en venta</h2>
+            <h2 className={show && 'mirando-activity'} onClick={(e) => setShow(!show)}> Productos que quiero vender</h2>
           </div>
           <div className='boySold-activity'>
-            <h2 className={!show && 'mirando-activity'} onClick={(e) => setShow(!show)}>Productos que quiero</h2>
+            <h2 className={!show && 'mirando-activity'} onClick={(e) => setShow(!show)}>Productos que quiero comprar</h2>
           </div>
         </div>
         { show &&
           <div >
-              <ArticlesBuyer/>
+              <ArticlesBuyer setShow={setShow}/>
           </div>}
           { !show &&
           <div>
