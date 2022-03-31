@@ -7,7 +7,7 @@ import Loading from '../Loading'
 
 
 
-function ArticlesBuyer(){
+function ArticlesBuyer({setShow}){
 
   const userToken = useSelector(s => s.user)
   const navigate = useNavigate()
@@ -26,6 +26,9 @@ function ArticlesBuyer(){
   let datosArticulos
   datosArticulos = useFetch('http://localhost:3000/trading/userSeller', opts)
   if (!userToken?.token) datosArticulos = undefined
+
+  const [{username}] = useFetch('http://localhost:3000/users/name/' + datosArticulos[0][0].buyerId)
+  console.log(username)
 
 
   const handleSubmit = async (e, {idArticle, idBuyer, location, province}) => {
@@ -92,6 +95,8 @@ function ArticlesBuyer(){
     }
   }
 
+  console.log(datosArticulos[0])
+
   return (
     loading ?
     <div className="datauser-activity"><Loading /></div> :
@@ -112,11 +117,12 @@ function ArticlesBuyer(){
                 </div>
             </div>
             <div className='estado-activity'>
-              {(datosArticulos[1][i].buy === 1) && articulo.buyerId && <div> <h2>Estado de la venta</h2> <span>✅ Vendido</span> </div>}
-              {(datosArticulos[1][i].buy === 1) && !articulo.buyerId && <div><h2>Día de compra</h2> <p>{datosArticulos[1][i].saleDate.split('Z')[0].split('T')[0]}{' '}{datosArticulos[1][i].saleDate.split('Z')[0].split('T')[1].slice(0, -4)}</p> </div>}
-              {(datosArticulos[1][i].buy === 0) && <div> <h2>Estado de la venta</h2> <span>❌ Rechazado</span> </div>}
+              {(datosArticulos[1][i].buy === 1) && articulo.buyerId && <div> <h2>Estado de la venta</h2> <span>✅ Vendido</span> <h4>{username}</h4> </div>}
+              {(datosArticulos[1][i].buy === 1) && !articulo.buyerId && <div><h2>Día de compra</h2> <p>{datosArticulos[1][i].saleDate.split('Z')[0].split('T')[0]}{' '}{datosArticulos[1][i].saleDate.split('Z')[0].split('T')[1].slice(0, -4)}</p> <h4>{username}</h4> </div>}
+              {(datosArticulos[1][i].buy === 0) && <div> <h2>Estado de la venta</h2> <span>❌ Rechazado</span> <h4>{username}</h4> </div>}
               {(datosArticulos[1][i].buy === null) && <div>
                   <h2>Estado de la venta</h2>
+                  <h4>{username}</h4>
                   <form onSubmit={(e)=> handleSubmit(e, {idArticle: articulo.id, idBuyer: datosArticulos[1][i].buyerId, location: articulo.location, province: articulo.province})}>
                     <label>
                       <input required type="datetime-local" name="horareunion" onChange={(e)=> setFecha(e.target.value)} />
