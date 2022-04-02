@@ -2,9 +2,10 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import './ResgisterPage.css'
 
 
-function Registre() {
+function Register() {
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
   const [password, setPassword] = useState('')
@@ -60,19 +61,20 @@ function Registre() {
     userToken && navigate('/')
     datos && navigate('/')
   }, [userToken, datos, navigate])
+
   return (
             loading ?
                 <div className='reloj-loading'>
                 </div>
                 :
                 verifica ?
-                  <div className='verifica'>
-                    <h1>VERIFICA EL EMAIL PARA EMPEZAR A COMPRAR</h1>
+                  <div className='register-verify'>
+                    <h1>Por favor, revisa tu mail y devuélvenos la confirmación de tu cuenta</h1>
                   </div>
                   :
-                  <fieldset>
-                    <legend>Registrarse</legend>
-                    <form onSubmit={handleSubmit} className='login'>
+                  <fieldset className="register-fieldset">
+                  <h1>Hoja de registro</h1>
+                    <form onSubmit={handleSubmit} className='register-login'>
                         <label>
                         Email:
                         <br/>
@@ -89,7 +91,7 @@ function Registre() {
                         <input required type="password" name="password" value={password}  onChange={e => setPassword(e.target.value)} />
                         </label>
                         <label>
-                        Ubicacion:
+                        Población:
                         <br/>
                         <input required name="ubicacion" value={ubicacion}  onChange={e => setUbicacion(e.target.value)} />
                         </label>
@@ -149,21 +151,21 @@ function Registre() {
                         <label>
                           {!avatarURL ?
                           <div>
-                            <div className="button">📷</div>
+                            <div className="register-image-loading"> <span>📷</span>Añadir fotografía</div>
                             <input type="file" onChange={e => setAvatar(e.target.files[0])} accept="image/x-png,image/gif,image/jpeg" />
                           </div>
                           :
-                          <div className='avatarDiv'>
-                            <img className='avatar avatarRegistre' src={avatarURL} alt='avatar'/>
+                          <div className='register-avatar'>
+                            <img className='avatar avatarRegister' src={avatarURL} alt='avatar'/>
                             <input type="file" onChange={e => setAvatar(e.target.files[0])} accept="image/x-png,image/gif,image/jpeg" />
                           </div>}
                         </label>
-                        <div className='enviarRegistro'>
-                            <button>Enviar</button>
+                        <div>
+                            <button className='register-send-button'>Enviar</button>
                         </div>
                     </form>
                 </fieldset>
     )
   }
 
-  export default Registre
+  export default Register

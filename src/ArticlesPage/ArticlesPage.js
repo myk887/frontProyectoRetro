@@ -110,7 +110,7 @@ function ArticlesPage({setShow, setShow2, setShow3, setShow4, setShow5, setShow6
                     :
                     <button type='button' className='buy-article-button'><a href='/user/actividad' onClick={() => handleClick({id:article.id, idUser:article.idUser})}>Comprar artículo</a></button>)
                     :
-                    <button type='button' className='user-not-registered-button'><a href='/user/registre'>Registrarse</a></button>}
+                    <button type='button' className='user-not-registered-button'><a href='/user/register'>Registrarse</a></button>}
 
                 </div>
 

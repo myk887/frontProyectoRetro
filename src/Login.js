@@ -57,7 +57,7 @@ function Session() {
       setError({ statusText: res.statusText })
       setLoading(false)
       setShow(false)
-      navigate('/user/registre')
+      navigate('/user/register')
     }
   }
   useEffect(() => {
@@ -110,7 +110,7 @@ function Session() {
               {error && <div className="error">{error.statusText}</div>}
             </fieldset>}
           <button>
-            <NavLink to='./user/registre' onClick={() => setShow(false)}>Abrir una cuenta</NavLink>
+            <NavLink to='./user/register' onClick={() => setShow(false)}>Abrir una cuenta</NavLink>
           </button>
         </Modal>
       </div>

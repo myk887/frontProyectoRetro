@@ -83,6 +83,7 @@ color: white;
 
 .edituser-change-password {
     font-style:normal;
+    margin-top: 2rem;
     transition: transform 0.3s ease;
 }
 

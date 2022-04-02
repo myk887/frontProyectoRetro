@@ -12,7 +12,7 @@ function ArticlesSold() {
   const [vote, setVote] = useState(0)
 
   useEffect(() => {
-    !userToken && navigate('user/registre')
+    !userToken && navigate('user/register')
   }, [userToken, navigate])
 
   const opts = {}

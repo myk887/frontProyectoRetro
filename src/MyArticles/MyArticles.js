@@ -55,7 +55,7 @@ function MyArticles () {
             <div className="myarticles-grid">
                 {
                 !misArticulos.length ?
-                <h1>NO TIENES PRODUCTOS EN VENTA, CREA UN NUEVO ANUNCIO</h1>
+                <h1 className="myarticles-noproducts">No tienes productos en venta. Crea un nuevo anuncio</h1>
                 :
                 misArticulos?.map(articulo =>
 

@@ -14,7 +14,7 @@ function ArticlesBuyer({setShow}){
   const [fecha, setFecha] = useState('')
   const [loading, setLoading] = useState(false)
   useEffect(() => {
-    !userToken && navigate('user/registre')
+    !userToken && navigate('user/register')
   }, [userToken, navigate])
 
   const opts = {}

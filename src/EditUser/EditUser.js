@@ -12,7 +12,7 @@ function EditUser() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    !userToken && navigate('user/registre')
+    !userToken && navigate('user/register')
   }, [userToken, navigate])
 
   const [name, setName] = useState(datos[0].username)

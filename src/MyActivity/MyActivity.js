@@ -13,7 +13,7 @@ function MyActivity() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    !userToken && navigate('user/registre')
+    !userToken && navigate('user/register')
   }, [userToken, navigate])
 
   const [show, setShow] = useState(true)
