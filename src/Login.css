@@ -64,6 +64,10 @@
   flex: 1 1 10rem;
 }
 
+.login-user-label input {
+  margin-left: 1rem;
+}
+
 .login-perfil button {
   min-height: 0;
   min-width: 0;

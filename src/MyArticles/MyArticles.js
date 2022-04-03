@@ -74,7 +74,7 @@ function MyArticles () {
                             <div clasName="myarticles-card-buttons">
 
                                 <span className="modify myarticles-modify"><Link to={`/user/article/modify/${articulo.id}`}><span>📝</span> Modificar</Link></span>
-                                <br/><br/>
+                                <br className="myarticles-card-br"/><br className="myarticles-card-br"/>
 
                                 <span className="delete myarticles-delete" onClick={(e) => handleDelete({e,id: articulo.id})}><span>🗑</span> Eliminar</span>
 
