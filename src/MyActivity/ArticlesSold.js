@@ -12,7 +12,7 @@ function ArticlesSold() {
   const [vote, setVote] = useState(0)
 
   useEffect(() => {
-    !userToken && navigate('user/register')
+    !userToken && navigate('user/registre')
   }, [userToken, navigate])
 
   const opts = {}
@@ -23,9 +23,6 @@ function ArticlesSold() {
   let datosArticulos
   datosArticulos = useFetch('http://localhost:3000/trading/userBuyer', opts)
   if (!userToken?.token) datosArticulos = undefined
-
-  // const [{username}] = useFetch('http://localhost:3000/users/name/' + datosArticulos[0][0].idUser)
-  // console.log(username)
 
   const handleBuy = async ({articleId}) => {
     console.log('hola')
