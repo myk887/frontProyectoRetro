@@ -2,33 +2,78 @@
 @import '../variables.css';
 
 
- .edituser-data {
-    display: flex;
-    flex-direction: column;
-    padding: 7vw;
+/* main structure */
+
+.edituser-data {
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 5vh;;
 }
 
-.edituser-data p {
-    font-weight: bold;
-    font-style: italic;
-    font-size: 25px;
-    cursor: pointer;
+.edituser-casita {
+    margin: 3vh auto;
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 
-.edituser-info-edit {
+.edituser-casita-link {
+    text-decoration: none;
+    color: var(--orange);
+    font-size: 2.8vh;
+}
+
+.edituser-casita:hover {
+    transform: scale(1.1);
+}
+
+.edituser-info {
+    width: 98%;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    gap: 5vw;
 }
-.edituser-title-edit {
-    height: 5rem;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+
+/* Block: photo */
+
+.edituser-userphoto {
+    width: 30%;
+    min-width: 180px;
+}
+
+.edituser-avatar-photo {
+    width: 90%;
+    margin: auto;
+}
+
+.edituser-changephoto-button {
+    margin-top: 3vh;
+    font-size: 2.5vh;
+    text-align: center;
+    padding: 0.8vh;
+    border-radius: 1.1vh;
+    background-image: linear-gradient(var(--light-grey-button), var(--dark-grey-button));
+    color: white;
+}
+
+.edituser-changephoto-button:hover {
+    font-size: 2.6vh;
+    font-weight: bold;
+    box-shadow: 2vh 2vh 2vh lightgrey;
+    cursor: pointer;
+  }
+
+/* Block: user info */
+
+.edituser-userinfo {
+    width: 70%;
+    min-width: 400px;
+    padding: 3vw;
 }
 
 .edituser-form-edit {
+    width: 98%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     background-color: var(--light-grey-background);
@@ -41,36 +86,54 @@
 .edituser-form-edit span{
     display:flex;
     align-items: center;
-    flex: 1 1 5rem;
+    font-size: 2vh;
+    flex: 1 1 8vw;
+    margin: 2vh 0;
 }
 
 .edituser-form-edit input {
-    margin: 0.8rem;
+    margin: 1.3vh;
+    width: 80%;
+    font-size: 2vh;;
 }
 
 .provinces {
-    margin: 0.3rem auto;
+    margin: 2vh auto;
+    margin-left: 8vw;
+    width: 60%;
+    font-size: 2vh;
 }
 
-.edituser-avatar-photo {
-    height: 20rem;
+.edituser-savedatabutton {
+    min-width: 15rem;
+    min-height: 0;
+    max-width: none;
+    border-radius: 1vh;
+    width: 60%;
+    height: 6vh;
+    margin: 3vh auto;
+    font-size: 3vh;
+    transition: font-size 0.3s ease;
 }
 
-.edituser-changephoto-button {
-margin-top: 50px;
-font-size: 20px;
-text-align: center;
-padding: 5px;
-border-radius: 10px;
-background-image: linear-gradient(var(--light-grey-button), var(--dark-grey-button));
-color: white;
+.edituser-savedatabutton:hover {
+    font-size: 3.3vh;
 }
 
-.edituser-changephoto-button:hover {
-    font-size:20px;
-    font-weight: bold;
-    box-shadow: 8px 8px 8px lightgrey;
-  }
+.edituser-changepassword {
+    font-size: 2.5vh;
+    margin: 3vh 0;
+    transition: font-size 0.3s ease;
+    height: 3vh;
+}
+
+.edituser-changepassword:hover {
+    font-size: 2.8vh;
+    cursor:pointer;
+}
+
+
+/* Block: change my password */
 
 .back-to-my-profile {
     font-style:normal;
@@ -81,14 +144,8 @@ color: white;
     transform: scale(1.05);
 }
 
-.edituser-change-password {
-    font-style:normal;
-    margin-top: 2rem;
-    transition: transform 0.3s ease;
-}
-
-.edituser-change-password:hover {
-    transform: scale(1.05);
+.edituser-changepassword-form {
+    font-size: 2vh;
 }
 
 .edituser-showpass {
@@ -99,4 +156,79 @@ color: white;
 
 .edituser-showpass:hover {
     color: blue;
+}
+
+.edituser-changepass-button {
+    min-width: 0;
+    min-height: 0;
+    max-width: none;
+    border-radius: 1vh;
+    width: 60%;
+    height: 6vh;
+    margin: 3vh auto;
+    font-size: 2.5vh;
+    transition: font-size 0.3s ease;
+}
+
+.edituser-changepass-button:hover {
+    font-size: 2.8vh;
+}
+
+@media screen and (max-width: 35rem) {
+
+    .edituser-data {
+        width:98%;
+        margin: 0 auto;
+        margin-bottom: 2vh;;
+    }
+
+    .edituser-info {
+        display: block;
+    }
+
+    .edituser-userinfo {
+        width: 98%;
+        padding: 2vw;
+        margin: 5vw auto;
+    }
+
+    .edituser-userphoto {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .edituser-avatar-photo {
+        width: 30%;
+        display: inline-block;
+        margin: 0 5vw;
+    }
+
+    .edituser-changephoto-button {
+        display: inline-block;
+        margin: 0;
+        font-size: 20px;
+    }
+
+    .edituser-form-edit {
+        width: 90%;
+        padding:0;
+        margin: 0 auto;
+    }
+
+    .edituser-form-edit span{
+        flex: 1 1 20vw;
+    }
+
+    .provinces {
+        margin-left: 20vw;
+    }
+
+    .edituser-savedatabutton {
+        min-width: 0;
+    }
+
+    .edituser-changepassword-form {
+        width: 95%;
+        padding: 0;
+    }
 }
