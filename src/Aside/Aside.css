@@ -39,8 +39,8 @@
 .aside ul li li {
   margin-left: 0.3rem;
   padding: 0.5rem;
+  list-style: none;
 }
-
 
 .aside ul li li a {
   font-size: 1.1rem;

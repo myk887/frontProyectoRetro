@@ -13,30 +13,30 @@ function MyActivity() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    !userToken && navigate('user/register')
+    !userToken && navigate('user/registre')
   }, [userToken, navigate])
 
   const [show, setShow] = useState(true)
-  console.log(show)
 
   return (
     <div className="datauser-activity">
       <div className='title-activity'>
+      <h1>Mi Actividad </h1>
         <Link className='casita' to={'/'} title='Pàgina principal'>⌂ Volver al Home</Link>
-        <h1>Mi Actividad </h1>
+
       </div>
       <div className='info-activity'>
         <div className='info-title-activity'>
           <div className='boySold-activity'>
-            <h2 className={show && 'mirando-activity'} onClick={(e) => setShow(!show)}> Productos que quiero vender</h2>
+            <h2 className={show && 'mirando-activity'} onClick={(e) => setShow(!show)}> Productos vendidos o que me han solicitado</h2>
           </div>
           <div className='boySold-activity'>
-            <h2 className={!show && 'mirando-activity'} onClick={(e) => setShow(!show)}>Productos que quiero comprar</h2>
+            <h2 className={!show && 'mirando-activity'} onClick={(e) => setShow(!show)}>Productos comprados o que he solicitado</h2>
           </div>
         </div>
         { show &&
           <div >
-              <ArticlesBuyer setShow={setShow}/>
+              <ArticlesBuyer/>
           </div>}
           { !show &&
           <div>

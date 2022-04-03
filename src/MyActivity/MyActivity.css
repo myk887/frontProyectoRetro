@@ -8,6 +8,7 @@
 }
 
  .textMyArticle-activity {
+  border: 1px solid red;
   display: flex;
   flex-direction: column;
   text-align: right;
@@ -52,7 +53,6 @@
   height: 15vw;
 }
 
-
 .soldBuy-activity {
   width: 100%;
   display: flex;
@@ -90,4 +90,11 @@
 
 .estado-activity input[type="radio"]:checked ~ label {
   color: orange;
+}
+
+.myactivity-noproducts {
+
+  font-size: 3vh;
+  font-weight: bold;
+  color: var(--grey);
 }
