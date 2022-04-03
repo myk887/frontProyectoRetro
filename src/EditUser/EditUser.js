@@ -12,7 +12,7 @@ function EditUser() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    !userToken && navigate('user/registre')
+    !userToken && navigate('user/register')
   }, [userToken, navigate])
 
   const [name, setName] = useState(datos[0].username)
@@ -100,11 +100,11 @@ function EditUser() {
 
     <div className="edituser-data">
 
-      <div className='edituser-title-edit'>
-        <Link className='casita' to={'/'} title='Pàgina principal'><h4>⌂ Volver al home</h4></Link>
+      <div className='edituser-casita'>
+        <Link className='edituser-casita-link' to={'/'} title='Pàgina principal'><h4>⌂ Volver al home</h4></Link>
       </div>
 
-      <div className='edituser-info-edit'>
+      <div className='edituser-info'>
 
       { show3 !== 3 && <div className='edituser-userphoto'>
             {avatarURL ?
@@ -118,9 +118,9 @@ function EditUser() {
         </div> }
 
         {show3 &&
-        <div>
+        <div className="edituser-userinfo">
           { show3 !== 2 ?
-            <p className="back-to-my-profile" onClick={(e) => setShow3(2)}> ✎ Volver a Mi Perfil</p>
+            <p className="edituser-changepassword" onClick={(e) => setShow3(2)}> ✎ Volver a Mi Perfil</p>
             :
             <form className='edituser-form-edit' onSubmit={handleSubmit}>
               <label>
@@ -136,7 +136,6 @@ function EditUser() {
               <input name="address" value={address} required onChange={e => setAddress(e.target.value)}></input>
               </label>
               <label>
-              Provincia:
                 <select className="provinces" name="provinces" value={provinces} required onChange={e => setProvinces(e.target.value)}>
                   <option value=''>{provinces}</option>
                   <option value="coruña">A Coruña/La Coruña</option>
@@ -191,14 +190,13 @@ function EditUser() {
                   <option value="zaragoza">Zaragoza</option>
                   </select>
               </label>
-              <button className='savedata-edit'>Guardar datos</button>
+              <button className='edituser-savedatabutton'>Guardar datos</button>
           </form>}
 
           { show3 !== 3 ?
-          <p className="edituser-change-password" onClick={(e) => setShow3(3)}>✎ Cambiar contraseña</p>
+          <p className="edituser-changepassword" onClick={(e) => setShow3(3)}>✎ Cambiar contraseña</p>
           :
-          <fieldset>
-            <legend>Cambio de contraseña</legend>
+          <fieldset className="edituser-changepassword-form">
             <form className='edituser-form-edit' onSubmit={handleSubmitPass}>
               <label>
                   Contraseña actual
@@ -210,7 +208,7 @@ function EditUser() {
                   <input name="newPassword" value={newPassword} required type={show2 ? 'text' : 'password'}  onChange={e => setNewPassword(e.target.value)}></input>
                   <span className='edituser-showpass' onClick={switchShow2}>{show2 ? 'Ocultar' : 'Mostrar'}</span>
               </label>
-              <button className='savedata-button'>Cambiar Contraseña</button>
+              <button className='edituser-changepass-button'>Cambiar Contraseña</button>
             </form>
           </fieldset>}
         </div>}

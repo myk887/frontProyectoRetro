@@ -126,7 +126,7 @@ function CreateArticle() {
                           </div>
                           :
                           <div className='photoDiv'>
-                            <img className='photo photoRegistre' src={photoUrl} alt='phot'/>
+                            <img className='photo photoRegister' src={photoUrl} alt='phot'/>
                             <input type="file" onChange={e => setPhoto(e.target.files[0])} accept="image/x-png,image/gif,image/jpeg" />
                           </div>}
                         </label>

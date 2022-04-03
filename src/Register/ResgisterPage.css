@@ -1,0 +1,122 @@
+@import '../normalize.css';
+@import '../variables.css';
+
+
+.register-fieldset {
+    border: none;
+}
+
+.register-fieldset h1{
+    color: var(--grey);
+    text-align: center;
+    margin: 0;
+}
+
+.register-fieldset form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 60vh;
+    text-align: center;
+    min-width: 81vw;
+
+}
+
+.register-fieldset form input{
+    width: 30vw;
+    min-width: 20rem;
+    min-height: 1.5rem;
+}
+
+.register-fieldset form select{
+    width: 30vw;
+    min-width: 20rem;
+    text-align: center;
+    min-height: 2rem;
+    margin: 0 auto;
+}
+
+.register-image-loading {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+    margin: 1.5rem;
+}
+
+.register-image-loading span{
+    margin:  0 1rem;
+}
+
+.register-image-loading:hover {
+    transform: scale(1.2);
+}
+
+input[type=file] {
+    display: none;
+}
+
+.register-verify {
+    margin: 5rem 1rem;
+    color: var(--grey);
+}
+
+
+@media screen and (max-width: 35rem) {
+
+    .register-fieldset h1{
+        margin-bottom: 1.5rem;
+    }
+
+    .register-fieldset form input{
+        margin: 0.5rem;
+    }
+
+    .register-fieldset form select{
+        margin: 1rem auto;
+    }
+
+    .register-image-loading {
+        margin: 1rem;
+    }
+
+    .register-send-button {
+        min-width: 0;
+        min-height: 0;
+    }
+    .register-verify {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 140rem) {
+
+    .register-fieldset h1{
+        font-size: 3rem;
+    }
+    .register-fieldset form{
+        font-size: 2rem;
+    }
+    .register-image-loading {
+        font-size: 2rem;
+    }
+    .register-send-button {
+       font-size: 2rem;
+    }
+
+}
+
+@media screen and (min-width: 250rem) {
+
+    .register-fieldset h1{
+        font-size: 5rem;
+    }
+    .register-fieldset form{
+        font-size: 3rem;
+    }
+    .register-image-loading {
+        font-size: 3.5rem;
+    }
+    .register-send-button {
+       font-size: 3.5rem;
+    }
+
+}

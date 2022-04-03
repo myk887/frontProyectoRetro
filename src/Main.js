@@ -8,7 +8,7 @@ import Loading from "./Loading"
 import SubCategory from "./SubCategory/SubCategory"
 import './App.css';
 import ArticlesPage from './ArticlesPage/ArticlesPage'
-import RegistrePage from './Registre/RegistrePage'
+import RegisterPage from './Register/RegisterPage'
 import MyArticles from './MyArticles/MyArticles';
 import CreateArticle from './CreateArticle/CreateArticle';
 import ModifyArticle from './ModifyArticle/ModifyArticle';
@@ -64,7 +64,7 @@ function Main ({search, setSearch}) {
                 <ErrorBoundary fallback={<Loading/>}>
                     <Routes>
                         <Route path="user/articles" element={<MyArticles />} />
-                        <Route path="user/registre" element={<RegistrePage />} />
+                        <Route path="user/register" element={<RegisterPage />} />
                         <Route path="user/article/create" element={<CreateArticle />} />
                         <Route path="user/article/modify/:idActuallyArticle" element={<ModifyArticle />} />
                         <Route path="user/edit" element={<EditUser />} />
