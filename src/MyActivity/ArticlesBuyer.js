@@ -105,9 +105,9 @@ function ArticlesBuyer(){
             <div  className="MyArticle-activity">
                 <img className="image-activity" src={`http://localhost:3000${articulo.photo.replace('./', '/')}`} alt={articulo.name} />
                 <div>
-                  <h3>{articulo.name}</h3>
+                  <h3 className="myactivity-article-name">{articulo.name}</h3>
                   <div className="textMyArticle-activity">
-                      <h4>{articulo.price} €</h4>
+                      <h4 className="myactivity-article-price">{articulo.price} €</h4>
                   </div>
                 </div>
             </div>
@@ -116,16 +116,16 @@ function ArticlesBuyer(){
               {(datosArticulos[1][i].buy === 1) && !articulo.buyerId && <div><h2>Día de compra</h2> <p>{datosArticulos[1][i].saleDate.split('Z')[0].split('T')[0]}{' '}{datosArticulos[1][i].saleDate.split('Z')[0].split('T')[1].slice(0, -4)}</p> </div>}
               {(datosArticulos[1][i].buy === 0) && <div> <h2>Estado de la venta</h2> <span>❌ Rechazado</span> </div>}
               {(datosArticulos[1][i].buy === null) && <div>
-                  <h2>Estado de la venta</h2>
+                  <h2 className="myactivity-articletitle">Estado de la venta</h2>
                   <form onSubmit={(e)=> handleSubmit(e, {idArticle: articulo.id, idBuyer: datosArticulos[1][i].buyerId, location: articulo.location, province: articulo.province})}>
-                    <label>
+                    <label className="myactivity-meet">
                       <input required type="datetime-local" name="horareunion" onChange={(e)=> setFecha(e.target.value)} />
-                      <button>Poner hora</button>
+                      <button className="myactivity-button">Poner hora</button>
                     </label>
                   </form>
                   <form onSubmit={(e)=> handleSubmit2(e, {idArticle: articulo.id, idBuyer: datosArticulos[1][i].buyerId, location: articulo.location, province: articulo.province})}>
                     <label>
-                      <button>No quiero vender</button>
+                      <button className="myactivity-button">No quiero vender</button>
                     </label>
                   </form>
                 </div>}

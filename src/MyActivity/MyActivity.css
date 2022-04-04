@@ -1,17 +1,28 @@
 @import '../variables.css';
 
+/* Header */
+
+.title-activity {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color:var(--light-grey-background);
+  font-size: 2vh;
+  width: 95vw;
+}
+
+.casita {
+  font-size: 3vh;
+}
+
+/* Structure */
+
 .datauser-activity {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 3vw;
-}
-
- .textMyArticle-activity {
-  border: 1px solid red;
-  display: flex;
-  flex-direction: column;
-  text-align: right;
+  width: 98vw;
 }
 
 .info-activity {
@@ -22,52 +33,114 @@
   justify-content: space-around;
   gap: 5vw;
   padding: 2vw;
-}
-.info-title-activity{
-  display: flex;
-  justify-content: space-between;
-  gap: 10vw;
-  cursor: pointer;
-}
-.title-activity {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  background-color:var(--light-grey-background);
+  width: 95vw;
 }
 
+.comercio-activity {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 90vw;
+}
+
+/* Card structure */
+
 .MyArticle-activity {
-  background-color:var(--light-grey-background);
-  width: 40vw;
-  padding: 10px;
+  background-color:var(--light-grey-background); 
+  padding: 1vw;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 5vw;
+  gap: 2vw;
   border: 2px solid silver;
-  border-radius: 5px;
-  margin: 20px;
+  border-radius: 0.5vw;
+  margin: 1vw;
+  width: 45%;
 }
-.image-activity {
-  width: 20vw;
-  height: 15vw;
+
+.estado-activity {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
 }
+
+/* Sold vs. Bought titles */
+
+.info-title-activity{
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.8vh;
+  gap: 10vw;
+  cursor: pointer;
+}
+
+.mirando-activity {
+  text-decoration: underline;
+  color: darkblue;
+  text-shadow: 0.05vh 0.05vh ;
+}
+
+/* Product info */
 
 .soldBuy-activity {
   width: 100%;
   display: flex;
   flex-direction: column-reverse;
 }
-.comercio-activity {
+
+/* Product image name and price*/
+
+.image-activity {
+  width: 20vw;
+
+}
+
+.myactivity-article-name {
+  font-size: 2.2vh;
+  text-align: left;
+}
+
+.myactivity-article-price {
+  font-size: 2.2vh;
+  text-align: right;
+  margin: 2vh;
+}
+
+
+/* Meet date Sold product */
+
+.myactivity-articletitle {
+  margin: 1vw;
+}
+
+.myactivity-meet {
   display: flex;
-  justify-content: center;
-  text-align: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-.mirando-activity {
-  color: darkblue;
+.myactivity-meet input{
+  width: 20vw;
+  margin: 1vw;
+  font-size: 2vh;
 }
 
+.myactivity-button {
+  min-width: 0;
+  min-height: 0;
+  max-width: none;
+  margin: 1vw;
+  width: 20vw;
+  height: 4vh;
+  font-size: 2vh;
+}
+
+/* Bought products */
+
+.estado-activity {
+  font-size: 1.8vh;
+  margin: 1vw;
+}
 
 .buttonPuntua-activity {
   color: white;
@@ -76,7 +149,6 @@
 .estado-activity input[type="radio"] {
   display: none;
 }
-
 
 .estado-activity .clasificacion {
   direction: rtl;
@@ -98,3 +170,51 @@
   font-weight: bold;
   color: var(--grey);
 }
+
+@media screen and (max-width: 35rem) {
+
+  .title-activity {
+    font-size: 1.5vh;
+    gap: 1vw;
+    width: 95vw;
+  }
+
+  .casita {
+    font-size: 2.3vh;
+  }
+
+  .info-title-activity{
+    font-size: 1.5vh;
+    gap: 5vw;
+  }
+
+  .comercio-activity {
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    margin-bottom: 1.5vh;
+  }
+
+  .MyArticle-activity {
+    width: 98%;
+  }
+
+  .estado-activity {
+    width: 98%;
+  }
+
+  .image-activity {
+    width: 30vw;
+    height: 30vw;
+  }
+
+  .myactivity-meet input{
+    width: 50vw;
+  }
+
+  .myactivity-button {
+    width: 40vw;
+  }
+}
+

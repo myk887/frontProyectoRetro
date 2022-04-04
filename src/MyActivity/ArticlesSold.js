@@ -89,9 +89,9 @@ function ArticlesSold() {
             <div  className="MyArticle-activity">
                 <img className="image-activity" src={`http://localhost:3000${articulo.photo.replace('./', '/')}`} alt={articulo.name} />
                 <div>
-                  <h3>{articulo.name}</h3>
+                  <h3 className="myactivity-article-name">{articulo.name}</h3>
                   <div className="textMyArticle-activity">
-                      <h4>{articulo.price} €</h4>
+                      <h4 className="myactivity-article-price">{articulo.price} €</h4>
                   </div>
                 </div>
             </div>
