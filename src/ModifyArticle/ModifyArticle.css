@@ -1,25 +1,114 @@
+@import '../variables.css';
+@import '../normalize.css';
 
+.modifyarticle-verifica {
+    font-size: 3vh;
+    font-weight: bold;
+    color: var(--grey);
+}
 
-/* AFECTA A OTROS CSS
-.myArticles {
-    text-align: center;
-} */
-.MyArticle {
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 3px solid black;
-    width: 60%;
-    margin: 20px;
+.modifyarticle-container {
+    border:0;
+    width: 60vw;
+    margin: 0 auto;
 }
-.image {
-    width: 150px;
-    height: 150px;
+
+.modifyarticle-container h1 {
+      font-size: 3.5vh;
+      color: var(--grey);
 }
-/* AFECTA A OTROS CSS
- .textMyArticle {
+
+.modifyarticle-form {
     display: flex;
     flex-direction: column;
-    text-align: right;
-} */
+    font-size: 2.5vh;
+}
+
+.modifyarticle-form  input {
+    font-size: 2vh;
+    height: 3.5vh;
+    width: 50%;
+    margin: 1vh 0;
+}
+
+.modifyarticle-form  select {
+    font-size: 2vh;
+    height: 3.5vh;
+    width: 50%;
+    margin: 1vh 0;
+}
+
+.modifyarticle-changephoto {
+    margin: 1vh 5vw;
+    font-size: 1.5vh;
+    transition: color 0.3s ease;
+}
+
+.modifyarticle-changephoto:hover {
+    color: blue;
+}
+
+.modifyarticle-photo {
+    width: 15%;
+    margin: 1vh 5vw;
+    transition: transform 0.3s ease;
+    transition: box-shadow 0.2s ease;
+}
+
+.modifyarticle-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0.5vh 0.8vh grey;
+    cursor: pointer;
+}
+
+.modifyarticle-button {
+    min-width: 0;
+    min-height: 0;
+    max-width: none;
+    font-size: 2.5vh;
+    height: 4.5vh;
+    width: 20vw;
+    margin: 2vh 0;
+}
+
+@media screen and (max-width: 35rem) {
+
+    .modifyarticle-container {
+        width: 100vw;
+        margin: 0 auto;
+        padding-left: 15vw
+    }
+
+    .modifyarticle-container h1 {
+        font-size: 3vh;
+    }
+
+    .modifyarticle-form {
+        font-size: 2vh;
+    }
+
+    .modifyarticle-form  input {
+        width: 80%;
+    }
+
+    .modifyarticle-form  select {
+        width: 80%;
+    }
+
+    .modifyarticle-changephoto {
+        margin: 1vh 10vw;
+        font-size: 1.5vh;
+        transition: color 0.3s ease;
+    }
+    .modifyarticle-photo {
+        width: 30%;
+        margin: 1vh 10vw;
+    }
+
+    .modifyarticle-button {
+        min-width: 0;
+        min-height: 0;
+        width: 50vw;
+    }
+
+}

@@ -64,14 +64,14 @@ function ModifyArticle() {
                 </div>
                 :
                 verifica ?
-                  <div className='verifica'>
+                  <div className='modifyarticle-verifica'>
                     <h1>Producto modificado</h1>
                     <Link to={'/article/' + idActuallyArticle}> Ver producto</Link>
                   </div>
                   :
-                  <fieldset className='cretateForm'>
-                    <legend>Modificar articulo</legend>
-                    <form onSubmit={handleSubmit} className='formArticle'>
+                  <fieldset className='modifyarticle-container'>
+                    <h1>Modificar articulo</h1>
+                    <form onSubmit={handleSubmit} className='modifyarticle-form'>
                         <label>
                         Nombre:
                         <br/>
@@ -117,17 +117,18 @@ function ModifyArticle() {
                         <label>
                           {!photoUrl ?
                           <div>
-                            <img className='photo photoModify' src={`http://localhost:3000${actuallyArticle.photo.replace('./', '/')}`} alt={actuallyArticle.name}></img>
+                            <p className="modifyarticle-changephoto">Cambiar foto:</p>
+                            <img className='modifyarticle-photo' src={`http://localhost:3000${actuallyArticle.photo.replace('./', '/')}`} alt={actuallyArticle.name}></img>
                             <input name='file' type="file" onChange={e => setPhoto(e.target.files[0])} accept="image/x-png,image/gif,image/jpeg"/>
                           </div>
                           :
                           <div className='photoDiv'>
-                            <img className='photo photoModify' src={photoUrl} alt='phot'/>
+                            <img className='modifyarticle-photo' src={photoUrl} alt='phot'/>
                             <input type="file" onChange={e => setPhoto(e.target.files[0])} accept="image/x-png,image/gif,image/jpeg" />
                           </div>}
                         </label>
-                        <div className='enviarRegistro'>
-                            <button>Enviar</button>
+                        <div>
+                            <button className='modifyarticle-button'>Guardar cambios</button>
                         </div>
                     </form>
                 </fieldset>
