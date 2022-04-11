@@ -15,11 +15,11 @@ function EditUser() {
     !userToken && navigate('user/register')
   }, [userToken, navigate])
 
-  const [name, setName] = useState(datos[0].username)
-  const [email, setEmail] = useState(datos[0].email)
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [newPassword, setNewPassword] = useState('')
-  const [address, setAddress] = useState(datos[0].location)
+  const [address, setAddress] = useState('')
   const [provinces, setProvinces] = useState(datos[0].province)
   const [loading, setLoading] = useState(false)
   const [avatar, setAvatar] = useState(false)
@@ -125,18 +125,18 @@ function EditUser() {
             <form className='edituser-form-edit' onSubmit={handleSubmit}>
               <label>
               <span>Nombre: </span>
-              <input name="name" value={name} required onChange={e => setName(e.target.value)}></input>
+              <input name="name" value={name} required placeholder={datos[0].username}  onChange={e => setName(e.target.value)}></input>
               </label>
               <label>
               <span>Email: </span>
-              <input name="email" value={email} type="email" required onChange={e => setEmail(e.target.value)}></input>
+              <input name="email" value={email} type="email" required placeholder={datos[0].email}  onChange={e => setEmail(e.target.value)}></input>
               </label>
               <label>
               <span>Ciudad: </span>
-              <input name="address" value={address} required onChange={e => setAddress(e.target.value)}></input>
+              <input name="address" value={address} required placeholder={datos[0].location} onChange={e => setAddress(e.target.value)}></input>
               </label>
               <label>
-                <select className="provinces" name="provinces" value={provinces} required onChange={e => setProvinces(e.target.value)}>
+                <select className="provinces" name="provinces" value={provinces} required  onChange={e => setProvinces(e.target.value)}>
                   <option value=''>{provinces}</option>
                   <option value="coruña">A Coruña/La Coruña</option>
                   <option value="araba">Araba/Alava</option>
@@ -200,7 +200,7 @@ function EditUser() {
             <form className='edituser-form-edit' onSubmit={handleSubmitPass}>
               <label>
                   Contraseña actual
-                  <input name="password" value={password} required type={show ? 'text' : 'password'}  onChange={e => setPassword(e.target.value)}></input>
+                  <input name="password" value={password} required type={show ? 'text' : 'password'} onChange={e => setPassword(e.target.value)}></input>
                   <span className='edituser-showpass' onClick={switchShow}>{show ? 'Ocultar' : 'Mostrar'}</span>
                   </label>
                   <label >
