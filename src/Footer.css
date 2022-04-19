@@ -4,7 +4,7 @@
 .main-footer {
   grid-area: footer;
   display: flex;
-  margin: 0.3rem 0 0 0;
+  margin: 0.7rem 0 0 0;
   justify-content: space-around;
   align-items: center;
   background: linear-gradient(to right, #7c7c7c 20%,#3353e4 60%,#7c7c7c);
