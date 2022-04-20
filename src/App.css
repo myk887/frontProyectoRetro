@@ -20,7 +20,7 @@
 
 .active {
   color: var(--orange);
-  font-size: 1.2rem;
+  font-size: 2vh;
   font-weight: bold;
 }
 
@@ -129,14 +129,16 @@ button:hover {
   }
 }
 
-@media screen and (min-width: 140rem) {
+@media screen and (min-width: 120rem) {
   .body-structure {
+    grid-template-columns: 20rem 1fr;
     margin-top: 12rem;
   }
 }
 
 @media screen and (min-width: 220rem) {
   .body-structure {
+    grid-template-columns: 35rem 1fr;
     margin-top: 23rem;
   }
 }
