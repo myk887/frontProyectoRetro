@@ -67,7 +67,7 @@
 .createarticle-created-text {
     font-size: 4vh;
     color: var(--grey);
-    margin: 5vh auto;
+    margin: 10vh auto;
 }
 
 .createarticle-created-link {
@@ -96,4 +96,13 @@
         width: 30vw;
     }
 
+}
+
+.createarticle-created-article {
+    text-align: center;
+    height: 53vh;
+}
+
+.createarticle-created-text {
+    font-size: 4rem;
 }
