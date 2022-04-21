@@ -57,6 +57,14 @@ input[type=file] {
 .register-verify {
     margin: 5rem 1rem;
     color: var(--grey);
+    height: 42vh;
+    display: flex;
+    justify-content: center;
+}
+.register-verify h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
