@@ -89,6 +89,7 @@
 .myarticles-noproducts{
     margin: 5rem 1rem;
     color: var(--grey);
+    height: 30vh;
 }
 
 

@@ -67,6 +67,10 @@ input[type=file] {
     align-items: center;
 }
 
+.avatarRegister {
+    width: 20rem;
+    height: 20rem;
+}
 
 @media screen and (max-width: 35rem) {
 
