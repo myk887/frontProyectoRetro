@@ -7,6 +7,19 @@
   box-sizing: border-box;
 }
 
+input {
+  padding: 5px;
+}
+
+textarea {
+  padding: 5px;
+}
+
+.error {
+  text-align: center;
+  color: red;
+}
+
 .body {
   min-width: 100vw;
 }

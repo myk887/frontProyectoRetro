@@ -5,9 +5,13 @@
 /* main structure */
 
 .edituser-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 60%;
     margin: 0 auto;
-    margin-bottom: 5vh;;
+    margin-bottom: 5vh;
+    height: 55vh;
 }
 
 .edituser-casita {

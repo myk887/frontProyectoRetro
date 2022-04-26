@@ -61,6 +61,8 @@
 .estado-activity {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 55%;
 }
 
@@ -85,7 +87,7 @@
 .soldBuy-activity {
   width: 100%;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 
 /* Product image name and price*/

@@ -11,6 +11,7 @@ function CreateArticle() {
   const [description, setDescription] = useState('')
   const [price, setPrice] = useState('')
   const [photo, setPhoto] = useState('')
+  const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
   const [verifica, setVerifica] = useState(false)
   const [id, setId] = useState('')
@@ -54,11 +55,13 @@ function CreateArticle() {
       } else {
         console.log(res)
         setLoading(false)
+        setError(res.status)
       }
       setCategory('')
       setName('')
       setDescription('')
       setPrice('')
+      setPhoto('')
     }
   }
   if (!userToken && !datos) navigate('/')
@@ -74,6 +77,7 @@ function CreateArticle() {
                   </div>
                   :
                   <div className="createarticle-body">
+                    <p className='error'>{error == 401 && 'Verifica que esta todo bien escrito'|| error == 404 && 'El articulo no fue creado correctamente' || error == 500 && 'Hubo un error'}</p>
                     <h1 className="createarticle-title">Crear un anuncio</h1>
                     <fieldset>
                     <form onSubmit={handleSubmit} className='createarticle-form'>

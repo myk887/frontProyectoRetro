@@ -2,9 +2,11 @@
 @import '../normalize.css';
 
 .modifyarticle-verifica {
+    text-align: center;
     font-size: 3vh;
     font-weight: bold;
     color: var(--grey);
+    height: 55vh;
 }
 
 .modifyarticle-container {

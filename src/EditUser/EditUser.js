@@ -26,6 +26,8 @@ function EditUser() {
   const [show, setShow] = useState(false)
   const [show2, setShow2] = useState(false)
   const [show3, setShow3] = useState(2)
+  const [res, setRes] = useState(false)
+  const [resp, setResp] = useState(false)
 
   const switchShow = (e) => {
     e.preventDefault()
@@ -64,10 +66,13 @@ function EditUser() {
         const data = await res.json()
         console.log(data)
         setLoading(false)
-        alert('Cambios guardados')
+        // window.location.reload(true);
+        // alert('Cambios guardados')
+        setRes(res.status)
       } else {
         console.log(res.status)
-        alert('Hubo un error' + res.statusText)
+        setRes(res.status)
+        // alert('Hubo un error' + res.statusText)
         setLoading(false)
       }
     }
@@ -86,12 +91,14 @@ function EditUser() {
         })
         if (res.ok) {
           setLoading(false)
-          alert('Contraseña cambiadas')
+          setResp(res.status)
         } else {
           console.log(res.status)
-          alert('Hubo un error' + res.statusText)
+          setResp(res.status)
           setLoading(false)
         }
+        setNewPassword('')
+        setPassword('')
       }
     }
 
@@ -105,6 +112,8 @@ function EditUser() {
       </div>
 
       <div className='edituser-info'>
+
+      <p>{resp == 200 && 'Contraseña cambiada correctamente' || resp == 401 && 'Error en la verificación del usuario' || resp == 402 && 'Formato de contraseña no valido' || resp == 404 && 'Contraseña no fue cambiada correctamente' || resp == 500 && 'Hubo un error'}</p>
 
       { show3 !== 3 && <div className='edituser-userphoto'>
             {avatarURL ?
@@ -123,17 +132,19 @@ function EditUser() {
             <p className="edituser-changepassword" onClick={(e) => setShow3(2)}> ✎ Volver a Mi Perfil</p>
             :
             <form className='edituser-form-edit' onSubmit={handleSubmit}>
+              <p>{res == 200 && 'Cambios realizados correctamente' || res == 500 && 'Formato no valido' || res == 400 && 'los cambios no se ejecutaron correctamente' || res == 501 && 'Hubo un error'}</p>
+
               <label>
               <span>Nombre: </span>
-              <input name="name" value={name} required placeholder={datos[0].username}  onChange={e => setName(e.target.value)}></input>
+              <input name="name"  value={name} placeholder={datos[0].username}  onChange={e => setName(e.target.value)}></input>
               </label>
               <label>
               <span>Email: </span>
-              <input name="email" value={email} type="email" required placeholder={datos[0].email}  onChange={e => setEmail(e.target.value)}></input>
+              <input name="email" type="email"  value={email} placeholder={datos[0].email}  onChange={e => setEmail(e.target.value)}></input>
               </label>
               <label>
               <span>Ciudad: </span>
-              <input name="address" value={address} required placeholder={datos[0].location} onChange={e => setAddress(e.target.value)}></input>
+              <input name="address"  value={address} placeholder={datos[0].location} onChange={e => setAddress(e.target.value)}></input>
               </label>
               <label>
                 <select className="provinces" name="provinces" value={provinces} required  onChange={e => setProvinces(e.target.value)}>
@@ -200,12 +211,12 @@ function EditUser() {
             <form className='edituser-form-edit' onSubmit={handleSubmitPass}>
               <label>
                   Contraseña actual
-                  <input name="password" value={password} required type={show ? 'text' : 'password'} onChange={e => setPassword(e.target.value)}></input>
+                  <input name="password" value={password} placeholder={'Contraseña'} required type={show ? 'text' : 'password'} onChange={e => setPassword(e.target.value)}></input>
                   <span className='edituser-showpass' onClick={switchShow}>{show ? 'Ocultar' : 'Mostrar'}</span>
                   </label>
                   <label >
                   Nueva Contraseña
-                  <input name="newPassword" value={newPassword} required type={show2 ? 'text' : 'password'}  onChange={e => setNewPassword(e.target.value)}></input>
+                  <input name="newPassword" value={newPassword} placeholder={'Contraseña'} required type={show2 ? 'text' : 'password'}  onChange={e => setNewPassword(e.target.value)}></input>
                   <span className='edituser-showpass' onClick={switchShow2}>{show2 ? 'Ocultar' : 'Mostrar'}</span>
               </label>
               <button className='edituser-changepass-button'>Cambiar Contraseña</button>
